@@ -14,15 +14,21 @@ body {
   font-weight: 500;
   -webkit-font-smoothing: antialiased;
   margin: 0;
-  text-transform: uppercase;
   letter-spacing: 0.02em;
   text-align: center;
   color: #44545e;
+  outline: 0;
 }
 
 /* Responsive images */
 img {
   max-width: 100%;
+}
+
+.bold {
+  font-weight: 700;
+  color: #7aaeea;
+  font-style: italic;
 }
 
 /* ----------------------------------------
@@ -142,7 +148,7 @@ Home
   align-items: center;
   justify-content: space-evenly;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   text-align: center;
   padding: 200px;
 }
@@ -150,9 +156,10 @@ Home
 .home-h1 {
   font-size: 60px;
   text-transform: capitalize;
-  padding: 50px 100px 30px 100px;
+  padding: 25px 100px 30px 100px;
   color: white;
   letter-spacing: 1px;
+  margin: 0;
 }
 
 .home-h2 {
@@ -162,11 +169,12 @@ Home
   color: #c5e8fd;
   line-height: 1.1em;
   letter-spacing: 1px;
+  margin: 0;
 }
 
 .home-btn-div {
   display: flex;
-  /* flex-direction: column; */
+  justify-content: center;
 }
 
 .home-btn {
@@ -184,4 +192,119 @@ Home
   align-items: center;
   transition: ease 1s;
   justify-content: center;
+}
+
+/* ----------------------------------------
+Testimonials
+------------------------------------------- */
+
+.testimonials {
+  display: flex;
+  flex-direction: row;
+
+  padding-top: 80px;
+  background-color: #f1f6fc;
+}
+
+.personDiv {
+  display: flex;
+  flex-direction: row;
+  /* background-color: red; */
+  margin-bottom: 40px;
+}
+
+.successLeft {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: red; */
+}
+
+.bgDiv {
+  background-color: #7aaeea;
+  width: fit-content;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.successRight {
+  /* background-color: yellow; */
+  display: flex;
+  flex-direction: column;
+  height: 375px;
+  justify-content: space-between;
+  padding-right: 80px;
+  text-align: start;
+  margin-bottom: 40px;
+}
+
+.storyName {
+  font-size: 45px;
+  padding: 0;
+  margin: 0 0 10px;
+  /* color: #e4f0f0; */
+  /* background-color: peru; */
+}
+
+.storyText {
+  /* background-color: orchid; */
+  /* color: #e4f0f0; */
+  font-size: 20px;
+  line-height: 1.2em;
+}
+
+.react-responsive-modal-container {
+  outline: 0;
+}
+
+video {
+  outline: 0;
+}
+
+/* ----------------------------------------
+About Me
+------------------------------------------- */
+
+.about-me {
+  position: relative;
+  font-size: 25px;
+  background-color: #f1f6fc;
+  /* background-color: transparent; */
+}
+
+.about-container {
+  /* display: flex; */
+  /* padding-top: 15px; */
+  /* background-color: pink; */
+}
+
+.about-pic-div {
+  height: 100vh;
+  /* padding: 140px 0 0 30px; */
+  align-items: center;
+  justify-content: center;
+  /* background-color: red; */
+}
+
+.about-pic {
+  /* margin-top: 75px; */
+  padding: 4px 30px 0 30px;
+  width: 100%;
+  height: 100%;
+}
+
+.about-text-div {
+  padding: 50px;
+  /* background-color: sandybrown; */
+  justify-content: center;
+  align-items: center;
+}
+
+.about-text-div p {
+  padding-bottom: 20px;
+  line-height: 1.5em;
+  letter-spacing: 0.5px;
+  /* background-color: seagreen; */
 }
