@@ -4,7 +4,7 @@ import '../Styles/styles.css'
 
 const Nav = () => {
   return (
-    <nav id="navbar">
+    <nav className="navbar">
       <a className="burger">X</a>
       <ul className="nav-links left">
         <li>

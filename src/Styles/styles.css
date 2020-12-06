@@ -1,7 +1,38 @@
 /* ----------------------------------------
+Base Styles
+------------------------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+/* html {
+  font-size: 15px;
+} */
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #44545e;
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+}
+
+/* ----------------------------------------
+Layout
+------------------------------------------- */
+
+/* ----------------------------------------
 Navbar
 ------------------------------------------- */
-#navbar {
+.navbar {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -16,7 +47,7 @@ Navbar
   z-index: 1;
 }
 
-#navbar .nav-links a {
+.navbar .nav-links a {
   letter-spacing: 3px;
   text-decoration: none;
   color: white;
@@ -84,24 +115,28 @@ Navbar
 Home
 ------------------------------------------- */
 
-#home {
-  background-image: url('./pat-photo.JPG');
-  background-repeat: no-repeat;
-  background-position: left top;
-  background-size: cover;
-  -webkit-background-size: center;
-  -moz-background-size: center;
-  -o-background-size: center;
-  margin: 0;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-attachment: scroll;
-  min-width: 100vw;
+.home {
+  position: relative;
+  color: white;
 }
 
-#home-div {
-  background-color: rgb(0 0 0 / 57%);
+.home::after {
+  content: '';
+  /* opacity: 0.1; */
+  background: rgb(0 0 0/ 57%) url('./pat-photo.JPG') no-repeat fixed top;
+  background-blend-mode: color;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: -1;
+  height: 100vh;
+}
+
+.home .home-div {
+  background-color: 'red';
   height: 100vh;
   width: 100vw;
   align-items: center;
@@ -109,9 +144,10 @@ Home
   display: flex;
   flex-direction: column;
   text-align: center;
+  padding: 200px;
 }
 
-#home-h1 {
+.home-h1 {
   font-size: 60px;
   text-transform: capitalize;
   padding: 50px 100px 30px 100px;
@@ -119,7 +155,7 @@ Home
   letter-spacing: 1px;
 }
 
-#home-h2 {
+.home-h2 {
   font-size: 25px;
   text-transform: uppercase;
   padding: 0 125px 30px 125px;
@@ -128,7 +164,7 @@ Home
   letter-spacing: 1px;
 }
 
-#home-btn-div {
+.home-btn-div {
   display: flex;
   /* flex-direction: column; */
 }
