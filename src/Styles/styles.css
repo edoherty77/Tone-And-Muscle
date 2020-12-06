@@ -1,0 +1,151 @@
+/* ----------------------------------------
+Navbar
+------------------------------------------- */
+#navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background-color: black;
+  box-sizing: border-box;
+  transition: 1s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+#navbar .nav-links a {
+  letter-spacing: 3px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: 1s;
+  line-height: 30px;
+}
+
+.left {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  /* padding: 8px 25px; */
+  transition: 1s;
+}
+
+.right {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  /* padding: 8px 25px; */
+  transition: 1s;
+}
+
+.nav-links li {
+  list-style: none;
+  padding: 10px 40px 0px 40px;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(226, 226, 226);
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.burger {
+  display: none;
+}
+
+.banner-div {
+  width: 450px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 10vh;
+  z-index: 4;
+}
+
+.banner-pic {
+  height: 10vh;
+  width: 450px;
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+
+/* ----------------------------------------
+Home
+------------------------------------------- */
+
+#home {
+  background-image: url('./pat-photo.JPG');
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
+  -webkit-background-size: center;
+  -moz-background-size: center;
+  -o-background-size: center;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-attachment: scroll;
+  min-width: 100vw;
+}
+
+#home-div {
+  background-color: rgb(0 0 0 / 57%);
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#home-h1 {
+  font-size: 60px;
+  text-transform: capitalize;
+  padding: 50px 100px 30px 100px;
+  color: white;
+  letter-spacing: 1px;
+}
+
+#home-h2 {
+  font-size: 25px;
+  text-transform: uppercase;
+  padding: 0 125px 30px 125px;
+  color: #c5e8fd;
+  line-height: 1.1em;
+  letter-spacing: 1px;
+}
+
+#home-btn-div {
+  display: flex;
+  /* flex-direction: column; */
+}
+
+.home-btn {
+  text-transform: uppercase;
+  margin: 0 30px;
+  width: 200px;
+  height: 65px;
+  background-color: rgb(0 0 0 / 30%);
+  color: white;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border: white 2px solid;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  transition: ease 1s;
+  justify-content: center;
+}
