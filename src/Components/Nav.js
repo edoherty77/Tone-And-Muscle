@@ -1,10 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import '../Styles/styles.css'
 
 const Nav = () => {
+  const [nav, setNav] = useState(false)
+
+  const changeNav = () => {
+    console.log(window.scrollY)
+    if (window.scrollY >= 690) {
+      setNav(true)
+    } else {
+      setNav(false)
+    }
+  }
+
+  window.addEventListener('scroll', changeNav)
+
   return (
-    <nav className="navbar">
+    <nav className={nav ? 'navbar hide' : 'navbar'}>
       <a className="burger">X</a>
       <ul className="nav-links left">
         <li>

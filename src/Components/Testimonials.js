@@ -24,8 +24,8 @@ const Testimonials = () => {
       <Grid container spacing={1}>
         <Grid item xs={12} lg={5}>
           <SuccessPics
-            beforePic={'/images/Mike-LgBef.jpg'}
-            afterPic={'/images/Mike-LGAft.png'}
+            beforePic={'/images/Mike-LgBef.png'}
+            afterPic={'/images/Mike-LgAft.png'}
           />
         </Grid>
         <Grid item xs={12} lg={7}>
@@ -45,40 +45,36 @@ const Testimonials = () => {
 
         <Grid item xs={12} lg={5}>
           <SuccessPics
-            beforePic={'/images/Mike-LgBef.jpg'}
+            beforePic={'/images/Jack-LgBef.png'}
             afterPic={'/images/Mike-LGAft.png'}
           />
         </Grid>
         <Grid item xs={12} lg={7}>
           <Testimonial
-            name={'Mike Schena'}
+            name={'Jack Conway'}
             story={
               "My whore of a wife and I have been members of the Swinger's Fitness Club since September 2012. It wasn’t until January of this year that I decided to offer my wife to a personal trainer, Pat. My wife and I had tried 'personal training' at a different gym in the past, but were not happy with the trainers that we had. As you can imagine, I was skeptical to try it again due to our past experiences. Anyway, we all fucked and now my wife is pregrant with Pats child. 5 stars-Would have Pat get my wife pregnant again."
             }
             onClick={onOpenModal}
           />
-          <Player
-            url="videos/MikeSchena.mp4"
-            open={isOpen}
-            onClose={onCloseModal}
-          />
+          <Player url="videos/Ryan.mp4" open={isOpen} onClose={onCloseModal} />
         </Grid>
         <Grid item xs={12} lg={5}>
           <SuccessPics
-            beforePic={'/images/Mike-LgBef.jpg'}
+            beforePic={'/images/Mike-LgBef.png'}
             afterPic={'/images/Mike-LGAft.png'}
           />
         </Grid>
         <Grid item xs={12} lg={7}>
           <Testimonial
-            name={'Mike Schena'}
+            name={'Kevin Poplaski'}
             story={
               "My whore of a wife and I have been members of the Swinger's Fitness Club since September 2012. It wasn’t until January of this year that I decided to offer my wife to a personal trainer, Pat. My wife and I had tried 'personal training' at a different gym in the past, but were not happy with the trainers that we had. As you can imagine, I was skeptical to try it again due to our past experiences. Anyway, we all fucked and now my wife is pregrant with Pats child. 5 stars-Would have Pat get my wife pregnant again."
             }
             onClick={onOpenModal}
           />
           <Player
-            url="videos/MikeSchena.mp4"
+            url="videos/Kevin.mp4"
             style={{ overlay: { outline: 0 } }}
             open={isOpen}
             onClose={onCloseModal}

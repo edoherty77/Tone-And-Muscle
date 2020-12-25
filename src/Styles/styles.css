@@ -53,6 +53,10 @@ Navbar
   z-index: 1;
 }
 
+.hide {
+  display: none;
+}
+
 .navbar .nav-links a {
   letter-spacing: 3px;
   text-decoration: none;

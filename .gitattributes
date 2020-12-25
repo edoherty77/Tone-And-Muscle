@@ -1,2 +1,4 @@
 /public/videos/MikeSchena.mp4 export-ignore
+/public/videos/Kevin.mp4 export-ignore
+/public/videos/Ryan.mp4 export-ignore
 *.psd filter=lfs diff=lfs merge=lfs -text
