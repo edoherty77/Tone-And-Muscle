@@ -20,6 +20,7 @@ const Player = ({ style, url, open, onClose }) => {
       outline="0"
     >
       <ReactPlayer
+        playing="true"
         style={{ video: { overlay: 0 } }}
         controls={true}
         width="300px"
