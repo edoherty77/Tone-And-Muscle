@@ -7,7 +7,6 @@ export default function Testimonial({ name, story, onClick }) {
     <div className="successRight">
       <h2 className="storyName">{name}</h2>
       <div className="storyText">{story}</div>
-      {/* <Button onClick={onClick}>Hear {name}'s Story</Button> */}
     </div>
   )
 }
