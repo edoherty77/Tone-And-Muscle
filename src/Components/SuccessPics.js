@@ -1,7 +1,11 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlayCircle } from '@fortawesome/free-solid-svg-icons'
 
-export default function SuccessPics({ beforePic, afterPic }) {
+import Button from './Button'
+
+export default function SuccessPics({ beforePic, afterPic, onClick, name }) {
   return (
     <div className="successLeft">
       <div className="bgDiv">
@@ -12,6 +16,14 @@ export default function SuccessPics({ beforePic, afterPic }) {
           height="375px"
         />
         <img className="afterPic" src={afterPic} width="225px" height="375px" />
+      </div>
+      <div className="buttonDiv">
+        <FontAwesomeIcon
+          className="iconBtn"
+          onClick={onClick}
+          icon={faPlayCircle}
+          size="5x"
+        />
       </div>
     </div>
   )

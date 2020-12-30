@@ -205,7 +205,6 @@ Testimonials
 .testimonials {
   display: flex;
   flex-direction: row;
-
   padding-top: 80px;
   background-color: #f1f6fc;
 }
@@ -227,10 +226,33 @@ Testimonials
 .bgDiv {
   background-color: #7aaeea;
   width: fit-content;
-  padding: 5px;
+  padding: 1px;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0px 0px 20px 2px #5579a3;
+}
+
+.buttonDiv {
+  position: absolute;
+  /* width: 250px; */
+  /* height: 250px; */
+  /* background-color: purple; */
+}
+
+.iconBtn {
+  background-color: white;
+  /* color: white; */
+  cursor: pointer;
+  color: #49688c;
+  /* background-color: #49688c; */
+  border-radius: 150px;
+  opacity: 0.7;
+  transition: 1s opacity;
+}
+
+.iconBtn:hover {
+  opacity: 1;
 }
 
 .successRight {
@@ -238,7 +260,8 @@ Testimonials
   display: flex;
   flex-direction: column;
   height: 375px;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  padding: 30px;
   padding-right: 80px;
   text-align: start;
   margin-bottom: 40px;
@@ -248,13 +271,11 @@ Testimonials
   font-size: 45px;
   padding: 0;
   margin: 0 0 10px;
-  /* color: #e4f0f0; */
   /* background-color: peru; */
 }
 
 .storyText {
   /* background-color: orchid; */
-  /* color: #e4f0f0; */
   font-size: 20px;
   line-height: 1.2em;
 }
@@ -285,18 +306,18 @@ About Me
 }
 
 .about-pic-div {
+  display: flex;
   height: 100vh;
-  /* padding: 140px 0 0 30px; */
   align-items: center;
   justify-content: center;
-  /* background-color: red; */
+  margin: 4px 30px 0 30px;
+  /* background-color: brown; */
 }
 
 .about-pic {
-  /* margin-top: 75px; */
-  padding: 4px 30px 0 30px;
-  width: 100%;
-  height: 100%;
+  height: 80%;
+  background-color: #f1f6fc;
+  box-shadow: 0px 0px 20px 2px #5579a3;
 }
 
 .about-text-div {

@@ -12,7 +12,7 @@ const AboutMe = () => {
         alignItems="center"
         justify="center"
       >
-        <Grid item xs={12} md={7} className="about-text-div">
+        <Grid item xs={12} md={6} className="about-text-div">
           {/* <p>
             <span className="bold">Growing up as an athlete</span> I spent a lot
             of my time either on the field or on the mat. Playing sports was my
@@ -45,14 +45,22 @@ const AboutMe = () => {
             designed a coaching program for former athletes to do the same.
           </p> */}
           <p>
-            "I created Tone & Muscle to help people see that “dieting” results
+            I created the Tone & Muscle Academy because I knew people were
+            struggling. I knew people were confused on what to eat and how to
+            exercise to create long lasting physiques they were proud of. With
+            so much information and options in the market, I saw that people
+            were confused, I wanted to provide people with easily implementable
+            strategies and constant support from beginning to the end of their
+            journey. Setting goals along the way and celebrating small wins is
+            what has created a positive culture in the TMA community.
+            {/* "I created Tone & Muscle to help people see that “dieting” results
             in more than just weight loss. I show them that it also brings a{' '}
             <span className="bold">newfound energy</span> to their day in which
             they have never experienced. Tone & Muscle teaches people that
             “exercising” is not just working up a sweat so they can look good in
             the mirror, but rather a{' '}
             <span className="bold">journey of strength and mobility</span> that
-            gives them the freedom to move like they were a kid again."
+            gives them the freedom to move like they were a kid again." */}
           </p>
           {/* <p>
             So if you find that you feel{' '}
@@ -63,10 +71,10 @@ const AboutMe = () => {
             when you were on the field or court.
           </p> */}
           {/* <p>Click Below to apply for the Tone & Muscle Academy</p> */}
-          <Button>Fuck</Button>
+          <Button>More About Me</Button>
         </Grid>
-        <Grid item xs={12} md={5} className="about-pic-div">
-          <img className="about-pic" src="images/pat-photo1.jpg" alt="" />
+        <Grid item xs={12} md={6} className="about-pic-div">
+          <img className="about-pic" src="images/pat-photo3.jpg" alt="" />
         </Grid>
       </Grid>
     </section>

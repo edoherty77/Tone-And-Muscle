@@ -16,16 +16,14 @@ const Home = () => {
     <section id="landing" className="home">
       <Grid container className="home-div">
         <Grid item xs={12}>
-          <h2 className="home-h1">
-            A tailored coaching method that creates lasting results
-          </h2>
+          <h2 className="home-h1">Find Your New Prime </h2>
         </Grid>
 
         <ColoredLine />
         <Grid item xs={0} sm={0} md={12} lg={12} xl={12}>
           <h2 className="home-h2">
-            Individually prescribed plans, periodized for sustainability and
-            delivered through constant connection-based coaching
+            A tailored, online coaching experience for former athletes looking
+            to regain strength, energy levels, and confidence in their bodies
           </h2>
         </Grid>
         <ColoredLine />

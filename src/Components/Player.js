@@ -1,13 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Modal } from 'react-responsive-modal'
 import 'react-responsive-modal/styles.css'
 import ReactPlayer from 'react-player'
 import '../Styles/styles.css'
 
 const Player = ({ style, url, open, onClose }) => {
-  const bg = {
-    outline: 0,
-  }
   return (
     <Modal
       classNames={{ overlay: { background: 'black' } }}
