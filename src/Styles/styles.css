@@ -207,6 +207,8 @@ Testimonials
   flex-direction: row;
   padding-top: 80px;
   background-color: #f1f6fc;
+  border-radius: 0px 0px 400px 40px;
+  transform: skew();
 }
 
 .personDiv {
@@ -295,8 +297,8 @@ About Me
 .about-me {
   position: relative;
   font-size: 25px;
-  background-color: #f1f6fc;
-  /* background-color: transparent; */
+  /* background-color: #f1f6fc; */
+  background-color: white;
 }
 
 .about-container {
