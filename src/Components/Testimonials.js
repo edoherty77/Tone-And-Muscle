@@ -60,13 +60,13 @@ const Testimonials = () => {
             //fix proportion
             beforePic={'/images/Mike-LgBef.png'}
             afterPic={'/images/Mike-LgAft.png'}
-            onClick={() => onMikeOpen('videos/MikeSchena.mp4')}
+            onClick={() => onMikeOpen('videos/Mike.mp4')}
           />
         </Grid>
         <Grid item xs={12} lg={7}>
           <Testimonial name={'Mike Schena'} story={text.schena} />
           <Player
-            url="videos/MikeSchena.mp4"
+            url="videos/Mike.mp4"
             open={isMikeOpen}
             onClose={onMikeCloseModal}
           />
