@@ -42,7 +42,7 @@ Navbar
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 12vh;
+  min-height: 14vh;
   background-color: black;
   box-sizing: border-box;
   transition: 1s;
@@ -109,12 +109,12 @@ Navbar
   left: 0%;
   margin-left: auto;
   margin-right: auto;
-  height: 12vh;
+  height: 14vh;
   z-index: 4;
 }
 
 .banner-pic {
-  height: 12vh;
+  height: 14vh;
   width: 450px;
   image-rendering: auto;
   image-rendering: crisp-edges;
