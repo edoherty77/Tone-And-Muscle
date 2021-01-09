@@ -20,9 +20,7 @@ const Nav = () => {
     <nav className={nav ? 'navbar hide' : 'navbar'}>
       <a className="burger">X</a>
       <ul className="nav-links left">
-        <li>
-          <a href="#landing">Home</a>
-        </li>
+        <li>{/* <a href="#landing">Home</a> */}</li>
         <li>
           <a href="#testies">Success Stories</a>
         </li>
