@@ -20,7 +20,9 @@ const Nav = () => {
     <nav className={nav ? 'navbar hide' : 'navbar'}>
       <a className="burger">X</a>
       <ul className="nav-links left">
-        <li>{/* <a href="#landing">Home</a> */}</li>
+        <li>
+          <a href="#landing">Home</a>
+        </li>
         <li>
           <a href="#testies">Success Stories</a>
         </li>
@@ -30,7 +32,7 @@ const Nav = () => {
           <a href="#about">About Me</a>
         </li>
         <li>
-          <a href="#contact-me">Contact Me</a>
+          <a href="#contact-me">Sign Up</a>
         </li>
       </ul>
       <div className="banner-div">

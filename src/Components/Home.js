@@ -1,7 +1,11 @@
 import React from 'react'
 
+import { FaFacebook } from 'react-icons/fa'
+import { FaInstagramSquare } from 'react-icons/fa'
+
 import '../Styles/styles.css'
 import Grid from '@material-ui/core/Grid'
+
 const Home = () => {
   const ColoredLine = () => (
     <hr
@@ -30,11 +34,25 @@ const Home = () => {
         <Grid xs={12}>
           <div className="home-btn-div">
             <button className="home-btn">
-              <a>Coaching</a>
+              <a>Facebook</a>
             </button>
             <button className="home-btn">
-              <a>Free Content</a>
+              <a>Instagram</a>
             </button>
+            {/* <a
+              href="https://www.facebook.com/profile.php?id=100007385869431"
+              className="social-a"
+            >
+              <img src="images/fb.png" className="social-pic" />
+              <FaFacebook className="fb-i" />
+            </a>
+            <a
+            href="https://www.instagram.com/yogamatpat/"
+            className="social-a"
+            >
+              <img src="images/insta.png" className="social-pic" />
+               <FaInstagramSquare className="social-i" /> 
+            </a> */}
           </div>
         </Grid>
       </Grid>
