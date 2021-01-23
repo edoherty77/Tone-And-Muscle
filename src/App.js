@@ -1,17 +1,14 @@
-import './App.css'
-import Home from './Components/Home'
-import Nav from './Components/Nav'
-import Testimonials from './Components/Testimonials'
-import AboutMe from './Components/AboutMe'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Home from './pages'
 
 function App() {
   return (
-    <div className="App">
-      <Nav />
-      <Home />
-      <Testimonials />
-      <AboutMe />
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/" component={Home} exact />
+        {/* <Route path="/signin" component={SigninPage} exact /> */}
+      </Switch>
+    </Router>
   )
 }
 

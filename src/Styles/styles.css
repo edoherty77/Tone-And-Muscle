@@ -38,7 +38,7 @@ Layout
 /* ----------------------------------------
 Navbar
 ------------------------------------------- */
-.navbar {
+/* .navbar {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -72,7 +72,6 @@ Navbar
   display: flex;
   width: 100%;
   justify-content: flex-start;
-  /* padding: 8px 25px; */
   transition: 1s;
 }
 
@@ -80,7 +79,6 @@ Navbar
   display: flex;
   width: 100%;
   justify-content: flex-end;
-  /* padding: 8px 25px; */
   transition: 1s;
 }
 
@@ -119,7 +117,7 @@ Navbar
   image-rendering: auto;
   image-rendering: crisp-edges;
   image-rendering: pixelated;
-}
+} */
 
 /* ----------------------------------------
 Home
@@ -363,13 +361,13 @@ Phone
   /* ----------------------------------------
 Nav
 ------------------------------------------- */
-  .nav-links {
+  /* .nav-links {
     display: none;
   }
 
   .burger {
     display: inline;
-  }
+  } */
 
   /* ----------------------------------------
 Home
