@@ -39,14 +39,15 @@ export const BannerContainer = styled.div`
   margin-right: auto;
   position: fixed;
 
-  ${'' /* @media screen and (max-width: 540px) {
-    display: none;
-  } */}
+  @media screen and (max-width: 500px) {
+    width: 400px;
+    margin: 0;
+  }
 `
 
 export const BannerPic = styled.img`
   height: 14vh;
-  width: 450px;
+  width: 100%;
 `
 
 export const MobileIcon = styled.div`
