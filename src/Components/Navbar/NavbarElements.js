@@ -39,9 +39,20 @@ export const BannerContainer = styled.div`
   margin-right: auto;
   position: fixed;
 
-  @media screen and (max-width: 500px) {
-    width: 400px;
+  @media screen and (max-width: 460px) {
+    width: 330px;
+    ${'' /* margin: 0; */}
+  }
+  @media screen and (max-width: 350px) {
+    width: 300px;
     margin: 0;
+  }
+  @media screen and (max-width: 300px) {
+    width: 270px
+    margin: 0
+  }
+  @media screen and (max-width: 280px) {
+    display: none;
   }
 `
 
@@ -63,6 +74,11 @@ export const MobileIcon = styled.div`
     right: 10px;
     font-size: 1.8rem;
     cursor: pointer;
+  }
+
+  @media screen and (max-width: 280px) {
+    width: 100%;
+    ${'' /* display: none; */}
   }
 `
 export const NavMenuLeft = styled.ul`

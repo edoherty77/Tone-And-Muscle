@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
 import Home from '../Components/Home'
+import LandingSection from '../Components/LandingSection'
 import Navbar from '../Components/Navbar'
 import Testimonials from '../Components/Testimonials'
 import AboutMe from '../Components/AboutMe'
@@ -16,7 +17,7 @@ function Landing() {
     <>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
-      <Home />
+      <LandingSection />
       <Testimonials />
       <AboutMe />
     </>
