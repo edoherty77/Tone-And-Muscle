@@ -1,19 +1,13 @@
 import React, { useState } from 'react'
-// import { Button } from '../ButtonElements'
+import { Button } from '../ButtonElements'
 
 import {
-  HeroContainer,
-  HeroBg,
-  VideoBg,
-  HeroContent,
-  HeroH1,
-  HeroP,
-  HeroBtnWrapper,
-  ArrowForward,
-  ArrowRight,
+  LandingContainer,
+  LandingContent,
+  LandingH1,
+  LandingP,
+  LandingBtnWrapper,
 } from './LandingElements'
-
-import Pic from './pat-photo.JPG'
 
 function LandingSection() {
   const [hover, setHover] = useState(false)
@@ -22,34 +16,26 @@ function LandingSection() {
     setHover(!hover)
   }
   return (
-    <HeroContainer id="home">
-      {/* <HeroBg>
-        <VideoBg src={Pic} />
-      </HeroBg> */}
-      <HeroContent>
-        <HeroH1>Find Your New Prime</HeroH1>
-        <HeroP>
+    <LandingContainer id="home">
+      <LandingContent>
+        <LandingH1>Find Your New Prime</LandingH1>
+        <LandingP>
           A tailored, online coaching experience for former athletes looking to
           regain strength, energy levels, and confidence in their bodies
-        </HeroP>
-        <HeroBtnWrapper>
-          <button
-            to="signup"
-            smooth={true}
-            duration={500}
-            spy={true}
-            exact="true"
-            offset={-80}
-            primary="true"
-            dark="true"
-            onMouseEnter={onHover}
-            onMouseLeave={onHover}
+        </LandingP>
+        <LandingBtnWrapper>
+          <a
+            href="https://www.facebook.com/profile.php?id=100007385869431"
+            className="social-a"
           >
-            Get Started {hover ? <ArrowForward /> : <ArrowRight />}
-          </button>
-        </HeroBtnWrapper>
-      </HeroContent>
-    </HeroContainer>
+            <img src="images/fb.png" className="social-pic" />
+          </a>
+          <a href="https://www.instagram.com/yogamatpat/" className="social-a">
+            <img src="images/insta.png" className="social-pic" />
+          </a>
+        </LandingBtnWrapper>
+      </LandingContent>
+    </LandingContainer>
   )
 }
 

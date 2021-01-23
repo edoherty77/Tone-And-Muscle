@@ -4,12 +4,11 @@ import { MdKeyboardArrowRight, MdArrowForward } from 'react-icons/md'
 import Pic from './pat-photo.JPG'
 import MobilePic from './pat-photo2.jpg'
 
-export const HeroContainer = styled.div`
+export const LandingContainer = styled.div`
   background: #0c0c0c;
   display: flex;
   justify-content: center;
   align-items: center;
-  ${'' /* padding: 0 30px; */}
   height: 100vh;
   position: relative;
   z-index: 1;
@@ -19,12 +18,6 @@ export const HeroContainer = styled.div`
     background: rgb(0 0 0/ 57%) url(${Pic}) no-repeat fixed top;
     background-blend-mode: color;
     background-size: cover;
-    ${'' /* background-position: center center; */}
-    ${
-      '' /* -webkit-background-size: center;
-    -moz-background-size: center;
-    -o-background-size: center; */
-    }
     top: 0;
     left: 0;
     right: 0;
@@ -45,43 +38,26 @@ export const HeroContainer = styled.div`
     :after {
       content: '';
       background: rgb(0 0 0/ 57%) url(${MobilePic}) no-repeat fixed top;
-      ${'' /* background-position: 0 70px; */}
       height: 90vh;
       background-blend-mode: color;
       background-size: cover;
     }
   }
 `
-export const HeroBg = styled.div`
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-`
 
-export const VideoBg = styled.img`
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  background: #232a34;
-`
-
-export const HeroContent = styled.div`
+export const LandingContent = styled.div`
   z-index: 3;
   max-width: 1200px;
   position: absolute;
   padding: 8px 24px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  margin-top: 100px;
 `
 
-export const HeroH1 = styled.h1`
+export const LandingH1 = styled.h1`
   color: #fff;
   font-size: 48px;
   text-align: center;
@@ -95,7 +71,7 @@ export const HeroH1 = styled.h1`
   }
 `
 
-export const HeroP = styled.p`
+export const LandingP = styled.p`
   margin-top: 24px;
   color: #fff;
   font-size: 24px;
@@ -110,11 +86,12 @@ export const HeroP = styled.p`
     font-size: 18px;
   }
 `
-export const HeroBtnWrapper = styled.div`
+export const LandingBtnWrapper = styled.div`
   margin-top: 32px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
 `
 
 export const ArrowForward = styled(MdArrowForward)`

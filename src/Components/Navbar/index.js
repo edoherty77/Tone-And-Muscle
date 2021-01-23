@@ -48,7 +48,6 @@ const Navbar = ({ toggle }) => {
               <FaBars />
             </MobileIcon>
             <NavMenuLeft>
-              {/* <NavMenu> */}
               <NavItem>
                 <NavLinks
                   to="home"
@@ -73,10 +72,8 @@ const Navbar = ({ toggle }) => {
                   Success Stories
                 </NavLinks>
               </NavItem>
-              {/* </NavMenu> */}
             </NavMenuLeft>
             <NavMenuRight>
-              {/* <NavMenu> */}
               <NavItem>
                 <NavLinks
                   to="about"
@@ -92,7 +89,6 @@ const Navbar = ({ toggle }) => {
               <NavBtn>
                 <NavBtnLink>Sign Up</NavBtnLink>
               </NavBtn>
-              {/* </NavMenu> */}
             </NavMenuRight>
           </NavbarContainer>
         </Nav>
