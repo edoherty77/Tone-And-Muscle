@@ -13,7 +13,7 @@ import {
   ArrowRight,
 } from './LandingElements'
 
-import Pic from '../../Styles/pat-photo.JPG'
+import Pic from './pat-photo.JPG'
 
 function LandingSection() {
   const [hover, setHover] = useState(false)
@@ -24,7 +24,7 @@ function LandingSection() {
   return (
     <HeroContainer id="home">
       {/* <HeroBg>
-        <VideoBg />
+        <VideoBg src={Pic} />
       </HeroBg> */}
       <HeroContent>
         <HeroH1>Find Your New Prime</HeroH1>

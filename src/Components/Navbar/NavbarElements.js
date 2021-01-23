@@ -17,31 +17,35 @@ export const Nav = styled.nav`
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;
   }
+  @media screen and (max-width: 450px) {
+    height: 10vh;
+  }
 `
 
 export const NavbarContainer = styled.div`
   display: flex;
-  ${'' /* justify-content: space-around; */}
-  height: 14vh;
+  height: 100%;
   z-index: 1;
   width: 100%;
-  ${'' /* padding: 0 24px; */}
   max-width: 1100px;
 `
 
 export const BannerContainer = styled.div`
   width: 450px;
-  height: 14vh;
+  height: 100%;
   top: 0;
   right: 0;
   left: 0%;
   margin-left: auto;
   margin-right: auto;
-  position: fixed;
+  position: absolute;
+
+  @media screen and (max-width: 450px) {
+    transition: 0.8s all ease;
+  }
 
   @media screen and (max-width: 460px) {
     width: 330px;
-    ${'' /* margin: 0; */}
   }
   @media screen and (max-width: 350px) {
     width: 300px;
@@ -57,7 +61,7 @@ export const BannerContainer = styled.div`
 `
 
 export const BannerPic = styled.img`
-  height: 14vh;
+  height: 100%;
   width: 100%;
 `
 

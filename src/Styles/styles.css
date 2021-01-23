@@ -46,7 +46,6 @@ Home
 
 .home::after {
   content: '';
-  /* opacity: 0.1; */
   background: rgb(0 0 0/ 57%) url('./pat-photo.JPG') no-repeat fixed top;
   background-blend-mode: color;
   background-size: cover;

@@ -18,8 +18,8 @@ function Landing() {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <LandingSection />
-      <Testimonials />
-      <AboutMe />
+      {/* <Testimonials />
+      <AboutMe /> */}
     </>
   )
 }
