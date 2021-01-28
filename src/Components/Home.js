@@ -33,12 +33,6 @@ const Home = () => {
         <ColoredLine />
         <Grid xs={12}>
           <div className="home-btn-div">
-            {/* <button className="home-btn">
-              <a>Facebook</a>
-            </button>
-            <button className="home-btn">
-              <a>Instagram</a>
-            </button> */}
             <a
               href="https://www.facebook.com/profile.php?id=100007385869431"
               className="social-a"

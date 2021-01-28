@@ -7,6 +7,8 @@ import {
   LandingH1,
   LandingP,
   LandingBtnWrapper,
+  SocialLink,
+  SocialImg,
 } from './LandingElements'
 
 function LandingSection() {
@@ -24,15 +26,12 @@ function LandingSection() {
           regain strength, energy levels, and confidence in their bodies
         </LandingP>
         <LandingBtnWrapper>
-          <a
-            href="https://www.facebook.com/profile.php?id=100007385869431"
-            className="social-a"
-          >
-            <img src="images/fb.png" className="social-pic" />
-          </a>
-          <a href="https://www.instagram.com/yogamatpat/" className="social-a">
-            <img src="images/insta.png" className="social-pic" />
-          </a>
+          <SocialLink href="https://www.facebook.com/profile.php?id=100007385869431">
+            <SocialImg src="images/fb.png" />
+          </SocialLink>
+          <SocialLink href="https://www.instagram.com/yogamatpat/">
+            <SocialImg src="images/insta.png" />
+          </SocialLink>
         </LandingBtnWrapper>
       </LandingContent>
     </LandingContainer>

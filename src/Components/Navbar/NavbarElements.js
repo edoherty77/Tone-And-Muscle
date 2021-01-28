@@ -4,8 +4,8 @@ import styled from 'styled-components'
 
 export const Nav = styled.nav`
   background: ${({ scrollNav }) => (scrollNav ? '#000' : 'black')};
-  height: 14vh;
-  margin-top: -14vh;
+  height: 12vh;
+  margin-top: -12vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,8 +52,8 @@ export const BannerContainer = styled.div`
     margin: 0;
   }
   @media screen and (max-width: 300px) {
-    width: 270px
-    margin: 0
+    width: 270px;
+    margin: 0;
   }
   @media screen and (max-width: 280px) {
     display: none;
@@ -88,6 +88,7 @@ export const MobileIcon = styled.div`
 export const NavMenuLeft = styled.ul`
   display: flex;
   width: 50%;
+  height: 100%;
   list-style: none;
   justify-content: flex-start;
   align-items: center;
@@ -103,6 +104,7 @@ export const NavMenuRight = styled.ul`
   display: flex;
   list-style: none;
   width: 50%;
+  height: 100%;
   justify-content: flex-end;
   align-items: center;
   position: absolute;
@@ -147,7 +149,7 @@ export const NavBtn = styled.nav`
 
 export const NavBtnLink = styled(LinkR)`
   border-radius: 50px;
-  background: #eab67a;
+  background: #bcf97f;
   white-space: nowrap;
   padding: 10px 22px;
   color: black;

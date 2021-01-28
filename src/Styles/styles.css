@@ -1,19 +1,9 @@
-/* ----------------------------------------
-Base Styles
-------------------------------------------- */
-* {
-  box-sizing: border-box;
-}
-
-/* html {
-  font-size: 15px;
-} */
-
 body {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 500;
   -webkit-font-smoothing: antialiased;
   margin: 0;
+  padding: 0;
   letter-spacing: 0.02em;
   text-align: center;
   color: #44545e;
@@ -36,101 +26,6 @@ Layout
 ------------------------------------------- */
 
 /* ----------------------------------------
-Home
-------------------------------------------- */
-
-.home {
-  position: relative;
-  color: white;
-}
-
-.home::after {
-  content: '';
-  background: rgb(0 0 0/ 57%) url('./pat-photo.JPG') no-repeat fixed top;
-  background-blend-mode: color;
-  background-size: cover;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-  z-index: -1;
-  height: 100vh;
-}
-
-.home .home-div {
-  background-color: 'red';
-  height: 100vh;
-  width: 100vw;
-  align-items: center;
-  justify-content: space-evenly;
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  padding: 200px;
-}
-
-.home-h1 {
-  font-size: 60px;
-  text-transform: capitalize;
-  padding: 25px 100px 30px 100px;
-  color: white;
-  letter-spacing: 1px;
-  margin: 0;
-}
-
-.home-h2 {
-  font-size: 25px;
-  text-transform: uppercase;
-  padding: 0 125px 30px 125px;
-  color: #c5e8fd;
-  line-height: 1.1em;
-  letter-spacing: 1px;
-  margin: 0;
-}
-
-.home-btn-div {
-  display: flex;
-  justify-content: center;
-}
-
-.home-btn {
-  text-transform: uppercase;
-  margin: 0 30px;
-  width: 200px;
-  height: 65px;
-  background-color: rgb(0 0 0 / 30%);
-  color: white;
-  font-weight: 700;
-  letter-spacing: 2px;
-  border: white 2px solid;
-  padding: 40px;
-  display: flex;
-  align-items: center;
-  transition: ease 1s;
-  justify-content: center;
-}
-
-.social-a {
-  font-size: 60px;
-  margin: 20px;
-}
-
-.social-i {
-  color: white;
-}
-
-.fb-i {
-  color: #3a559f;
-}
-
-.social-pic {
-  width: 55px;
-  height: 55px;
-  border-radius: 15px;
-}
-
-/* ----------------------------------------
 Testimonials
 ------------------------------------------- */
 
@@ -138,6 +33,7 @@ Testimonials
   display: flex;
   flex-direction: row;
   padding-top: 80px;
+  position: relative;
   background-color: #f1f6fc;
   border-radius: 0px 0px 400px 40px;
   transform: skew();
@@ -271,24 +167,3 @@ About Me
 /* ----------------------------------------
 Phone
 ------------------------------------------- */
-
-@media (max-width: 648px) {
-  /* ----------------------------------------
-Nav
-------------------------------------------- */
-  /* .nav-links {
-    display: none;
-  }
-
-  .burger {
-    display: inline;
-  } */
-
-  /* ----------------------------------------
-Home
-------------------------------------------- */
-
-  .home-h2 {
-    display: none;
-  }
-}

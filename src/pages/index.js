@@ -6,6 +6,12 @@ import Navbar from '../Components/Navbar'
 import Testimonials from '../Components/Testimonials'
 import AboutMe from '../Components/AboutMe'
 import Sidebar from '../Components/Sidebar'
+import InfoSection from '../Components/InfoSection'
+import {
+  homeObjOne,
+  homeObjTwo,
+  homeObjThree,
+} from '../Components/InfoSection/Data'
 
 function Landing() {
   const [isOpen, setIsOpen] = useState(false)
@@ -18,8 +24,10 @@ function Landing() {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <LandingSection />
-      {/* <Testimonials />
-      <AboutMe /> */}
+      {/* <InfoSection {...homeObjOne} />
+      <InfoSection {...homeObjTwo} /> */}
+      <Testimonials />
+      {/* <AboutMe /> */}
     </>
   )
 }
