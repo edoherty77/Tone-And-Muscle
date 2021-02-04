@@ -21,6 +21,7 @@ export const Button = styled(Link)`
   transition: all 0.2s ease-in-out;
   height: 20px;
   width: 105px;
+  text-indent: 0;
 
   /* &:hover {
     transition: all 0.2s ease-in-out;

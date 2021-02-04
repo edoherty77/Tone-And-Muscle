@@ -1,6 +1,6 @@
 body {
   font-family: 'Josefin Sans', sans-serif;
-  font-weight: 500;
+  font-weight: 700;
   -webkit-font-smoothing: antialiased;
   margin: 0;
   padding: 0;
@@ -9,21 +9,6 @@ body {
   color: #44545e;
   outline: 0;
 }
-
-/* Responsive images */
-img {
-  max-width: 100%;
-}
-
-.bold {
-  font-weight: 700;
-  color: #7aaeea;
-  font-style: italic;
-}
-
-/* ----------------------------------------
-Layout
-------------------------------------------- */
 
 /* ----------------------------------------
 Testimonials
@@ -44,86 +29,10 @@ Testimonials
   opacity: 1;
 }
 
-.storyName {
-  font-size: 45px;
-  padding: 0;
-  margin: 0 0 10px;
-  /* background-color: peru; */
-}
-
-.storyText {
-  /* background-color: orchid; */
-  font-size: 20px;
-  line-height: 1.2em;
-}
-
-.react-responsive-modal-container {
-  outline: 0;
-}
-
-video {
-  outline: 0;
-}
-
-@media screen and (max-width: 500px) {
-  .successRight {
-    margin-bottom: 100px;
-  }
-  .successLeft {
-    margin-bottom: 100px;
-  }
-}
-
-/* ----------------------------------------
-About Me
-------------------------------------------- */
-
-.about-me {
-  position: relative;
-  font-size: 25px;
-  /* background-color: #f1f6fc; */
-  background-color: white;
-}
-
-.about-container {
-  /* display: flex; */
-  /* padding-top: 15px; */
-  /* background-color: pink; */
-}
-
-.about-pic-div {
-  display: flex;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
-  margin: 4px 30px 0 30px;
-  /* background-color: brown; */
-}
-
-.about-pic {
-  height: 80%;
-  background-color: #f1f6fc;
-  box-shadow: 0px 0px 20px 2px #5579a3;
-}
-
-.about-text-div {
-  padding: 50px;
-  /* background-color: sandybrown; */
-  justify-content: center;
-  align-items: center;
-}
-
-.about-text-div p {
-  padding-bottom: 20px;
-  line-height: 1.5em;
-  letter-spacing: 0.5px;
-  /* background-color: seagreen; */
-}
-
 /* ----------------------------------------
 Phone
 ------------------------------------------- */
-
+/* Hide and show testimonial stories */
 .show-enter {
   opacity: 0;
   transform: translateY(-5%);
@@ -140,4 +49,10 @@ Phone
   opacity: 0;
   transform: translateY(-5%);
   transition: opacity 300ms ease, transform 300ms ease;
+}
+
+/* Style for divider */
+
+.divider {
+  border-bottom: 2px black solid;
 }

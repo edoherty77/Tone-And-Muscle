@@ -93,11 +93,15 @@ export const Name = styled.h1`
   font-size: 48px;
   line-height: 1.1;
   font-weight: 600;
+  text-align: start;
+  text-indent: 0.75em;
   /* border: 1px green solid; */
   color: ${({ blackHeader }) => (blackHeader ? 'black' : '#7aaeea')};
 
   @media screen and (max-width: 890px) {
     margin-bottom: 20px;
+    text-align: center;
+    text-indent: 0;
   }
 
   @media screen and (max-width: 480px) {
@@ -123,6 +127,8 @@ export const Story = styled.p`
   height: fit-content;
   font-size: 20px;
   line-height: 24px;
+  text-indent: 2em;
+  text-align: start;
   color: ${({ darkText }) => (darkText ? '#010606' : '#fff')};
 
   @media screen and (max-width: 890px) {
@@ -148,6 +154,8 @@ export const MobileStory = styled.p`
   @media screen and (max-width: 480px) {
     max-width: 440px;
     height: fit-content;
+    text-align: start;
+    text-indent: 2em;
     font-size: 20px;
     line-height: 24px;
     color: ${({ darkText }) => (darkText ? '#010606' : '#fff')};

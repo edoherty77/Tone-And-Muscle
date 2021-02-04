@@ -62,6 +62,32 @@ const Navbar = ({ toggle }) => {
               </NavItem>
               <NavItem>
                 <NavLinks
+                  to="about"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                >
+                  About
+                </NavLinks>
+              </NavItem>
+              {/* <NavItem>
+                <NavLinks
+                  to="personal"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                >
+                  Personal
+                </NavLinks>
+              </NavItem> */}
+            </NavMenuLeft>
+            <NavMenuRight>
+              <NavItem>
+                <NavLinks
                   to="testies"
                   smooth={true}
                   duration={500}
@@ -70,20 +96,6 @@ const Navbar = ({ toggle }) => {
                   offset={-80}
                 >
                   Success Stories
-                </NavLinks>
-              </NavItem>
-            </NavMenuLeft>
-            <NavMenuRight>
-              <NavItem>
-                <NavLinks
-                  to="about"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
-                  About Me
                 </NavLinks>
               </NavItem>
               <NavBtn>

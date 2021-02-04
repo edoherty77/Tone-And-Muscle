@@ -1,6 +1,6 @@
 export const schena = {
   id: 'testies',
-  name: 'Mike Schena',
+  // name: 'Mike Schena',
   story:
     'Mike, an ex football player and long time gym go-er started with the Tone & Muscle Academy when he decided that he wanted to finally see things change for good. While he was super strong at some of the major lifts like squats, deadlifts, and bench press, he still wanted more. He wanted to lose the belly fat he had accumulated but still maintain all the muscle mass. Mike followed the TMA meal plans for 6 months, and a year and half later is currently still utilizing the training program. Down 60 lbs, and eating intuitively Mike is stronger all around than hes ever been.',
   buttonLabel: 'Get Started',
