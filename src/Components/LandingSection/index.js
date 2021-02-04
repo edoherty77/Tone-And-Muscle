@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Button } from '../ButtonElements'
+import React, { useState, useEffect } from 'react'
+import MobilePic from './pat-photo2.jpg'
 
 import {
   LandingContainer,
@@ -9,16 +9,28 @@ import {
   LandingBtnWrapper,
   SocialLink,
   SocialImg,
+  MobileImgWrp,
+  MobileImg,
 } from './LandingElements'
 
 function LandingSection() {
-  const [hover, setHover] = useState(false)
-
-  const onHover = () => {
-    setHover(!hover)
+  const [offsetY, setOffsetY] = useState(0)
+  const handleScroll = () => {
+    setOffsetY(window.pageYOffset)
   }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
   return (
     <LandingContainer id="home">
+      <MobileImgWrp>
+        <MobileImg
+          src={MobilePic}
+          style={{ transform: `translateY(${offsetY * 0.5}px)` }}
+        />
+      </MobileImgWrp>
       <LandingContent>
         <LandingH1>Find Your New Prime</LandingH1>
         <LandingP>

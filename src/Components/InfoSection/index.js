@@ -12,8 +12,10 @@ import {
   Column1,
   Column2,
   TextWrapper,
-  Heading,
-  Subtitle,
+  Name,
+  BtnWrap,
+  MobileStory,
+  Story,
   ImgWrap,
   Play,
   Img,
@@ -29,16 +31,16 @@ const InfoSection = ({
   aft,
   alt,
   alt2,
-  primary,
   darkText,
-  dark,
-  dark2,
   lightBg,
   imgStart,
-  lightText,
+  blackHeader,
+  dark,
+  primary,
 }) => {
   //State for modal
   const [isOpen, setOpen] = useState(false)
+  const [isShown, setShown] = useState(false)
 
   //Open and close functions for modals
   const onOpen = () => {
@@ -48,6 +50,11 @@ const InfoSection = ({
     setOpen(false)
   }
 
+  //Toggle story text
+  const toggleStory = () => {
+    setShown(!isShown)
+  }
+
   return (
     <>
       <InfoContainer lightBg={lightBg} id={id}>
@@ -55,8 +62,28 @@ const InfoSection = ({
           <InfoRow imgStart={imgStart}>
             <Column1>
               <TextWrapper>
-                <Heading lightText={lightText}>{name}</Heading>
-                <Subtitle darkText={darkText}>{story}</Subtitle>
+                <Name blackHeader={blackHeader}>{name}</Name>
+                <MobileStory isShown={isShown} darkText={darkText}>
+                  {story}
+                </MobileStory>
+                <BtnWrap>
+                  <Button
+                    onClick={toggleStory}
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact="true"
+                    offset={-80}
+                    primary={primary ? 1 : 0}
+                    dark={dark ? 1 : 0}
+                  >
+                    {isShown == false ? 'Read About It' : 'Close'}
+                  </Button>
+                </BtnWrap>
+
+                <Story darkText={darkText} isShown={isShown}>
+                  {story}
+                </Story>
               </TextWrapper>
             </Column1>
             <Column2>

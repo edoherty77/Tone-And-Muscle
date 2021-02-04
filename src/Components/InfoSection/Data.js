@@ -10,12 +10,11 @@ export const schena = {
   aft: '/images/Mike-LgAft.png',
   alt2: 'After Pic',
   imgStart: false,
+  darkText: true,
+  lightBg: false,
+  blackHeader: true,
   dark: true,
   primary: true,
-  darkText: false,
-  lightBg: false,
-  lightText: true,
-  lightTextDesc: true,
 }
 
 export const conway = {
@@ -28,13 +27,12 @@ export const conway = {
   alt: 'Before Pic',
   aft: '/images/Jack-LgAft.jpg',
   alt2: 'After Pic',
-  imgStart: false,
+  imgStart: true,
+  darkText: true,
+  lightBg: true,
+  blackHeader: true,
   dark: true,
   primary: true,
-  darkText: false,
-  lightBg: false,
-  lightText: true,
-  lightTextDesc: true,
 }
 
 export const poplaski = {
@@ -48,12 +46,11 @@ export const poplaski = {
   aft: '/images/Kevin-LgAft.png',
   alt2: 'After Pic',
   imgStart: false,
+  darkText: true,
+  lightBg: false,
+  blackHeader: true,
   dark: true,
   primary: true,
-  darkText: false,
-  lightBg: false,
-  lightText: true,
-  lightTextDesc: true,
 }
 
 export const bujacich = {
@@ -65,11 +62,10 @@ export const bujacich = {
   alt: 'Before Pic',
   aft: '/images/Alex-LgAft.png',
   alt2: 'After Pic',
-  imgStart: false,
+  imgStart: true,
+  darkText: true,
+  lightBg: true,
+  blackHeader: true,
   dark: true,
   primary: true,
-  darkText: false,
-  lightBg: false,
-  lightText: true,
-  lightTextDesc: true,
 }
