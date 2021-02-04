@@ -78,7 +78,7 @@ export const LandingContent = styled.div`
 `
 
 export const LandingH1 = styled.h1`
-  color: #fff;
+  color: #7aaeea;
   font-size: 48px;
   text-align: center;
 
@@ -88,6 +88,7 @@ export const LandingH1 = styled.h1`
 
   @media screen and (max-width: 480px) {
     font-size: 32px;
+    color: #fff;
   }
 `
 

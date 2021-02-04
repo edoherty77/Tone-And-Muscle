@@ -13,6 +13,7 @@ export const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 10;
+  margin-bottom: 0;
 
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;
@@ -95,6 +96,7 @@ export const NavMenuLeft = styled.ul`
   position: absolute;
   left: 50px;
   padding-left: 0;
+  margin: 0;
 
   @media screen and (max-width: 1100px) {
     display: none;
@@ -109,6 +111,7 @@ export const NavMenuRight = styled.ul`
   align-items: center;
   position: absolute;
   right: 50px;
+  margin: 0;
 
   @media screen and (max-width: 1100px) {
     display: none;
@@ -118,6 +121,7 @@ export const NavMenuRight = styled.ul`
 export const NavItem = styled.li`
   height: 10vh;
   padding: 0 20px 0 10px;
+  text-align: center;
 `
 
 export const NavLinks = styled(LinkS)`

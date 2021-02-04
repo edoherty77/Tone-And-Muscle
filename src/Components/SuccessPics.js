@@ -7,15 +7,15 @@ import Button from './Button'
 
 export default function SuccessPics({ beforePic, afterPic, onClick, name }) {
   return (
-    <div className="successLeft">
+    <div className="successRight">
       <div className="bgDiv">
         <img
           className="beforePic"
           src={beforePic}
-          width="225px"
+          width="200px"
           height="375px"
         />
-        <img className="afterPic" src={afterPic} width="225px" height="375px" />
+        <img className="afterPic" src={afterPic} width="200px" height="375px" />
       </div>
       <div className="buttonDiv">
         <FontAwesomeIcon

@@ -3,7 +3,7 @@ import React from 'react'
 import { FaFacebook } from 'react-icons/fa'
 import { FaInstagramSquare } from 'react-icons/fa'
 
-import '../Styles/styles.css'
+// import '../Styles/styles.css'
 import Grid from '@material-ui/core/Grid'
 
 const Home = () => {

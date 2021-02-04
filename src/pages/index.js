@@ -8,9 +8,10 @@ import AboutMe from '../Components/AboutMe'
 import Sidebar from '../Components/Sidebar'
 import InfoSection from '../Components/InfoSection'
 import {
-  homeObjOne,
-  homeObjTwo,
-  homeObjThree,
+  schena,
+  conway,
+  poplaski,
+  bujacich,
 } from '../Components/InfoSection/Data'
 
 function Landing() {
@@ -24,9 +25,11 @@ function Landing() {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <LandingSection />
-      {/* <InfoSection {...homeObjOne} />
-      <InfoSection {...homeObjTwo} /> */}
-      <Testimonials />
+      <InfoSection {...schena} />
+      <InfoSection {...conway} />
+      <InfoSection {...poplaski} />
+      <InfoSection {...bujacich} />
+      {/* <Testimonials /> */}
       {/* <AboutMe /> */}
     </>
   )

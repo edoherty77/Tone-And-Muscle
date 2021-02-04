@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Modal } from 'react-responsive-modal'
 import 'react-responsive-modal/styles.css'
 import ReactPlayer from 'react-player'
-import '../Styles/styles.css'
+// import '../Styles/styles.css'
 
 const Player = ({ style, url, open, onClose }) => {
   return (

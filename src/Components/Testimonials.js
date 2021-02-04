@@ -8,6 +8,11 @@ import Grid from '@material-ui/core/Grid'
 import Testimonial from './Testimonial'
 import SuccessPics from './SuccessPics'
 
+// import { Container, Row, Col } from 'react-bootstrap'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Container from 'react-bootstrap/Container'
+
 const text = {
   schena:
     'Mike, an ex football player and long time gym go-er started with the Tone & Muscle Academy when he decided that he wanted to finally see things change for good. While he was super strong at some of the major lifts like squats, deadlifts, and bench press, he still wanted more. He wanted to lose the belly fat he had accumulated but still maintain all the muscle mass. Mike followed the TMA meal plans for 6 months, and a year and half later is currently still utilizing the training program. Down 60 lbs, and eating intuitively Mike is stronger all around than hes ever been.',
@@ -54,77 +59,74 @@ const Testimonials = () => {
   }
   return (
     <section id="testies" className="testimonials">
-      <Grid container spacing={1}>
+      <Grid container>
+        <Grid className="test-left" item xs={12} lg={7}>
+          <Testimonial
+            name={'Mike Schena'}
+            story={text.schena}
+            open={isMikeOpen}
+            onClose={onMikeCloseModal}
+            url="videos/Mike.mp4"
+          />
+        </Grid>
         <Grid item xs={12} lg={5}>
           <SuccessPics
-            //fix proportion
             beforePic={'/images/Mike-LgBef.png'}
             afterPic={'/images/Mike-LgAft.png'}
             onClick={() => onMikeOpen('videos/Mike.mp4')}
           />
         </Grid>
+
         <Grid item xs={12} lg={7}>
-          <Testimonial name={'Mike Schena'} story={text.schena} />
-          <Player
-            url="videos/Mike.mp4"
-            open={isMikeOpen}
-            onClose={onMikeCloseModal}
+          <Testimonial
+            name={'Jack Conway'}
+            story={text.conway}
+            open={isJackOpen}
+            onClose={onJackCloseModal}
+            url="videos/Jack.mp4"
           />
         </Grid>
-
         <Grid item xs={12} lg={5}>
           <SuccessPics
             beforePic={'/images/Jack-LgBef.png'}
             afterPic={'/images/Jack-LgAft.jpg'}
-            //fix video
             onClick={() => onJackOpen('/videos/Jack.mp4')}
           />
         </Grid>
+
         <Grid item xs={12} lg={7}>
-          <Testimonial name={'Jack Conway'} story={text.conway} />
-          <Player
-            url="videos/Jack.mp4"
-            open={isJackOpen}
-            onClose={onJackCloseModal}
+          <Testimonial
+            name={'Kevin Poplaski'}
+            story={text.poplaski}
+            open={isKevinOpen}
+            onClose={onKevinCloseModal}
+            url="videos/Kevin.mp4"
           />
         </Grid>
         <Grid item xs={12} lg={5}>
           <SuccessPics
-            //correct photos
             beforePic={'/images/Kevin-LgBef.png'}
             afterPic={'/images/Kevin-LgAft.png'}
             onClick={() => onKevinOpen('/videos/Kevin.mp4')}
           />
         </Grid>
+
         <Grid item xs={12} lg={7}>
-          <Testimonial name={'Kevin Poplaski'} story={text.poplaski} />
-          <Player
-            url="videos/Kevin.mp4"
-            style={{ overlay: { outline: 0 } }}
-            open={isKevinOpen}
-            onClose={onKevinCloseModal}
-            outline="0"
+          <Testimonial
+            name={'Alex Bujacich'}
+            story={text.bujacich}
+            open={isAlexOpen}
+            onClose={onAlexCloseModal}
+            url="videos/Alex.mp4"
           />
         </Grid>
         <Grid item xs={12} lg={5}>
           <SuccessPics
-            //correct photos
             beforePic={'/images/Alex-LgBef.png'}
             afterPic={'/images/Alex-LgAft.png'}
             onClick={() => onAlexOpen('/videos/Alex.mp4')}
           />
         </Grid>
-        <Grid item xs={12} lg={7}>
-          <Testimonial name={'Alex Bujacich'} story={text.bujacich} />
-          <Player
-            url="videos/Alex.mp4"
-            style={{ overlay: { outline: 0 } }}
-            open={isAlexOpen}
-            onClose={onAlexCloseModal}
-            outline="0"
-          />
-        </Grid>
-        {/* add alex */}
       </Grid>
     </section>
   )

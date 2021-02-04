@@ -1,5 +1,8 @@
 import styled from 'styled-components'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlayCircle } from '@fortawesome/free-solid-svg-icons'
+
 export const InfoContainer = styled.div`
   color: #fff;
   background: ${({ lightBg }) => (lightBg ? '#f9f9f9' : '#010606')};
@@ -43,7 +46,7 @@ export const Column1 = styled.div`
 
 export const Column2 = styled.div`
   margin-bottom: 15px;
-  padding: 0 15px;
+  /* padding: 0 15px; */
   grid-area: col2;
 `
 
@@ -91,12 +94,33 @@ export const BtnWrap = styled.div`
 export const ImgWrap = styled.div`
   max-width: 555px;
   height: 100%;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+
+  @media screen and (max-width: 350px) {
+    max-width: 350px;
+  }
+`
+
+export const Play = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `
 
 export const Img = styled.img`
-  width: 100%;
+  width: 50%;
   margin-top: 0;
   margin-right: 0;
-  margin-left: 10px;
+  margin-left: 0;
+  padding-right: 0;
+`
+export const Img2 = styled.img`
+  width: 50%;
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 0;
   padding-right: 0;
 `

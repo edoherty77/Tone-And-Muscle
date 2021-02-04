@@ -46,7 +46,7 @@ Testimonials
   margin-bottom: 40px;
 }
 
-.successLeft {
+.successRight {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -85,15 +85,16 @@ Testimonials
   opacity: 1;
 }
 
-.successRight {
+.successLeft {
   /* background-color: yellow; */
   display: flex;
   flex-direction: column;
   height: 375px;
   justify-content: space-evenly;
+  align-items: center;
   padding: 30px;
   padding-right: 80px;
-  text-align: start;
+  /* text-align: start; */
   margin-bottom: 40px;
 }
 
@@ -116,6 +117,15 @@ Testimonials
 
 video {
   outline: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .successRight {
+    margin-bottom: 100px;
+  }
+  .successLeft {
+    margin-bottom: 100px;
+  }
 }
 
 /* ----------------------------------------

@@ -3,7 +3,7 @@ import { Modal } from 'react-responsive-modal'
 import 'react-responsive-modal/styles.css'
 import { Grid } from '@material-ui/core'
 import Button from './Button'
-import '../Styles/styles.css'
+// import '../Styles/styles.css'
 
 const AboutMe = () => {
   const [open, setOpen] = useState(false)

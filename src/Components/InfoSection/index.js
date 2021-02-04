@@ -1,5 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Button } from '../ButtonElements'
+import SuccessPics from '../SuccessPics'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlayCircle } from '@fortawesome/free-solid-svg-icons'
+import Player from '../Player'
+import 'react-responsive-modal/styles.css'
 import {
   InfoContainer,
   InfoWrapper,
@@ -7,31 +12,42 @@ import {
   Column1,
   Column2,
   TextWrapper,
-  TopLine,
   Heading,
   Subtitle,
-  BtnWrap,
   ImgWrap,
+  Play,
   Img,
+  Img2,
 } from './InfoElements'
 
 const InfoSection = ({
-  lightBg,
-  imgStart,
-  topLine,
-  lightText,
-  headline,
-  description,
-  buttonLabel,
-  img,
-  alt,
   id,
+  story,
+  name,
+  video,
+  bef,
+  aft,
+  alt,
+  alt2,
   primary,
   darkText,
   dark,
   dark2,
+  lightBg,
+  imgStart,
+  lightText,
 }) => {
-  console.log(primary)
+  //State for modal
+  const [isOpen, setOpen] = useState(false)
+
+  //Open and close functions for modals
+  const onOpen = () => {
+    setOpen(true)
+  }
+  const onCloseModal = () => {
+    setOpen(false)
+  }
+
   return (
     <>
       <InfoContainer lightBg={lightBg} id={id}>
@@ -39,30 +55,24 @@ const InfoSection = ({
           <InfoRow imgStart={imgStart}>
             <Column1>
               <TextWrapper>
-                <TopLine>{topLine}</TopLine>
-                <Heading lightText={lightText}>{headline}</Heading>
-                <Subtitle darkText={darkText}>{description}</Subtitle>
-                <BtnWrap>
-                  <Button
-                    to="home"
-                    smooth={true}
-                    duration={500}
-                    spy={true}
-                    exact="true"
-                    offset={-80}
-                    primary={primary ? 1 : 0}
-                    dark={dark ? 1 : 0}
-                    dark2={dark2 ? 1 : 0}
-                  >
-                    {buttonLabel}
-                  </Button>
-                </BtnWrap>
+                <Heading lightText={lightText}>{name}</Heading>
+                <Subtitle darkText={darkText}>{story}</Subtitle>
               </TextWrapper>
             </Column1>
             <Column2>
               <ImgWrap>
-                <Img src={img} alt={alt} />
+                <Play>
+                  <FontAwesomeIcon
+                    className="iconBtn"
+                    onClick={() => onOpen({ video })}
+                    icon={faPlayCircle}
+                    size="5x"
+                  />
+                </Play>
+                <Img src={bef} alt={alt} />
+                <Img2 src={aft} alt={alt2} />
               </ImgWrap>
+              <Player open={isOpen} onClose={onCloseModal} url={video} />
             </Column2>
           </InfoRow>
         </InfoWrapper>
