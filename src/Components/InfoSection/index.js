@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import { Button } from '../ButtonElements'
-import SuccessPics from '../SuccessPics'
+import { CSSTransition } from 'react-transition-group'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlayCircle } from '@fortawesome/free-solid-svg-icons'
 import Player from '../Player'
 import 'react-responsive-modal/styles.css'
+import '../../Styles/styles.css'
 import {
   InfoContainer,
   InfoWrapper,
@@ -40,7 +41,10 @@ const InfoSection = ({
 }) => {
   //State for modal
   const [isOpen, setOpen] = useState(false)
+
+  //State for story in mobile view
   const [isShown, setShown] = useState(false)
+  const [showButton, setShowButton] = useState(true)
 
   //Open and close functions for modals
   const onOpen = () => {
@@ -63,23 +67,53 @@ const InfoSection = ({
             <Column1>
               <TextWrapper>
                 <Name blackHeader={blackHeader}>{name}</Name>
-                <MobileStory isShown={isShown} darkText={darkText}>
-                  {story}
-                </MobileStory>
                 <BtnWrap>
-                  <Button
-                    onClick={toggleStory}
-                    smooth={true}
-                    duration={500}
-                    spy={true}
-                    exact="true"
-                    offset={-80}
-                    primary={primary ? 1 : 0}
-                    dark={dark ? 1 : 0}
-                  >
-                    {isShown == false ? 'Read About It' : 'Close'}
-                  </Button>
+                  {showButton && (
+                    <Button
+                      onClick={() => setShown(true)}
+                      smooth={true}
+                      duration={500}
+                      spy={true}
+                      exact="true"
+                      offset={-80}
+                      primary={primary ? 1 : 0}
+                      dark={dark ? 1 : 0}
+                    >
+                      Read About It
+                    </Button>
+                  )}
                 </BtnWrap>
+                <CSSTransition
+                  in={isShown}
+                  timeout={300}
+                  classNames="show"
+                  unmountOnExit
+                  onEnter={() => setShowButton(false)}
+                  onExited={() => setShowButton(true)}
+                >
+                  <MobileStory
+                    isShown={isShown}
+                    darkText={darkText}
+                    dismissible
+                    variant="primary"
+                    onClose={() => setShown(false)}
+                  >
+                    {story}
+                    <Button
+                      onClick={() => setShown(false)}
+                      smooth={true}
+                      duration={500}
+                      spy={true}
+                      exact="true"
+                      offset={-80}
+                      primary={primary ? 1 : 0}
+                      dark={dark ? 1 : 0}
+                      style={{ marginTop: '20px' }}
+                    >
+                      Close
+                    </Button>
+                  </MobileStory>
+                </CSSTransition>
 
                 <Story darkText={darkText} isShown={isShown}>
                   {story}

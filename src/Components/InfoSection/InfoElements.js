@@ -50,7 +50,6 @@ export const InfoRow = styled.div`
 `
 
 export const Column1 = styled.div`
-  background-color: 'red';
   /* margin-bottom: 15px; */
   /* border: 1px blue solid; */
   grid-area: col1;
@@ -142,16 +141,12 @@ export const Story = styled.p`
 `
 
 export const MobileStory = styled.p`
-  opacity: 0;
-  position: absolute;
-  /* display: none; */
-  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @media screen and (max-width: 480px) {
-    transition: opacity 0.2s linear;
     max-width: 440px;
-    opacity: ${({ isShown }) => (isShown ? 1 : 0)};
-    position: ${({ isShown }) => (isShown ? 'static' : 'absolute')};
     height: fit-content;
     font-size: 20px;
     line-height: 24px;

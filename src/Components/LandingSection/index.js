@@ -31,7 +31,7 @@ function LandingSection() {
           style={{ transform: `translateY(${offsetY * 0.5}px)` }}
         />
       </MobileImgWrp>
-      <LandingContent>
+      <LandingContent style={{ transform: `translateY(${offsetY * 0.3}px)` }}>
         <LandingH1>Find Your New Prime</LandingH1>
         <LandingP>
           A tailored, online coaching experience for former athletes looking to
