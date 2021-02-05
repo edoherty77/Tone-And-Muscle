@@ -53,12 +53,6 @@ const InfoSection = ({
   const onCloseModal = () => {
     setOpen(false)
   }
-
-  //Toggle story text
-  const toggleStory = () => {
-    setShown(!isShown)
-  }
-
   return (
     <>
       <InfoContainer lightBg={lightBg} id={id}>

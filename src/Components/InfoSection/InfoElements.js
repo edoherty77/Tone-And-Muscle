@@ -1,8 +1,5 @@
 import styled from 'styled-components'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlayCircle } from '@fortawesome/free-solid-svg-icons'
-
 export const InfoContainer = styled.div`
   color: #fff;
   background: ${({ lightBg }) => (lightBg ? 'white' : '#f1f6fc')};

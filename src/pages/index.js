@@ -27,7 +27,7 @@ function Landing() {
       <AboutSection />
       <InfoSection {...schena} />
       <InfoSection {...conway} />
-      <InfoSection {...poplaski} />
+      {/* <InfoSection {...poplaski} /> */}
       <InfoSection {...bujacich} />
     </>
   )

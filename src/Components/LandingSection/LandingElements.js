@@ -1,23 +1,23 @@
 import styled from 'styled-components'
-
 import LgPic from './pat-photo.JPG'
 
 import colors from '../../config/colors'
 
 export const LandingContainer = styled.div`
-  background: #0c0c0c;
+  background: #f1f6fc;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   position: relative;
-  z-index: 1;
+  z-index: 0;
   width: 100%;
-  /* border: black 2px solid; */
+  margin: 0;
 
   :before {
     content: '';
     position: absolute;
+    max-width: 100%;
     top: 0;
     left: 0;
     right: 0;
@@ -36,7 +36,7 @@ export const LandingContainer = styled.div`
         rgba(0, 0, 0, 0.6) 100%
       ),
       linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, transparent 100%);
-    z-index: 2;
+    z-index: -1;
   }
 
   :after {
@@ -52,6 +52,12 @@ export const LandingContainer = styled.div`
     z-index: -1;
     height: 100vh;
     width: 100%;
+  }
+  @media screen and (min-width: 931px) {
+    :before,
+    :after {
+      clip-path: polygon(0 0, 100% 0%, 100% 92%, 0 66%);
+    }
   }
 `
 
@@ -101,21 +107,56 @@ export const MobileImg = styled.img`
   background: #232a34;
 `
 
-export const LandingContent = styled.div`
-  z-index: 3;
-  max-width: 1200px;
+export const TopContainer = styled.div`
+  z-index: 1;
   position: absolute;
-  padding: 8px 24px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 100px;
+  justify-content: flex-end;
+  top: 12vh;
+  right: 0px;
+  /* border: green 1px solid; */
+  width: 100%;
+  height: 100%;
+`
+export const ImgContainer = styled.div`
+  position: relative;
+  top: 80px;
+  width: fit-content;
+  height: fit-content;
 
+  @media screen and (max-width: 1180px) {
+    display: none;
+  }
+`
+
+export const Img = styled.img`
+  width: 300px;
+  height: 300px;
+  border-radius: 150px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+`
+
+export const TextContainer = styled.div`
+  z-index: 1;
+  position: absolute;
+  margin: auto;
+  top: 100px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-width: 50%;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  @media screen and (max-width: 930px) {
+    max-width: 90%;
+    top: 125px;
+  }
   @media screen and (max-width: 480px) {
-    margin-top: 30px;
-    padding: 8px 0px;
-    /* border: black 2px solid; */
+    max-width: 100%;
+    top: 125px;
   }
 `
 
@@ -131,17 +172,14 @@ export const LandingH1 = styled.h1`
   @media screen and (max-width: 480px) {
     font-size: 35px;
     font-weight: bold;
-    /* text-transform: uppercase; */
     max-width: 98%;
-    /* color: ${colors.secondary}; */
-    /* border: blue 1px solid; */
     color: white;
   }
 `
 
 export const LandingP = styled.p`
   margin-top: 24px;
-  color: #fff;
+  color: white;
   font-size: 24px;
   text-align: center;
   max-width: 600px;
@@ -165,14 +203,80 @@ export const LandingBtnWrapper = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  /* z-index: 1; */
 `
 export const SocialLink = styled.a`
   font-size: 60px;
   margin: 20px;
+  /* z-index: 3; */
 `
 
 export const SocialImg = styled.img`
   width: 55px;
   height: 55px;
   border-radius: 15px;
+  /* z-index: 3; */
+`
+
+export const StoryContainer = styled.div`
+  /* z-index: 3; */
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  /* border: blue 2px solid; */
+  height: 100%;
+  padding: 20px;
+
+  @media screen and (max-width: 930px) {
+    display: none;
+  }
+`
+
+export const LeftContainer = styled.div`
+  position: relative;
+  /* border: solid red 1px; */
+  display: flex;
+
+  @media screen and (max-width: 450px) {
+  }
+`
+
+export const Play = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`
+
+export const StoryImg = styled.img`
+  width: 150px;
+  height: auto;
+  border: grey 2px solid;
+  /* margin: 5px; */
+`
+
+export const RightContainer = styled.div`
+  /* border: solid green 1px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 20px 0 0 20px;
+  max-width: 30%;
+
+  @media screen and (max-width: 450px) {
+  }
+`
+
+export const RightHeader = styled.h1`
+  align-self: flex-start;
+  color: black;
+`
+export const RightText = styled.p`
+  text-align: start;
+  font-size: 22px;
+  color: black;
+  margin-top: 15px;
 `
