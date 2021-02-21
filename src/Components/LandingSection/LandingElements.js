@@ -56,7 +56,7 @@ export const LandingContainer = styled.div`
   @media screen and (min-width: 931px) {
     :before,
     :after {
-      clip-path: polygon(0 0, 100% 0%, 100% 92%, 0 66%);
+      /* clip-path: polygon(0 0, 100% 0%, 100% 92%, 0 66%); */
     }
   }
 `
@@ -86,7 +86,7 @@ export const MobileImgWrp = styled.div`
           rgba(0, 0, 0, 0.6) 100%
         ),
         linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, transparent 100%);
-      z-index: 2;
+      z-index: 1;
     }
     display: inline;
     position: absolute;
@@ -97,6 +97,7 @@ export const MobileImgWrp = styled.div`
     width: 100%;
     height: 100%;
     overflow: hidden;
+    z-index: 1;
   }
 `
 
@@ -107,43 +108,11 @@ export const MobileImg = styled.img`
   background: #232a34;
 `
 
-export const TopContainer = styled.div`
-  z-index: 1;
-  position: absolute;
-  display: flex;
-  justify-content: flex-end;
-  top: 12vh;
-  right: 0px;
-  /* border: green 1px solid; */
-  width: 100%;
-  height: 100%;
-`
-export const ImgContainer = styled.div`
-  position: relative;
-  top: 80px;
-  width: fit-content;
-  height: fit-content;
-
-  @media screen and (max-width: 1180px) {
-    display: none;
-  }
-`
-
-export const Img = styled.img`
-  width: 300px;
-  height: 300px;
-  border-radius: 150px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-`
-
 export const TextContainer = styled.div`
   z-index: 1;
-  position: absolute;
+
   margin: auto;
-  top: 100px;
-  left: 0;
-  bottom: 0;
-  right: 0;
+
   max-width: 50%;
 
   display: flex;
@@ -183,6 +152,7 @@ export const LandingP = styled.p`
   font-size: 24px;
   text-align: center;
   max-width: 600px;
+  font-size: 30px;
 
   @media screen and (max-width: 768px) {
     font-size: 24px;
@@ -219,14 +189,13 @@ export const SocialImg = styled.img`
 `
 
 export const StoryContainer = styled.div`
-  /* z-index: 3; */
+  z-index: auto;
   width: 100%;
-  position: relative;
+  position: absolute;
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
   /* border: blue 2px solid; */
-  height: 100%;
+  bottom: 0;
   padding: 20px;
 
   @media screen and (max-width: 930px) {
@@ -253,20 +222,23 @@ export const Play = styled.div`
 export const StoryImg = styled.img`
   width: 150px;
   height: auto;
-  border: grey 2px solid;
+  /* border: grey 2px solid; */
   /* margin: 5px; */
 `
 
 export const RightContainer = styled.div`
+  position: relative;
   /* border: solid green 1px; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-evenly;
   padding: 20px 0 0 20px;
   max-width: 30%;
 
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 1500px) {
+    justify-content: flex-end;
+    max-width: 50%;
   }
 `
 

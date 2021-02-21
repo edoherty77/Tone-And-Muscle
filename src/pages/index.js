@@ -6,12 +6,6 @@ import AboutMe from '../Components/AboutMe'
 import Sidebar from '../Components/Sidebar'
 import InfoSection from '../Components/InfoSection'
 import AboutSection from '../Components/AboutSection'
-import {
-  schena,
-  conway,
-  poplaski,
-  bujacich,
-} from '../Components/InfoSection/Data'
 
 function Landing() {
   const [isOpen, setIsOpen] = useState(false)
@@ -25,10 +19,7 @@ function Landing() {
       <Navbar toggle={toggle} />
       <LandingSection />
       <AboutSection />
-      <InfoSection {...schena} />
-      <InfoSection {...conway} />
-      {/* <InfoSection {...poplaski} /> */}
-      <InfoSection {...bujacich} />
+      <InfoSection />
     </>
   )
 }
