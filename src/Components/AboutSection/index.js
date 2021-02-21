@@ -1,76 +1,85 @@
 import React, { useState } from 'react'
-
+import AboutPic from './pat-photo3.png'
 import '../../Styles/styles.css'
 import {
   AboutContainer,
+  CatchContainer,
+  CatchText,
+  ImgContainer,
+  AboutImg,
   InfoWrapper,
-  InfoRow,
-  Column1,
-  LeftWrapper,
+  HeaderContainer,
   Header,
-  Content,
-  Divider,
-  Column2,
-  RightWrapper,
-  Img,
-  CardInfo,
-  Name,
-  Title,
+  InfoContainer,
+  RightContainer,
+  InfoHeader,
+  InfoText,
 } from './AboutElements'
 
 const PersonalSection = () => {
   return (
     <>
+      <CatchContainer>
+        <CatchText>
+          Not sure what to do in order to get your weight down? Tired of feeling
+          guilty about eating certain foods? And at the same time, do you want
+          to find a sustainable training routine that you can take with you for
+          the rest of your life? Well, you’ve come to the right place
+        </CatchText>
+      </CatchContainer>
       <AboutContainer id="about">
+        <ImgContainer>
+          <AboutImg src={AboutPic} />
+        </ImgContainer>
         <InfoWrapper>
-          <InfoRow>
-            <Column1>
-              <LeftWrapper>
-                <Img src="images/pat-photo1.png" />
-                <Header>ABOUT</Header>
-                <CardInfo>
-                  <Content>
-                    I created the Tone & Muscle Academy because I knew people
-                    were struggling. I knew people were confused on what to eat
-                    and how to exercise to create long lasting physiques they
-                    were proud of. With so much information and options in the
-                    market, I saw that people were confused, I wanted to provide
-                    people with easily implementable strategies and constant
-                    support from beginning to the end of their journey. Setting
-                    goals along the way and celebrating small wins is what has
-                    created a positive culture in the TMA community.
-                  </Content>
-                </CardInfo>
-              </LeftWrapper>
-            </Column1>
-            <Divider />
-            <Column2 id="personal">
-              <RightWrapper>
-                <Img src="images/pat-photo3.png" />
-                <Header>MEET YOUR TRAINER</Header>
-                <CardInfo>
-                  <Name>Pat Doherty</Name>
-                  <Title>FOUNDER AND HEAD COACH</Title>
-                  <Content>
-                    <span className="bold">Growing up as an athlete</span> I
-                    spent a lot of my time either on the field or on the mat.
-                    Playing sports was my passion, both scholastic and
-                    recreational. From playing dodgeball in elementary school to
-                    wrestling in college, I have always thrived in{' '}
-                    <span className="bold">competitive situations</span> that
-                    require skill, strength and speed.
-                    <br />I always managed to stay on the field and give 100% no
-                    matter what sport or time of year I competed in. However,
-                    tearing my meniscus in my right knee during a college
-                    wrestling tournament would change that. It was the beginning
-                    of a long line of
-                    <span className="bold">injuries that plagued me</span> over
-                    the next 4 years.
-                  </Content>
-                </CardInfo>
-              </RightWrapper>
-            </Column2>
-          </InfoRow>
+          <HeaderContainer>
+            <Header>The 101 Course </Header>
+          </HeaderContainer>
+          <RightContainer>
+            <InfoContainer>
+              <InfoHeader>What is the 101 Course?</InfoHeader>
+              <InfoText>
+                The 101 course is the introductory online coaching program for
+                those who want to see a 15-20 lb fat loss while building muscle
+                through an at home exercise program.. Once accepted, new members
+                get to create goals for themselves and then follow a 15 week
+                customized nutrition and training program in order to achieve
+                what they set out for. It is the beginning of a multi-program
+                journey where members are taught (and held accountable) to
+                experience what life is like with sustainable eating and
+                training habits placed into their daily schedule....It’s like
+                going back to school for your but this time for your body.
+              </InfoText>
+            </InfoContainer>
+            <InfoContainer>
+              <InfoHeader>Who is the 101 Course for?</InfoHeader>
+              <InfoText>
+                Our first level course is for people who want to take the
+                guesswork out of losing body fat while building muscle, forever,
+                period. This program is for people who have tried multiple
+                strategies with no luck, have doubts about whether they can find
+                something sustainable, but still haven’t given up on creating
+                the body they’ve always wanted.{' '}
+              </InfoText>
+            </InfoContainer>
+            <InfoContainer>
+              <InfoHeader>Why does it work?</InfoHeader>
+              <InfoText>
+                The TMA programs work because they are reasonable and easy to
+                follow. Plain and simple. We understand that you’re not trying
+                to be a bodybuilder, and that you have a life outside of
+                exercise. However, we do know that you want to feel great and
+                look great while balancing your work and personal life, so
+                that’s where we come in. In the 101 Course, we first show you
+                the roadmap so you know what your long term journey looks like.
+                We understand that permanent, sustainable changes take more than
+                a few months, so we want you to know we’re prepared for that.
+                After that we give you small action steps for you to take on a
+                weekly basis and stay in the corner with you every step of the
+                way until you’ve gotten what you came for.
+              </InfoText>
+            </InfoContainer>
+          </RightContainer>
         </InfoWrapper>
       </AboutContainer>
     </>

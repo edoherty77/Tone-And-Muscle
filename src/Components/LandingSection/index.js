@@ -13,16 +13,7 @@ import {
   SocialImg,
   MobileImgWrp,
   MobileImg,
-  ImgContainer,
   TextContainer,
-  Img,
-  StoryContainer,
-  LeftContainer,
-  RightContainer,
-  StoryImg,
-  RightHeader,
-  RightText,
-  Play,
 } from './LandingElements'
 
 import Player from '../Player'
@@ -56,7 +47,7 @@ function LandingSection() {
         />
       </MobileImgWrp>
 
-      <TextContainer style={{ transform: `translateY(${offsetY * 0.4}px)` }}>
+      <TextContainer style={{ transform: `translateY(${offsetY * 0.3}px)` }}>
         <LandingH1>Find Your New Prime</LandingH1>
         <LandingP>
           A tailored, online coaching experience for former athletes looking to
