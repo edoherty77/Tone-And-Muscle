@@ -5,7 +5,7 @@ import colors from '../config/colors'
 
 export const Button = styled(Link)`
   border-radius: 50px;
-  background: ${({ primary }) => (primary ? colors.secondary : 'white')};
+  background: ${({ primary }) => (primary ? colors.red : 'white')};
   /* background: ${({ primary }) => (primary ? '#E6EA7A' : 'white')}; */
   white-space: nowrap;
   padding: ${({ big }) => (big ? '14px 48px' : '12px 30px')};

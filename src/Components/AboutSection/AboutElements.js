@@ -101,6 +101,7 @@ export const HeaderContainer = styled.div`
 `
 
 export const Header = styled.h1`
+  text-align: center;
   font-size: 40px;
   font-weight: 600;
   text-transform: uppercase;

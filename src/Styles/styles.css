@@ -7,13 +7,13 @@ body {
   margin: 0;
   padding: 0;
   letter-spacing: 0.02em;
-  text-align: center;
+  /* text-align: center; */
   color: black;
   outline: 0;
 }
 
 /* ----------------------------------------
-Testimonials
+Player
 ------------------------------------------- */
 
 .iconBtn {
@@ -53,18 +53,15 @@ Modal
 .MuiDialog-root {
   height: 90vh;
   margin: auto;
-  width: fit-content;
+  /* width: fit-content; */
   /* background-color: red; */
 }
 
-.MuiDialog-container {
-  padding: 0px;
-  background-color: #f1f6fc;
-}
-
-.MuiDialog-paper {
-  background-color: blue;
-  padding: 30px;
+.closeIcon {
+  cursor: pointer;
+  border-radius: 150px;
+  color: #ea7e7a;
+  margin-right: 10px;
 }
 
 @media screen and (max-width: 600px) {
@@ -75,6 +72,12 @@ Modal
   .MuiDialog-container {
     padding: 0px;
     background-color: transparent;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .closeIcon {
+    margin-right: 0px;
   }
 }
 

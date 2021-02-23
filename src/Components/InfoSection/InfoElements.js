@@ -3,29 +3,37 @@ import styled from 'styled-components'
 export const HeaderContainer = styled.div`
   background-color: #f1f6fc;
   margin: auto;
-  margin-bottom: 35px;
-  width: 30%;
+  margin-bottom: 75px;
+  width: 40%;
   height: 30px;
 
   @media screen and (max-width: 850px) {
-    margin: 30px auto;
+    /* display: inline; */
+    /* background-color: white; */
+    margin: 40px auto;
     width: 65%;
+    height: 30px;
   }
 
-  @media screen and (max-width: 450px) {
-    margin: 30px auto;
+  @media screen and (max-width: 700px) {
     width: 75%;
   }
 `
 
 export const Header = styled.h1`
-  /* border: 1px dashed red; */
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
   text-transform: uppercase;
-  transform: translateY(-25px);
-  color: black;
+  letter-spacing: 0.2em;
+  transform: translateY(-30px);
+
+  @media screen and (max-width: 600px) {
+    letter-spacing: 0.01em;
+  }
 
   @media screen and (max-width: 450px) {
-    font-size: 25px;
+    font-size: 35px;
   }
 `
 

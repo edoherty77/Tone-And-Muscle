@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import colors from '../../config/colors'
 
 export const CatchContainer = styled.div`
   padding: 3% 10% 0 10%;
@@ -10,7 +11,7 @@ export const CatchContainer = styled.div`
 export const CatchText = styled.p`
   font-size: 25px;
   line-height: 1.3em;
-  color: #7aaeea;
+  color: ${colors.primary};
   font-weight: 800;
 
   @media screen and (max-width: 480px) {
@@ -23,7 +24,7 @@ export const AboutContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 4fr;
   box-shadow: 0px 0px 20px 2px gray;
-  background: #f1f6fc;
+  background: ${colors.background};
   padding: 120px;
 
   margin: 80px;
@@ -114,6 +115,7 @@ export const HeaderContainer = styled.div`
 `
 
 export const Header = styled.h1`
+  text-align: center;
   font-size: 40px;
   font-weight: 600;
   text-transform: uppercase;
@@ -149,7 +151,6 @@ export const TextContainer = styled.div`
   align-items: flex-start;
   background-color: white;
 
-  /* border: 1px solid black; */
   padding: 30px 50px;
 
   @media screen and (max-width: 850px) {
@@ -161,10 +162,6 @@ export const TextContainer = styled.div`
   }
 `
 
-export const ModalHeader = styled.h1`
-  margin-bottom: 5px;
-  text-align: left;
-`
 export const InfoText = styled.p`
   text-align: start;
   font-size: 20px;
@@ -189,22 +186,10 @@ export const ButtonContainer = styled.div`
   }
 `
 
-export const ModalContainer = styled.div`
-  background-color: white;
-  /* padding: 30px; */
-`
-
-export const ModalText = styled.p`
-  text-align: start;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 1.2em;
-  letter-spacing: 0.05em;
-  margin-bottom: 20px;
-
-  @media screen and (max-width: 450px) {
-    letter-spacing: 0;
-    /* text-align: center; */
-    font-size: 18px;
-  }
+export const IconContainer = styled.div`
+  position: fixed;
+  /* text-align: right; */
+  /* top: 10px; */
+  right: 0px;
+  background-color: red;
 `
