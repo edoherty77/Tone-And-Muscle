@@ -16,8 +16,10 @@ export const CatchText = styled.p`
   font-weight: 800;
 
   @media screen and (max-width: 480px) {
+    text-align: justify;
     font-size: 20px;
     line-height: 1.1em;
+    font-weight: 600;
   }
 `
 
@@ -47,6 +49,9 @@ export const AboutContainer = styled.div`
   @media screen and (max-width: 600px) {
     margin: 50px 10px;
   }
+  @media screen and (max-width: 480px) {
+    margin: 10px;
+  }
 `
 
 export const MobileHeaderContainer = styled.div`
@@ -58,7 +63,7 @@ export const MobileHeaderContainer = styled.div`
     /* background-color: white; */
     margin: 40px auto 0px;
     width: 65%;
-    height: 30px;
+    height: 40px;
   }
 
   @media screen and (max-width: 450px) {
@@ -110,7 +115,7 @@ export const HeaderContainer = styled.div`
   margin: auto;
   margin-bottom: 75px;
   width: 50%;
-  height: 30px;
+  height: 40px;
 
   @media screen and (max-width: 850px) {
     display: none;

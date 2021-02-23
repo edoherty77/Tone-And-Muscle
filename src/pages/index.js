@@ -4,7 +4,7 @@ import LandingSection from '../Components/LandingSection'
 import Navbar from '../Components/Navbar'
 
 import Sidebar from '../Components/Sidebar'
-import InfoSection from '../Components/InfoSection'
+import TestSection from '../Components/TestSection'
 import AboutSection from '../Components/AboutSection'
 import BioSection from '../Components/BioSection'
 
@@ -21,7 +21,7 @@ function Landing() {
       <LandingSection />
       <BioSection />
       <AboutSection />
-      <InfoSection />
+      <TestSection />
     </>
   )
 }

@@ -18,10 +18,11 @@ export const Button = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.2s ease-in-out;
+  /* transition: all 0.2s ease-in-out; */
   height: 20px;
   width: 105px;
   text-indent: 0;
+  /* z-index: 0; */
 
   /* &:hover {
     transition: all 0.2s ease-in-out;

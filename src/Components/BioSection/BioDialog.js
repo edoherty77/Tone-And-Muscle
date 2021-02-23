@@ -27,8 +27,7 @@ const BioDialog = ({ Transition, open, onClose }) => {
         <DialogContent dividers={true} classes={{ root: 'bio-dialog-content' }}>
           <DialogContentText>
             {' '}
-            Hi, my names is Pat, and{' '}
-            <span className="bold">growing up as an athlete</span> I spent a lot
+            <span className="bold">Growing up as an athlete</span> I spent a lot
             of my time either on the field or on the mat. Playing sports was my
             passion, both scholastic and recreational. From playing dodgeball in
             elementary school to wrestling in college, I have always thrived in{' '}
@@ -85,7 +84,7 @@ const BioDialog = ({ Transition, open, onClose }) => {
             <span className="bold"> journey of strength and mobility</span> that
             gives them the freedom to move like they were a kid again.
           </DialogContentText>
-          <DialogContentText>
+          <DialogContentText classes={{ root: 'last-p' }}>
             So if you find that you feel{' '}
             <span className="bold">lost or stuck</span> and need to start moving
             in the other direction, I’m here to help. I’ll help you skip the 10

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import colors from '../../config/colors'
 
 export const CatchContainer = styled.div`
   padding: 3% 10% 0 10%;
@@ -34,6 +35,7 @@ export const AboutContainer = styled.div`
 
   @media screen and (max-width: 850px) {
     display: flex;
+    background-color: white;
     grid-template-columns: 1fr 1fr;
     flex-direction: column;
     padding: 0;
@@ -49,16 +51,12 @@ export const MobileHeaderContainer = styled.div`
 
   @media screen and (max-width: 850px) {
     display: inline;
-    background-color: white;
-    margin: 40px auto 0px;
-    width: 85%;
-    height: 30px;
-  }
+    background-color: #f1f6fc;
 
-  /* @media screen and (max-width: 450px) {
     margin: 40px auto 0px;
-    width: 85%;
-  } */
+    width: 65%;
+    height: 40px;
+  }
 
   @media screen and (max-width: 450px) {
     margin: 40px auto 0px;
@@ -90,7 +88,8 @@ export const HeaderContainer = styled.div`
   margin: auto;
   margin-bottom: 75px;
   width: 55%;
-  height: 30px;
+  height: 40px;
+  /* background-color: blue; */
 
   @media screen and (max-width: 1150px) {
     width: 70%;
@@ -149,25 +148,57 @@ export const TextContainer = styled.div`
   padding: 30px 50px;
 
   @media screen and (max-width: 850px) {
-    background: #f1f6fc;
+    background: white;
   }
 
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 675px) {
     padding: 30px;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 15px;
   }
 `
 
 export const InfoHeader = styled.h1`
-  margin-bottom: 5px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  padding-left: 3px;
+
+  @media screen and (max-width: 850px) {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 15px;
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 25px;
+    padding-left: 0;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
 `
 export const InfoText = styled.p`
   text-align: start;
-  font-size: 20px;
+  font-size: 17px;
   line-height: 1.2em;
   letter-spacing: 0.05em;
+  font-weight: 500;
+  border-left: ${colors.primary} 2px solid;
+  padding-left: 15px;
+
+  @media screen and (max-width: 500px) {
+    /* font-size: 13px; */
+    letter-spacing: 0;
+    border-left: none;
+    padding-left: 0;
+    text-align: justify;
+  }
 
   @media screen and (max-width: 450px) {
-    letter-spacing: 0;
   }
 `
 

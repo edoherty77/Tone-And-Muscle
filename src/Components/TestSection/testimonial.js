@@ -4,10 +4,9 @@ import { CSSTransition } from 'react-transition-group'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlayCircle } from '@fortawesome/free-solid-svg-icons'
 import Player from '../Player'
-import 'react-responsive-modal/styles.css'
 import '../../Styles/styles.css'
 import {
-  InfoContainer,
+  TestContainer,
   InfoWrapper,
   InfoRow,
   Column1,
@@ -21,7 +20,7 @@ import {
   Play,
   Img,
   Img2,
-} from './InfoElements'
+} from './TestElements'
 
 const Testimonial = ({
   id,
@@ -35,7 +34,6 @@ const Testimonial = ({
   darkText,
   lightBg,
   imgStart,
-  blackHeader,
   dark,
   primary,
 }) => {
@@ -59,12 +57,12 @@ const Testimonial = ({
   }
   return (
     <>
-      <InfoContainer lightBg={lightBg} id={id}>
+      <TestContainer lightBg={lightBg} id={id}>
         <InfoWrapper>
           <InfoRow imgStart={imgStart}>
             <Column1>
-              <TextWrapper>
-                <Name blackHeader={blackHeader}>{name}</Name>
+              <TextWrapper imgStart={imgStart}>
+                {/* <Name blackHeader={blackHeader}>{name}</Name> */}
 
                 <BtnWrap>
                   {showButton && (
@@ -91,18 +89,17 @@ const Testimonial = ({
                   onExited={() => setShowButton(true)}
                 >
                   <MobileStory
-                    isShown={isShown}
+                    // isShown={isShown}
                     darkText={darkText}
                     dismissible
                     variant="primary"
-                    onClose={() => setShown(false)}
+                    // onClose={() => setShown(false)}
                   >
                     {story}
                     <Button
                       onClick={() => setShown(false)}
                       smooth={true}
-                      duration={500}
-                      spy={true}
+                      // spy={true}
                       exact="true"
                       offset={-80}
                       primary={primary ? 1 : 0}
@@ -114,7 +111,11 @@ const Testimonial = ({
                   </MobileStory>
                 </CSSTransition>
 
-                <Story darkText={darkText} isShown={isShown}>
+                <Story
+                  darkText={darkText}
+                  isShown={isShown}
+                  imgStart={imgStart}
+                >
                   {story}
                 </Story>
               </TextWrapper>
@@ -141,7 +142,7 @@ const Testimonial = ({
             </Column2>
           </InfoRow>
         </InfoWrapper>
-      </InfoContainer>
+      </TestContainer>
     </>
   )
 }

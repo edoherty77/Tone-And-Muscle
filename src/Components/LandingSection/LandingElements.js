@@ -1,5 +1,12 @@
 import styled from 'styled-components'
 import LgPic from './pat-photo.JPG'
+import {
+  useSpring,
+  animated,
+  useTransition,
+  config,
+  useChain,
+} from 'react-spring'
 
 import colors from '../../config/colors'
 
@@ -108,7 +115,7 @@ export const MobileImg = styled.img`
   background: #232a34;
 `
 
-export const TextContainer = styled.div`
+export const TextContainer = styled(animated.div)`
   z-index: 1;
   /* border: 1px black solid; */
   margin: auto;
@@ -127,7 +134,7 @@ export const TextContainer = styled.div`
   }
 `
 
-export const LandingH1 = styled.h1`
+export const LandingH1 = styled(animated.h1)`
   color: #7aaeea;
   font-size: 48px;
   text-align: center;
@@ -150,7 +157,7 @@ export const LandingH1 = styled.h1`
   }
 `
 
-export const LandingP = styled.p`
+export const LandingP = styled(animated.p)`
   margin-top: 24px;
   color: white;
   font-size: 24px;
@@ -175,7 +182,7 @@ export const LandingP = styled.p`
     max-width: 98%;
   }
 `
-export const LandingBtnWrapper = styled.div`
+export const LandingBtnWrapper = styled(animated.div)`
   margin-top: 32px;
   display: flex;
   flex-direction: row;

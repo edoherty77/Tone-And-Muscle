@@ -93,7 +93,7 @@ Text
 .bold {
   color: #7aaeea;
   font-weight: 600;
-  font-style: normal;
+  font-style: italic;
 }
 
 .ital {
@@ -115,19 +115,26 @@ Bio Dialogs
   font-family: 'Poppins', sans-serif;
 }
 
+.bio-dialog .bio-dialog-content {
+  padding: 30px;
+}
+
 .bio-dialog .MuiDialogContentText-root {
   font-family: 'Poppins', sans-serif;
-  font-weight: 600;
+  font-weight: 500;
+  color: black;
+  line-height: 1.3em;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+.bio-dialog .last-p {
+  margin-bottom: 0;
 }
 
 @media screen and (max-width: 600px) {
   .bio-dialog {
     height: 80vh;
-  }
-
-  .bio-dialog-content {
-    padding: 0px;
-    /* background-color: transparent; */
   }
 }
 
@@ -136,27 +143,30 @@ Bio Dialogs
     margin: auto 10px;
   }
 
+  .bio-dialog .bio-dialog-content {
+    padding: 25px;
+  }
+
   .bio-dialog .MuiDialogContentText-root {
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     text-align: justify;
-    /* font-size: 20px; */
-    /* background-color: turquoise; */
   }
 }
 
 /* ----------------------------------------
-Phone
+Testimonial Text on Phone
 ------------------------------------------- */
 /* Hide and show testimonial stories */
 .show-enter {
   opacity: 0;
+  position: relative;
   transform: translateY(-5%);
 }
 .show-enter-active {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 300ms ease, transform 300ms ease;
+  transition: opacity 200ms ease-in, transform 200ms ease-in;
 }
 .show-exit {
   opacity: 1;
@@ -164,7 +174,7 @@ Phone
 .show-exit-active {
   opacity: 0;
   transform: translateY(-5%);
-  transition: opacity 300ms ease, transform 300ms ease;
+  transition: opacity 100ms ease-in, transform 100ms ease-in;
 }
 
 /* Style for divider */
