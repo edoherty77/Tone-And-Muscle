@@ -1,31 +1,51 @@
 import React, { useState } from 'react'
 import { Modal } from 'react-responsive-modal'
+import {
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogTitle,
+} from '@material-ui/core'
 import 'react-responsive-modal/styles.css'
 import ReactPlayer from 'react-player'
+import Button from './Button'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTimesCircle } from '@fortawesome/free-regular-svg-icons'
+import '../Styles/styles.css'
 
-const Player = ({ style, url, open, onClose }) => {
+const Player = ({ name, url, open, onClose }) => {
   return (
-    <Modal
-      classNames={{ overlay: { background: 'black' } }}
-      styles={{
-        overlay: { background: 'rgb(0 0 0 / 45%)', outline: 0 },
-        modal: { background: 'rgb(0 0 0 / 55%)', outline: 0 },
-        closeButton: { background: 'white', outline: 0, borderRadius: 25 },
-      }}
-      style={{ overlay: 0 }}
+    <Dialog
       open={open}
       onClose={onClose}
-      center
-      outline="0"
+      // fullWidth={true}
+      classes={{ root: 'player-dialog' }}
     >
-      <ReactPlayer
-        playing="true"
-        style={{ video: { overlay: 0 } }}
-        controls={true}
-        width="300px"
-        url={url}
-      />
-    </Modal>
+      {/* <DialogTitle>{name}</DialogTitle> */}
+      <DialogContent dividers={true} classes={{ root: 'player-container' }}>
+        <FontAwesomeIcon
+          className="closeIcon"
+          onClick={onClose}
+          icon={faTimesCircle}
+          size="2x"
+        />
+        <ReactPlayer
+          playing={false}
+          className="react-player"
+          playing="true"
+          controls={true}
+          width="100%"
+          height="100%"
+          // height="fit-content"
+          url={url}
+          // style={{ video: { width: '200px' } }}
+        />
+      </DialogContent>
+      {/* <DialogActions>
+       
+      </DialogActions> */}
+    </Dialog>
   )
 }
 

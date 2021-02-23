@@ -9,6 +9,7 @@ import {
 import Button from '../Button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimesCircle } from '@fortawesome/free-regular-svg-icons'
+import '../../Styles/styles.css'
 
 const BioDialog = ({ open, onClose }) => {
   return (

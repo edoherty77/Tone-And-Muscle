@@ -125,6 +125,7 @@ export const Name = styled.h1`
   color: ${({ blackHeader }) => (blackHeader ? 'black' : '#7aaeea')};
 
   @media screen and (max-width: 890px) {
+    text-align: center;
     margin-bottom: 20px;
   }
   @media screen and (max-width: 480px) {

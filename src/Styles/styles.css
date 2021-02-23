@@ -31,6 +31,67 @@ Player
   opacity: 1;
 }
 
+body .player-dialog {
+  /* height: 100vh; */
+  /* margin: 0; */
+  /* background-color: rgba(0, 0, 0, 0.5); */
+}
+
+.player-container {
+  background-color: #f1f6fc;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 400px;
+  padding: 0 !important;
+}
+
+@media screen and (max-width: 500px) {
+  .player-container {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .player-container {
+    width: 250px;
+    height: 250px;
+  }
+
+  .closeIcon {
+    display: none;
+  }
+}
+@media screen and (max-width: 320px) {
+  .player-container {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.react-player {
+  position: absolute;
+  background-color: #f1f6fc;
+}
+
+.react-player video {
+  outline: transparent;
+  height: 100%;
+}
+
+.closeIcon {
+  position: absolute;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 150px;
+  color: #7aaeea;
+  top: 10px;
+  right: 10px;
+  /* margin-right: 10px; */
+}
+
 /* ----------------------------------------
 Text
 ------------------------------------------- */
@@ -47,21 +108,22 @@ Text
 }
 
 /* ----------------------------------------
-Modal
+Bio Dialogs
 ------------------------------------------- */
 
 .MuiDialog-root {
   height: 90vh;
   margin: auto;
-  /* width: fit-content; */
-  /* background-color: red; */
 }
 
-.closeIcon {
-  cursor: pointer;
-  border-radius: 150px;
-  color: #ea7e7a;
-  margin-right: 10px;
+.MuiDialogTitle-root .MuiTypography-h6 {
+  font-size: 30px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.MuiDialog-root .MuiDialogContentText-root {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
 }
 
 @media screen and (max-width: 600px) {
@@ -78,6 +140,14 @@ Modal
 @media screen and (max-width: 450px) {
   .closeIcon {
     margin-right: 0px;
+  }
+
+  .MuiDialog-root .MuiDialogContentText-root {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    text-align: justify;
+    /* font-size: 20px; */
+    /* background-color: turquoise; */
   }
 }
 

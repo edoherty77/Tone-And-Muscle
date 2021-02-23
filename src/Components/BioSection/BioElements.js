@@ -9,6 +9,7 @@ export const CatchContainer = styled.div`
   }
 `
 export const CatchText = styled.p`
+  text-align: center;
   font-size: 25px;
   line-height: 1.3em;
   color: ${colors.primary};

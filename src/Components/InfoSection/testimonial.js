@@ -132,7 +132,12 @@ const Testimonial = ({
                 <Img src={bef} alt={alt} />
                 <Img2 src={aft} alt={alt2} />
               </ImgWrap>
-              <Player open={isOpen} onClose={onCloseModal} url={video} />
+              <Player
+                name={name}
+                open={isOpen}
+                onClose={onCloseModal}
+                url={video}
+              />
             </Column2>
           </InfoRow>
         </InfoWrapper>

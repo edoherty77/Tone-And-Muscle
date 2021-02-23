@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import LandingSection from '../Components/LandingSection'
 import Navbar from '../Components/Navbar'
-import AboutMe from '../Components/AboutMe'
+
 import Sidebar from '../Components/Sidebar'
 import InfoSection from '../Components/InfoSection'
 import AboutSection from '../Components/AboutSection'
