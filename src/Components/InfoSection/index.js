@@ -22,7 +22,7 @@ const InfoSection = ({ id, lightBg }) => {
   }
   return (
     <>
-      <Header>Testimonials</Header>
+      {/* <Header>Testimonials</Header> */}
       <InfoContainer lightBg={lightBg} id="testies">
         <Testimonial {...schena} />
         <Testimonial {...poplaski} />

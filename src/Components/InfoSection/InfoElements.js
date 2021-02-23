@@ -1,179 +1,73 @@
 import styled from 'styled-components'
 
 export const InfoContainer = styled.div`
-  color: white;
-  display: grid;
-  position: relative;
-  grid-template-columns: repeat(4, 1fr);
-
-  gap: 5x;
-  height: 100%;
-
-  /* border: purple 4px solid; */
-  grid-auto-rows: minmax(100px, auto);
-  /* background: ${({ lightBg }) => (lightBg ? 'white' : '#f1f6fc')}; */
-
-  @media screen and (max-width: 1340px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @media screen and (max-width: 670px) {
-    /* padding: 50px; */
-    display: block;
-  }
-`
-
-export const Header = styled.h1`
-  color: black;
-  margin: 40px 0 0 40px;
-  text-align: start;
-  font-size: 35px;
-  text-transform: uppercase;
-  font-weight: bold;
-`
-
-export const Info = styled.div`
-  display: flex;
-  align-items: center;
-  position: relative;
-  margin: 50px 5px;
-
-  width: 100%;
-  height: fit-content;
-  flex-direction: column;
-
-  /* border: black 2px solid; */
-
-  @media screen and (max-width: 1175px) {
-    grid-template-areas: ${({ num }) => 1 / 2};
-    grid-row: ${({ num }) => (num < 3 ? 1 : 2)};
-    /* width: 100%; */
-  }
-
-  @media screen and (max-width: 670px) {
-    grid-template-areas: ${({ num }) => num / 1};
-    grid-row: ${({ num }) => num};
-    width: 100%;
-  }
-
-  @media screen and (max-width: 480px) {
-    grid-template-areas: ${({ num }) => 1 / 3};
-    /* grid-row: ${({ num }) => 1}; */
-    max-width: 100%;
-  }
-`
-
-export const InfoWrapper = styled.div`
-  /* border: 3px green dashed; */
-  box-shadow: 0px 0px 20px 2px #5579a3;
-  margin-bottom: 20px;
-`
-
-export const InfoTop = styled.div`
-  display: flex;
-  padding: 0;
-  flex-direction: column;
-  max-width: 100%;
-  /* border: pink 2px solid; */
-`
-
-export const ImgWrap = styled.div`
-  display: flex;
-  /* border: red 1px solid; */
-  background: rgb(0 0 0/ 17%);
-  max-width: 100%;
-  flex-direction: row;
-  position: relative;
-  align-items: center;
-  justify-content: center;
+  color: #fff;
+  background: ${({ lightBg }) => (lightBg ? 'white' : '#f1f6fc')};
 
   @media screen and (max-width: 890px) {
-    max-width: 100%;
-    margin: auto;
+    /* padding: 50px 0; */
   }
+  @media screen and (max-width: 480px) {
+    padding: 20px;
+  }
+`
+export const InfoWrapper = styled.div`
+  display: grid;
+  z-index: 1;
+  /* height: 100%; */
+  width: 100%;
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
+  align-items: center;
 
   @media screen and (max-width: 480px) {
-    max-width: 100%;
-    height: 280px;
-  }
-
-  @media screen and (max-width: 350px) {
-    max-width: 100%;
+    padding: 0;
   }
 `
-
-export const Play = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-`
-
-export const Img = styled.img`
-  width: 165px;
-  height: 255px;
-  /* width: 250px; */
-  /* height: 400px; */
-  margin-top: 0;
-  margin-right: 0;
-  margin-left: 0;
-  padding-right: 0;
-
-  /* @media screen and (max-width: 1500px) {
-    width: 200px;
-    height: 320px;
-  } */
-
-  @media screen and (max-width: 1300px) {
-    width: 180px;
-    height: 300px;
+export const InfoRow = styled.div`
+  display: grid;
+  justify-content: space-evenly;
+  margin: 30px 0 30px 0;
+  grid-template-areas: ${({ imgStart }) =>
+    imgStart ? "'col2 col1'" : "'col1 col2'"};
+  /* Must use '\' css class \'' */
+  @media screen and (max-width: 890px) {
+    grid-template-areas: ${({ imgStart }) =>
+      imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`};
   }
-
   @media screen and (max-width: 480px) {
-    width: 50%;
-    height: 280px;
+    margin: 0px;
   }
 `
-export const Img2 = styled.img`
-  width: 165px;
-  height: 255px;
 
-  margin-top: 0;
-  margin-right: 0;
-  margin-left: 0;
-  padding-right: 0;
+export const Column1 = styled.div`
+  background-color: 'red';
+  /* margin-bottom: 15px; */
+  /* border: 1px blue solid; */
+  grid-area: col1;
 
-  @media screen and (max-width: 1300px) {
-    width: 180px;
-    height: 300px;
+  @media screen and (max-width: 890px) {
+    margin-top: 15px;
+    margin-bottom: 30px;
   }
-
   @media screen and (max-width: 480px) {
-    width: 50%;
-    height: 280px;
+    padding: 0px;
   }
 `
-export const InfoBottom = styled.div`
+export const Column2 = styled.div`
+  /* margin-bottom: 15px; */
   display: flex;
-  max-width: 500px;
-  /* border: blue solid 1px; */
-  height: fit-content;
-  padding: 10px;
-
-  justify-content: center;
-  @media screen and (max-width: 1300px) {
-    width: 360px;
-    /* height: 300px; */
-  }
+  grid-area: col2;
+  align-items: center;
 
   @media screen and (max-width: 480px) {
-    width: 100%;
-    /* height: 280px; */
+    padding: 0px;
+    margin: 0;
   }
 `
-
 export const TextWrapper = styled.div`
   max-width: 100%;
-  display: flex;
   height: 100%;
   padding-top: 0;
   position: relative;
@@ -184,44 +78,125 @@ export const TextWrapper = styled.div`
     padding: 0px;
   }
 `
+export const Name = styled.h1`
+  margin-bottom: 40px;
+  font-size: 48px;
+  line-height: 1.1;
+  font-weight: 600;
+  /* border: 1px green solid; */
+  color: ${({ blackHeader }) => (blackHeader ? 'black' : '#7aaeea')};
 
+  @media screen and (max-width: 890px) {
+    margin-bottom: 20px;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 32px;
+    margin-bottom: 0;
+  }
+`
 export const BtnWrap = styled.div`
-  /* display: none; */
-
+  display: none;
   @media screen and (max-width: 480px) {
     display: flex;
-    /* border: 2px solid green; */
+    justify-content: center;
     z-index: 22;
     width: 100%;
     margin-top: 5px;
   }
 `
-
 export const Story = styled.p`
-  height: 100%;
-  font-size: 15px;
-  line-height: 18px;
-  text-align: start;
+  max-width: 640px;
+  height: fit-content;
+  font-size: 20px;
+  line-height: 24px;
   color: ${({ darkText }) => (darkText ? '#010606' : '#fff')};
-
+  @media screen and (max-width: 890px) {
+    margin: auto;
+    max-width: 70%;
+  }
   @media screen and (max-width: 620px) {
     margin: auto;
+    max-width: 85%;
   }
-
-  display: none;
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
 `
 
 export const MobileStory = styled.p`
+  opacity: 0;
+  position: absolute;
+  /* display: none; */
+  z-index: -1;
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  /* max-width: 440px; */
-  height: fit-content;
-  text-align: start;
-  /* text-indent: 2em; */
-  font-size: 20px;
-  line-height: 24px;
-  color: ${({ darkText }) => (darkText ? '#010606' : '#fff')};
-  margin: 20px 0 20px 0;
+  @media screen and (max-width: 480px) {
+    transition: opacity 0.2s linear;
+    max-width: 440px;
+    opacity: ${({ isShown }) => (isShown ? 1 : 0)};
+    position: ${({ isShown }) => (isShown ? 'static' : 'absolute')};
+    height: fit-content;
+    font-size: 20px;
+    line-height: 24px;
+    color: ${({ darkText }) => (darkText ? '#010606' : '#fff')};
+    margin: 20px 0 20px 0;
+  }
+`
+export const ImgWrap = styled.div`
+  max-width: 555px;
+  height: 375px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 20px 2px #5579a3;
+
+  @media screen and (max-width: 890px) {
+    max-width: 100%;
+    margin: auto;
+  }
+  @media screen and (max-width: 480px) {
+    max-width: 100%;
+    height: 280px;
+  }
+  @media screen and (max-width: 350px) {
+    max-width: 100%;
+  }
+`
+export const Play = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`
+export const Img = styled.img`
+  /* width: 50%; */
+  width: 200px;
+  height: 375px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 0;
+  padding-right: 0;
+
+  @media screen and (max-width: 480px) {
+    width: 50%;
+    height: 280px;
+  }
+`
+export const Img2 = styled.img`
+  width: 200px;
+  height: 375px;
+  /* width: 50%; */
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 0;
+  padding-right: 0;
+
+  @media screen and (max-width: 480px) {
+    width: 50%;
+    height: 280px;
+  }
 `

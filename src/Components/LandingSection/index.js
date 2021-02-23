@@ -43,11 +43,11 @@ function LandingSection() {
       <MobileImgWrp>
         <MobileImg
           src={MobilePic}
-          style={{ transform: `translateY(${offsetY * 0.5}px)` }}
+          style={{ transform: `translateY(${offsetY * 0.2}px)` }}
         />
       </MobileImgWrp>
 
-      <TextContainer style={{ transform: `translateY(${offsetY * 0.3}px)` }}>
+      <TextContainer style={{ transform: `translateY(${offsetY * 0.2}px)` }}>
         <LandingH1>Find Your New Prime</LandingH1>
         <LandingP>
           A tailored, online coaching experience for former athletes looking to

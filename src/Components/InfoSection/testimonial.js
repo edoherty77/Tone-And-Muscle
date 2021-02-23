@@ -7,11 +7,11 @@ import Player from '../Player'
 import 'react-responsive-modal/styles.css'
 import '../../Styles/styles.css'
 import {
-  Header,
-  InfoTop,
-  InfoBottom,
-  Info,
+  InfoContainer,
   InfoWrapper,
+  InfoRow,
+  Column1,
+  Column2,
   TextWrapper,
   Name,
   BtnWrap,
@@ -38,7 +38,6 @@ const Testimonial = ({
   blackHeader,
   dark,
   primary,
-  num,
 }) => {
   //State for modal
   const [isOpen, setOpen] = useState(false)
@@ -54,81 +53,91 @@ const Testimonial = ({
   const onCloseModal = () => {
     setOpen(false)
   }
+  //Toggle story text
+  const toggleStory = () => {
+    setShown(!isShown)
+  }
   return (
     <>
-      <Info num={num}>
+      <InfoContainer lightBg={lightBg} id={id}>
         <InfoWrapper>
-          <InfoTop>
-            {/* <Name blackHeader={blackHeader}>{name}</Name> */}
-            <ImgWrap>
-              <Play>
-                <FontAwesomeIcon
-                  className="iconBtn"
-                  onClick={() => onOpen({ video })}
-                  icon={faPlayCircle}
-                  size="3x"
-                />
-              </Play>
-              <Img src={bef} alt={alt} />
-              <Img2 src={aft} alt={alt2} />
-            </ImgWrap>
-            <Player open={isOpen} onClose={onCloseModal} url={video} />
-          </InfoTop>
-          <InfoBottom>
-            <TextWrapper>
-              <BtnWrap>
-                {showButton && (
-                  <Button
-                    onClick={() => setShown(true)}
-                    smooth={true}
-                    duration={500}
-                    spy={true}
-                    exact="true"
-                    offset={-80}
-                    primary={primary ? 1 : 0}
-                    dark={dark ? 1 : 0}
-                  >
-                    {name}'s Story
-                  </Button>
-                )}
-              </BtnWrap>
-              <CSSTransition
-                in={isShown}
-                timeout={300}
-                classNames="show"
-                unmountOnExit
-                onEnter={() => setShowButton(false)}
-                onExited={() => setShowButton(true)}
-              >
-                <MobileStory
-                  isShown={isShown}
-                  darkText={darkText}
-                  dismissible
-                  variant="primary"
-                  onClose={() => setShown(false)}
+          <InfoRow imgStart={imgStart}>
+            <Column1>
+              <TextWrapper>
+                <Name blackHeader={blackHeader}>{name}</Name>
+
+                <BtnWrap>
+                  {showButton && (
+                    <Button
+                      onClick={() => setShown(true)}
+                      smooth={true}
+                      duration={500}
+                      spy={true}
+                      exact="true"
+                      offset={-80}
+                      primary={primary ? 1 : 0}
+                      dark={dark ? 1 : 0}
+                    >
+                      Read About It
+                    </Button>
+                  )}
+                </BtnWrap>
+                <CSSTransition
+                  in={isShown}
+                  timeout={300}
+                  classNames="show"
+                  unmountOnExit
+                  onEnter={() => setShowButton(false)}
+                  onExited={() => setShowButton(true)}
                 >
-                  {story}
-                  <Button
-                    onClick={() => setShown(false)}
-                    smooth={true}
-                    duration={500}
-                    spy={true}
-                    exact="true"
-                    offset={-80}
-                    primary={primary ? 1 : 0}
-                    dark={dark ? 1 : 0}
-                    style={{ marginTop: '20px' }}
+                  <MobileStory
+                    isShown={isShown}
+                    darkText={darkText}
+                    dismissible
+                    variant="primary"
+                    onClose={() => setShown(false)}
                   >
-                    Close
-                  </Button>
-                </MobileStory>
-              </CSSTransition>
-            </TextWrapper>
-          </InfoBottom>
+                    {story}
+                    <Button
+                      onClick={() => setShown(false)}
+                      smooth={true}
+                      duration={500}
+                      spy={true}
+                      exact="true"
+                      offset={-80}
+                      primary={primary ? 1 : 0}
+                      dark={dark ? 1 : 0}
+                      style={{ marginTop: '20px' }}
+                    >
+                      Close
+                    </Button>
+                  </MobileStory>
+                </CSSTransition>
+
+                <Story darkText={darkText} isShown={isShown}>
+                  {story}
+                </Story>
+              </TextWrapper>
+            </Column1>
+            <Column2>
+              <ImgWrap>
+                <Play>
+                  <FontAwesomeIcon
+                    className="iconBtn"
+                    onClick={() => onOpen({ video })}
+                    icon={faPlayCircle}
+                    size="5x"
+                  />
+                </Play>
+                <Img src={bef} alt={alt} />
+                <Img2 src={aft} alt={alt2} />
+              </ImgWrap>
+              <Player open={isOpen} onClose={onCloseModal} url={video} />
+            </Column2>
+          </InfoRow>
         </InfoWrapper>
-      </Info>
+      </InfoContainer>
     </>
   )
 }
-
 export default Testimonial

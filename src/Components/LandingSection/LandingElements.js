@@ -110,22 +110,20 @@ export const MobileImg = styled.img`
 
 export const TextContainer = styled.div`
   z-index: 1;
-
+  /* border: 1px black solid; */
   margin: auto;
-
   max-width: 50%;
-
   display: flex;
   align-items: center;
   flex-direction: column;
+  height: 100vh;
+  justify-content: center;
 
   @media screen and (max-width: 930px) {
     max-width: 90%;
-    top: 125px;
   }
   @media screen and (max-width: 480px) {
     max-width: 100%;
-    top: 125px;
   }
 `
 
@@ -133,16 +131,22 @@ export const LandingH1 = styled.h1`
   color: #7aaeea;
   font-size: 48px;
   text-align: center;
+  margin-top: 110px;
 
   @media screen and (max-width: 768px) {
     font-size: 40px;
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 35px;
+    font-size: 30px;
     font-weight: bold;
     max-width: 98%;
     color: white;
+  }
+
+  @media screen and (max-width: 350px) {
+    font-size: 25px;
+    max-width: 98%;
   }
 `
 
@@ -164,7 +168,11 @@ export const LandingP = styled.p`
     line-height: 1rm;
     letter-spacing: 1.3px;
     text-transform: uppercase;
-    /* border: blue 1px solid; */
+  }
+
+  @media screen and (max-width: 350px) {
+    font-size: 15px;
+    max-width: 98%;
   }
 `
 export const LandingBtnWrapper = styled.div`
