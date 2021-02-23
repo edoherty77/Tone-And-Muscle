@@ -3,7 +3,7 @@ import 'react-responsive-modal/styles.css'
 import '../../Styles/styles.css'
 import Testimonial from './testimonial'
 import { schena, conway, poplaski, bujacich } from './Data'
-import { InfoContainer, Header } from './InfoElements'
+import { Header, HeaderContainer } from './InfoElements'
 
 const InfoSection = ({ id, lightBg }) => {
   //State for modal
@@ -22,13 +22,13 @@ const InfoSection = ({ id, lightBg }) => {
   }
   return (
     <>
-      {/* <Header>Testimonials</Header> */}
-      <InfoContainer lightBg={lightBg} id="testies">
-        <Testimonial {...schena} />
-        <Testimonial {...poplaski} />
-        <Testimonial {...conway} />
-        <Testimonial {...bujacich} />
-      </InfoContainer>
+      <HeaderContainer>
+        <Header>Testimonials</Header>
+      </HeaderContainer>
+      <Testimonial {...schena} />
+      <Testimonial {...poplaski} />
+      <Testimonial {...conway} />
+      <Testimonial {...bujacich} />
     </>
   )
 }

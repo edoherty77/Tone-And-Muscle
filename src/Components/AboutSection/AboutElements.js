@@ -20,8 +20,6 @@ export const CatchText = styled.p`
 `
 
 export const AboutContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 4fr;
   box-shadow: 0px 0px 20px 2px gray;
   background: #f1f6fc;
   padding: 120px;
@@ -29,7 +27,7 @@ export const AboutContainer = styled.div`
   margin: 80px;
   height: fit-content;
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1450px) {
     margin: 80px 40px;
     padding: 50px;
   }
@@ -46,41 +44,44 @@ export const AboutContainer = styled.div`
   }
 `
 
-export const ImgContainer = styled.div`
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  /* border: blue 1px solid; */
-  width: 100%;
-  transform: translate(80px, 0px);
+export const MobileHeaderContainer = styled.div`
+  display: none;
 
   @media screen and (max-width: 850px) {
-    padding: 40px 0;
-    justify-content: center;
-    transform: none;
+    display: inline;
+    background-color: white;
+    margin: 40px auto 0px;
+    width: 85%;
+    height: 30px;
+  }
+
+  /* @media screen and (max-width: 450px) {
+    margin: 40px auto 0px;
+    width: 85%;
+  } */
+
+  @media screen and (max-width: 450px) {
+    margin: 40px auto 0px;
+    width: 85%;
   }
 `
 
-export const AboutImg = styled.img`
-  position: absolute;
-  width: 300px;
-  height: auto;
-  border-radius: 150px;
+export const AboutRow = styled.div`
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-areas: 'col1 col2';
 
   @media screen and (max-width: 850px) {
-    position: relative;
-    /* border-radius: 0px; */
-  }
-
-  @media screen and (max-width: 480px) {
-    width: 200px;
-    height: 200px;
+    grid-template-columns: 1fr;
+    padding: 0;
+    grid-template-areas: 'col2 col2' 'col1 col1';
   }
 `
 
-export const InfoWrapper = styled.div`
+export const Column1 = styled.div`
   @media screen and (max-width: 480px) {
     padding: 0;
+    grid-area: col1;
   }
 `
 
@@ -88,31 +89,42 @@ export const HeaderContainer = styled.div`
   background-color: white;
   margin: auto;
   margin-bottom: 75px;
-  width: 50%;
+  width: 55%;
   height: 30px;
 
-  @media screen and (max-width: 850px) {
-    margin: 30px auto;
-    width: 65%;
+  @media screen and (max-width: 1150px) {
+    width: 70%;
   }
-
-  @media screen and (max-width: 450px) {
-    margin: 30px auto;
-    width: 75%;
+  @media screen and (max-width: 850px) {
+    display: none;
   }
 `
 
 export const Header = styled.h1`
-  /* border: 1px dashed red; */
+  font-size: 40px;
+  font-weight: 600;
   text-transform: uppercase;
   transform: translateY(-25px);
+  letter-spacing: 0.2em;
+  transform: translateY(-30px);
 
+  @media screen and (max-width: 1000px) {
+    transform: translateY(-20px);
+    font-size: 30px;
+  }
   @media screen and (max-width: 450px) {
-    font-size: 25px;
+    transform: translateY(-25px);
+    letter-spacing: 0.01em;
+    font-size: 35px;
+  }
+
+  @media screen and (max-width: 405px) {
+    transform: translateY(-20px);
+    font-size: 27px;
   }
 `
 
-export const RightContainer = styled.div`
+export const InfoContainer = styled.div`
   border: 1px solid #a8acb0;
 
   padding: 50px;
@@ -126,7 +138,7 @@ export const RightContainer = styled.div`
   }
 `
 
-export const InfoContainer = styled.div`
+export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -155,5 +167,37 @@ export const InfoText = styled.p`
 
   @media screen and (max-width: 450px) {
     letter-spacing: 0;
+  }
+`
+
+export const Column2 = styled.div`
+  grid-area: col2;
+  position: relative;
+  display: flex;
+  /* border: blue 1px solid; */
+  width: 100%;
+  transform: translate(-80px, 0px);
+
+  @media screen and (max-width: 850px) {
+    padding: 40px 0;
+    justify-content: center;
+    transform: none;
+  }
+`
+
+export const AboutImg = styled.img`
+  position: absolute;
+  width: 300px;
+  height: auto;
+  border-radius: 150px;
+
+  @media screen and (max-width: 850px) {
+    position: relative;
+    /* border-radius: 0px; */
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 200px;
+    height: 200px;
   }
 `

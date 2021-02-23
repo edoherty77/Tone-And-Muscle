@@ -8,7 +8,7 @@ body {
   padding: 0;
   letter-spacing: 0.02em;
   text-align: center;
-  color: #44545e;
+  color: black;
   outline: 0;
 }
 
@@ -29,6 +29,53 @@ Testimonials
 
 .iconBtn:hover {
   opacity: 1;
+}
+
+/* ----------------------------------------
+Text
+------------------------------------------- */
+
+.bold {
+  color: #7aaeea;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.ital {
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* ----------------------------------------
+Modal
+------------------------------------------- */
+
+.MuiDialog-root {
+  height: 90vh;
+  margin: auto;
+  width: fit-content;
+  /* background-color: red; */
+}
+
+.MuiDialog-container {
+  padding: 0px;
+  background-color: #f1f6fc;
+}
+
+.MuiDialog-paper {
+  background-color: blue;
+  padding: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .MuiDialog-root {
+    height: 80vh;
+  }
+
+  .MuiDialog-container {
+    padding: 0px;
+    background-color: transparent;
+  }
 }
 
 /* ----------------------------------------

@@ -109,7 +109,7 @@ const Testimonial = ({
                       dark={dark ? 1 : 0}
                       style={{ marginTop: '20px' }}
                     >
-                      Close
+                      Hide Story
                     </Button>
                   </MobileStory>
                 </CSSTransition>

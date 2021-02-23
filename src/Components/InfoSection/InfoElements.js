@@ -1,5 +1,34 @@
 import styled from 'styled-components'
 
+export const HeaderContainer = styled.div`
+  background-color: #f1f6fc;
+  margin: auto;
+  margin-bottom: 35px;
+  width: 30%;
+  height: 30px;
+
+  @media screen and (max-width: 850px) {
+    margin: 30px auto;
+    width: 65%;
+  }
+
+  @media screen and (max-width: 450px) {
+    margin: 30px auto;
+    width: 75%;
+  }
+`
+
+export const Header = styled.h1`
+  /* border: 1px dashed red; */
+  text-transform: uppercase;
+  transform: translateY(-25px);
+  color: black;
+
+  @media screen and (max-width: 450px) {
+    font-size: 25px;
+  }
+`
+
 export const InfoContainer = styled.div`
   color: #fff;
   background: ${({ lightBg }) => (lightBg ? 'white' : '#f1f6fc')};
@@ -32,6 +61,7 @@ export const InfoRow = styled.div`
   grid-template-areas: ${({ imgStart }) =>
     imgStart ? "'col2 col1'" : "'col1 col2'"};
   /* Must use '\' css class \'' */
+
   @media screen and (max-width: 890px) {
     grid-template-areas: ${({ imgStart }) =>
       imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`};
@@ -174,7 +204,7 @@ export const Play = styled.div`
 `
 export const Img = styled.img`
   /* width: 50%; */
-  width: 200px;
+  width: 225px;
   height: 375px;
   margin-top: 0;
   margin-right: 0;
@@ -187,7 +217,7 @@ export const Img = styled.img`
   }
 `
 export const Img2 = styled.img`
-  width: 200px;
+  width: 225px;
   height: 375px;
   /* width: 50%; */
   margin-top: 0;
