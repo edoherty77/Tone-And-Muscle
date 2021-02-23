@@ -11,6 +11,7 @@ import {
   NavLinks,
   BannerPic,
   BannerContainer,
+  BannerLink,
   NavMenuLeft,
   NavMenuRight,
   NavBtn,
@@ -41,23 +42,32 @@ const Navbar = ({ toggle }) => {
       <IconContext.Provider value={{ color: '#fff' }}>
         <Nav>
           <NavbarContainer>
-            <BannerContainer>
-              <BannerPic src="images/tma-banner.png" alt="banner" />
-            </BannerContainer>
+            <BannerLink
+              to="home"
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact="true"
+              offset={-80}
+            >
+              <BannerContainer>
+                <BannerPic src="images/tma-banner.png" alt="banner" />
+              </BannerContainer>
+            </BannerLink>
             <MobileIcon onClick={toggle}>
               <FaBars />
             </MobileIcon>
             <NavMenuLeft>
               <NavItem>
                 <NavLinks
-                  to="home"
+                  to="bio"
                   smooth={true}
                   duration={500}
                   spy={true}
                   exact="true"
                   offset={-80}
                 >
-                  Home
+                  About Me
                 </NavLinks>
               </NavItem>
               <NavItem>
@@ -69,7 +79,7 @@ const Navbar = ({ toggle }) => {
                   exact="true"
                   offset={-80}
                 >
-                  About
+                  Program
                 </NavLinks>
               </NavItem>
               {/* <NavItem>

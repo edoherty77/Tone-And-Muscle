@@ -31,12 +31,6 @@ Player
   opacity: 1;
 }
 
-body .player-dialog {
-  /* height: 100vh; */
-  /* margin: 0; */
-  /* background-color: rgba(0, 0, 0, 0.5); */
-}
-
 .player-container {
   background-color: #f1f6fc;
   position: relative;
@@ -98,7 +92,7 @@ Text
 
 .bold {
   color: #7aaeea;
-  font-weight: 900;
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -111,38 +105,38 @@ Text
 Bio Dialogs
 ------------------------------------------- */
 
-.MuiDialog-root {
+.bio-dialog {
   height: 90vh;
   margin: auto;
 }
 
-.MuiDialogTitle-root .MuiTypography-h6 {
+.bio-dialog-title .MuiTypography-h6 {
   font-size: 30px;
   font-family: 'Poppins', sans-serif;
 }
 
-.MuiDialog-root .MuiDialogContentText-root {
+.bio-dialog .MuiDialogContentText-root {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
 }
 
 @media screen and (max-width: 600px) {
-  .MuiDialog-root {
+  .bio-dialog {
     height: 80vh;
   }
 
-  .MuiDialog-container {
+  .bio-dialog-content {
     padding: 0px;
-    background-color: transparent;
+    /* background-color: transparent; */
   }
 }
 
 @media screen and (max-width: 450px) {
-  .closeIcon {
-    margin-right: 0px;
+  .bio-dialog .MuiDialog-paper {
+    margin: auto 10px;
   }
 
-  .MuiDialog-root .MuiDialogContentText-root {
+  .bio-dialog .MuiDialogContentText-root {
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     text-align: justify;

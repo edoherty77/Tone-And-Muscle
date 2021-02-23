@@ -41,6 +41,7 @@ export const AboutContainer = styled.div`
     grid-template-columns: 1fr 1fr;
     flex-direction: column;
     padding: 0;
+    background-color: white;
   }
 
   @media screen and (max-width: 600px) {
@@ -53,7 +54,8 @@ export const MobileHeaderContainer = styled.div`
 
   @media screen and (max-width: 850px) {
     display: inline;
-    background-color: white;
+    background-color: ${colors.background};
+    /* background-color: white; */
     margin: 40px auto 0px;
     width: 65%;
     height: 30px;
@@ -88,12 +90,12 @@ export const AboutImg = styled.img`
 
   @media screen and (max-width: 850px) {
     position: relative;
-    /* border-radius: 0px; */
   }
 
   @media screen and (max-width: 480px) {
     width: 200px;
     height: 200px;
+    /* border-radius: 0px; */
   }
 `
 
@@ -134,15 +136,12 @@ export const Header = styled.h1`
 
 export const InfoContainer = styled.div`
   border: 1px solid #a8acb0;
-
   padding: 50px;
   width: 100%;
 
   @media screen and (max-width: 850px) {
-    /* display: flex; */
     padding: 0;
     border: none;
-    background: #f1f6fc;
   }
 `
 
@@ -155,11 +154,12 @@ export const TextContainer = styled.div`
   padding: 30px 50px;
 
   @media screen and (max-width: 850px) {
-    background: #f1f6fc;
+    background: white;
+    /* background: #f1f6fc; */
   }
 
   @media screen and (max-width: 450px) {
-    padding: 20px;
+    padding: 0 20px 20px;
   }
 `
 
@@ -173,8 +173,12 @@ export const InfoText = styled.p`
 
   @media screen and (max-width: 450px) {
     letter-spacing: 0;
-    /* text-align: center; */
     font-size: 18px;
+  }
+
+  @media screen and (max-width: 400px) {
+    letter-spacing: 0.05em;
+    font-size: 15px;
   }
 `
 

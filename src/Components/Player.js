@@ -39,6 +39,7 @@ const Player = ({ name, url, open, onClose }) => {
           height="100%"
           // height="fit-content"
           url={url}
+
           // style={{ video: { width: '200px' } }}
         />
       </DialogContent>

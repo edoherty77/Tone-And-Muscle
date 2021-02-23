@@ -43,7 +43,7 @@ function LandingSection() {
       <MobileImgWrp>
         <MobileImg
           src={MobilePic}
-          style={{ transform: `translateY(${offsetY * 0.2}px)` }}
+          style={{ transform: `translateY(${offsetY * 0.8}px)` }}
         />
       </MobileImgWrp>
 

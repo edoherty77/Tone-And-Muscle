@@ -19,7 +19,7 @@ const Sidebar = ({ isOpen, toggle }) => {
       <SidebarWrapper>
         <SidebarMenu>
           <SidebarLink
-            to="home"
+            to="bio"
             onClick={toggle}
             smooth={true}
             duration={500}
@@ -27,7 +27,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             exact="true"
             offset={-80}
           >
-            Home
+            Bio
           </SidebarLink>
           <SidebarLink
             to="about"
@@ -40,7 +40,7 @@ const Sidebar = ({ isOpen, toggle }) => {
           >
             About
           </SidebarLink>
-          <SidebarLink
+          {/* <SidebarLink
             to="personal"
             onClick={toggle}
             smooth={true}
@@ -50,7 +50,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             offset={-80}
           >
             Personal
-          </SidebarLink>
+          </SidebarLink> */}
           <SidebarLink
             to="testies"
             onClick={toggle}

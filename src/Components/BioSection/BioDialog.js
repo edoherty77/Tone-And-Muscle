@@ -1,22 +1,30 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {
   Dialog,
   DialogActions,
   DialogContent,
   DialogContentText,
   DialogTitle,
+  Slide,
 } from '@material-ui/core'
+
 import Button from '../Button'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTimesCircle } from '@fortawesome/free-regular-svg-icons'
 import '../../Styles/styles.css'
 
-const BioDialog = ({ open, onClose }) => {
+const BioDialog = ({ Transition, open, onClose }) => {
   return (
     <>
-      <Dialog open={open} onClose={onClose}>
-        <DialogTitle>Pat Doherty</DialogTitle>
-        <DialogContent dividers={true}>
+      <Dialog
+        open={open}
+        onClose={onClose}
+        classes={{ root: 'bio-dialog' }}
+        TransitionComponent={Transition}
+        keepMounted
+      >
+        <DialogTitle classes={{ root: 'bio-dialog-title' }}>
+          Pat Doherty
+        </DialogTitle>
+        <DialogContent dividers={true} classes={{ root: 'bio-dialog-content' }}>
           <DialogContentText>
             {' '}
             Hi, my names is Pat, and{' '}
@@ -88,12 +96,6 @@ const BioDialog = ({ open, onClose }) => {
         </DialogContent>
         <DialogActions>
           <Button onClick={onClose}>Close</Button>
-          {/* <FontAwesomeIcon
-            className="closeIcon"
-            onClick={onClose}
-            icon={faTimesCircle}
-            size="2x"
-          /> */}
         </DialogActions>
       </Dialog>
     </>

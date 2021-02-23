@@ -61,12 +61,19 @@ export const BannerContainer = styled.div`
   }
 `
 
+export const BannerLink = styled(LinkS)`
+  cursor: pointer;
+  height: 100%;
+  z-index: 2;
+`
+
 export const BannerPic = styled.img`
   height: 100%;
   width: 100%;
 `
 
 export const MobileIcon = styled.div`
+  z-index: 3;
   display: none;
 
   @media screen and (max-width: 1100px) {

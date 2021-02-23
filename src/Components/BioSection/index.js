@@ -1,6 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, forwardRef } from 'react'
 import AboutPic from './pat-photo3.png'
-
+import Slide from '@material-ui/core/Slide'
 import BioDialog from './BioDialog'
 import '../../Styles/styles.css'
 import Button from '../Button'
@@ -18,8 +18,11 @@ import {
   InfoContainer,
   InfoText,
   ButtonContainer,
-  IconContainer,
 } from './BioElements'
+
+const Transition = forwardRef(function Transition(props, ref) {
+  return <Slide direction="right" unmountOnExit ref={ref} {...props} />
+})
 
 const BioSection = () => {
   const [open, setOpen] = useState(false)
@@ -37,7 +40,7 @@ const BioSection = () => {
           the rest of your life? Well, you’ve come to the right place.
         </CatchText>
       </CatchContainer>
-      <AboutContainer id="about">
+      <AboutContainer id="bio">
         <MobileHeaderContainer>
           <Header>About Pat</Header>
         </MobileHeaderContainer>
@@ -83,7 +86,7 @@ const BioSection = () => {
           </InfoContainer>
         </Column2>
       </AboutContainer>
-      <BioDialog open={open} onClose={onCloseModal} />
+      <BioDialog open={open} onClose={onCloseModal} Transition={Transition} />
     </>
   )
 }
