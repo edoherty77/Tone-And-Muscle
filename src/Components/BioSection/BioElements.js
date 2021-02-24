@@ -113,9 +113,9 @@ export const Column2 = styled.div`
 export const HeaderContainer = styled.div`
   background-color: white;
   margin: auto;
-  margin-bottom: 75px;
+  margin-bottom: 55px;
   width: 50%;
-  height: 40px;
+  height: 45px;
 
   @media screen and (max-width: 850px) {
     display: none;

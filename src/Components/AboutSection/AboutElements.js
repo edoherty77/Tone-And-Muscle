@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import colors from '../../config/colors'
+import '../../Styles/styles.css'
 
 export const CatchContainer = styled.div`
   padding: 3% 10% 0 10%;
@@ -58,7 +59,7 @@ export const MobileHeaderContainer = styled.div`
     height: 40px;
   }
 
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 550px) {
     margin: 40px auto 0px;
     width: 85%;
   }
@@ -85,13 +86,14 @@ export const Column1 = styled.div`
 
 export const HeaderContainer = styled.div`
   background-color: white;
-  margin: auto;
-  margin-bottom: 75px;
+  margin: 0 auto 65px auto;
+  /* margin-bottom: 35px; */
   width: 55%;
   height: 40px;
   /* background-color: blue; */
 
-  @media screen and (max-width: 1150px) {
+  @media screen and (max-width: 1450px) {
+    margin: 0 auto 45px auto;
     width: 70%;
   }
   @media screen and (max-width: 850px) {
@@ -101,7 +103,7 @@ export const HeaderContainer = styled.div`
 
 export const Header = styled.h1`
   text-align: center;
-  font-size: 40px;
+  font-size: 45px;
   font-weight: 600;
   text-transform: uppercase;
   transform: translateY(-25px);
@@ -134,7 +136,7 @@ export const InfoContainer = styled.div`
     /* display: flex; */
     padding: 0;
     border: none;
-    background: #f1f6fc;
+    /* background: #f1f6fc; */
   }
 `
 
@@ -143,6 +145,63 @@ export const TextContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   background-color: white;
+  position: relative;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in;
+  margin-bottom: 40px;
+
+  /* border: 1px solid black; */
+  padding: 30px 50px;
+
+  @media screen and (max-width: 850px) {
+    background: white;
+  }
+
+  @media screen and (max-width: 675px) {
+    padding: 30px;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 15px;
+  }
+`
+export const WhatContainer = styled.div`
+  max-height: ${({ isWhatHeight }) => (isWhatHeight ? isWhatHeight : '500px')};
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in;
+  margin-bottom: 40px;
+
+  /* border: 1px solid black; */
+  padding: 30px 50px;
+
+  @media screen and (max-width: 850px) {
+    background: white;
+  }
+
+  @media screen and (max-width: 675px) {
+    padding: 30px;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 15px;
+  }
+`
+
+export const WhyContainer = styled.div`
+  max-height: ${({ isWhyHeight }) => (isWhyHeight ? isWhyHeight : '500px')};
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in;
+  margin-bottom: 40px;
 
   /* border: 1px solid black; */
   padding: 30px 50px;
@@ -179,9 +238,66 @@ export const InfoHeader = styled.h1`
   @media screen and (max-width: 400px) {
     font-size: 20px;
     margin-bottom: 8px;
+    font-weight: 700;
   }
 `
+
+export const ReadMore = styled.p`
+  display: none;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  /* padding: 30px 0; */
+  height: 100px;
+  /* background-color: green; */
+  background: -moz-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 90%
+  );
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, rgba(255, 255, 255, 0)),
+    color-stop(95%, rgba(255, 255, 255, 1))
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 90%
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 90%
+  );
+  background: -ms-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 90%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 90%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+
+  @media screen and (max-width: 480px) {
+    display: visible;
+  }
+`
+
 export const InfoText = styled.p`
+  /* overflow: hidden;
+  transition: max-height 0.5s ease-in; */
   text-align: start;
   font-size: 17px;
   line-height: 1.2em;
@@ -189,6 +305,7 @@ export const InfoText = styled.p`
   font-weight: 500;
   border-left: ${colors.primary} 2px solid;
   padding-left: 15px;
+  /* margin-bottom: 30px; */
 
   @media screen and (max-width: 500px) {
     /* font-size: 13px; */
@@ -196,9 +313,6 @@ export const InfoText = styled.p`
     border-left: none;
     padding-left: 0;
     text-align: justify;
-  }
-
-  @media screen and (max-width: 450px) {
   }
 `
 

@@ -1,12 +1,40 @@
-import React from 'react'
-
+import React, { useState, useRef, useEffect } from 'react'
+import { Button } from '../ButtonElements'
 import '../../Styles/styles.css'
-import { TextContainer, InfoHeader, InfoText } from './AboutElements'
+import {
+  WhatContainer,
+  WhyContainer,
+  TextContainer,
+  InfoHeader,
+  InfoText,
+  ReadMore,
+} from './AboutElements'
+
+let whatHeight = null
+let whyHeight = null
 
 const AboutInfo = () => {
+  const [isWhatHeight, setWhatHeight] = useState('auto')
+  const [isWhyHeight, setWhyHeight] = useState('auto')
+  const whatRef = useRef(null)
+  const whyRef = useRef(null)
+  useEffect(() => {
+    if (whatRef.current && whatHeight === null) {
+      whatHeight = whatRef.current.getBoundingClientRect().isWhatHeight
+      setWhatHeight(315)
+    }
+    if (whyRef.current && whyHeight === null) {
+      whyHeight = whyRef.current.getBoundingClientRect().isWhyHeight
+      setWhyHeight(325)
+    }
+  })
   return (
     <>
-      <TextContainer>
+      <WhatContainer
+        ref={whatRef}
+        style={{ maxHeight: isWhatHeight }}
+        isWhatHeight={isWhatHeight}
+      >
         <InfoHeader>What is the 101 Course?</InfoHeader>
         <InfoText>
           The <span className="bold">101 course</span> is the introductory
@@ -22,7 +50,20 @@ const AboutInfo = () => {
           placed into their daily schedule....It’s like going back to school for
           your but this time for your body.
         </InfoText>
-      </TextContainer>
+        <ReadMore>
+          <Button
+            dark
+            primary
+            onClick={() => {
+              if (whatHeight === null) return
+              setWhatHeight(isWhatHeight === 315 ? whatHeight : 315)
+            }}
+          >
+            Read More
+          </Button>
+        </ReadMore>
+      </WhatContainer>
+
       <TextContainer>
         <InfoHeader>Who is the 101 Course for?</InfoHeader>
         <InfoText>
@@ -36,9 +77,14 @@ const AboutInfo = () => {
           they’ve always wanted.{' '}
         </InfoText>
       </TextContainer>
-      <TextContainer>
+
+      <WhyContainer
+        isWhyHeight={isWhyHeight}
+        ref={whyRef}
+        style={{ maxHeight: isWhyHeight }}
+      >
         <InfoHeader>Why does it work?</InfoHeader>
-        <InfoText style={{ marginBottom: '20px' }}>
+        <InfoText>
           The TMA programs work because they are{' '}
           <span className="bold">reasonable</span> and{' '}
           <span className="bold">easy to follow</span>. Plain and simple. We
@@ -55,7 +101,19 @@ const AboutInfo = () => {
           <span className="bold">stay in the corner</span> with you every step
           of the way until you’ve gotten what you came for.
         </InfoText>
-      </TextContainer>
+        <ReadMore>
+          <Button
+            dark
+            primary
+            onClick={() => {
+              if (whyHeight === null) return
+              setWhyHeight(isWhyHeight === 325 ? whyHeight : 325)
+            }}
+          >
+            Read More
+          </Button>
+        </ReadMore>
+      </WhyContainer>
     </>
   )
 }

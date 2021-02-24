@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
-import { Button } from '../ButtonElements'
+// import { Button } from '../ButtonElements'
 import { CSSTransition } from 'react-transition-group'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlayCircle } from '@fortawesome/free-solid-svg-icons'
 import Player from '../Player'
+import colors from '../../config/colors'
+
+import ToggleBtn from './ToggleBtn'
+
 import '../../Styles/styles.css'
 import {
   TestContainer,
@@ -51,10 +55,7 @@ const Testimonial = ({
   const onCloseModal = () => {
     setOpen(false)
   }
-  //Toggle story text
-  const toggleStory = () => {
-    setShown(!isShown)
-  }
+
   return (
     <>
       <TestContainer lightBg={lightBg} id={id}>
@@ -66,48 +67,37 @@ const Testimonial = ({
 
                 <BtnWrap>
                   {showButton && (
-                    <Button
+                    <ToggleBtn
                       onClick={() => setShown(true)}
-                      smooth={true}
-                      duration={500}
-                      spy={true}
-                      exact="true"
-                      offset={-80}
-                      primary={primary ? 1 : 0}
-                      dark={dark ? 1 : 0}
-                    >
-                      Read About It
-                    </Button>
+                      title={name + "'s Story"}
+                      background="linear-gradient(45deg, #7AAEEA 10%, #49688C 90%)"
+                      boxShadow="none"
+                    />
+                  )}
+                  {!showButton && (
+                    <ToggleBtn
+                      onClick={() => setShown(false)}
+                      title="Hide Story"
+                      // marginTop="20px"
+                      boxShadow="0 3px 5px 2px rgba(255, 105, 135, .3)"
+                      background="linear-gradient(49deg, rgba(240,118,102,1) 0%, rgba(232,128,115,1) 49%, rgba(224,147,137,1) 81%, rgba(226,188,184,1) 100%)"
+                    />
                   )}
                 </BtnWrap>
                 <CSSTransition
                   in={isShown}
-                  timeout={300}
+                  timeout={500}
                   classNames="show"
                   unmountOnExit
                   onEnter={() => setShowButton(false)}
                   onExited={() => setShowButton(true)}
                 >
                   <MobileStory
-                    // isShown={isShown}
                     darkText={darkText}
                     dismissible
                     variant="primary"
-                    // onClose={() => setShown(false)}
                   >
                     {story}
-                    <Button
-                      onClick={() => setShown(false)}
-                      smooth={true}
-                      // spy={true}
-                      exact="true"
-                      offset={-80}
-                      primary={primary ? 1 : 0}
-                      dark={dark ? 1 : 0}
-                      style={{ marginTop: '20px' }}
-                    >
-                      Hide Story
-                    </Button>
                   </MobileStory>
                 </CSSTransition>
 

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Button from '@material-ui/core/Button'
 
 export const HeaderContainer = styled.div`
   background-color: #f1f6fc;
@@ -40,6 +41,10 @@ export const Header = styled.h1`
 export const TestContainer = styled.div`
   color: #fff;
   background: ${({ lightBg }) => (lightBg ? 'white' : '#f1f6fc')};
+
+  @media screen and (max-width: 600px) {
+    background-color: white;
+  }
 
   @media screen and (max-width: 480px) {
     padding: 20px;
@@ -93,6 +98,12 @@ export const Column1 = styled.div`
     align-items: center;
     justify-content: center;
   }
+
+  @media screen and (max-width: 550px) {
+    margin: 25px 0 55px 0;
+    padding: 0px;
+  }
+
   @media screen and (max-width: 480px) {
     padding: 0px;
   }
@@ -102,6 +113,11 @@ export const Column2 = styled.div`
   display: flex;
   grid-area: col2;
   align-items: center;
+
+  @media screen and (max-width: 550px) {
+    margin-top: 25px;
+    padding: 0px;
+  }
 
   @media screen and (max-width: 480px) {
     padding: 0px;
@@ -149,6 +165,7 @@ export const BtnWrap = styled.div`
     margin-top: 5px;
   }
 `
+
 export const Story = styled.p`
   display: flex;
   max-width: 100%;

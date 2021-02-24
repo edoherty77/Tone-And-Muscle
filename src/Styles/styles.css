@@ -161,20 +161,26 @@ Testimonial Text on Phone
 .show-enter {
   opacity: 0;
   position: relative;
-  transform: translateY(-5%);
+  transform: translateY(-100%);
 }
 .show-enter-active {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 200ms ease-in, transform 200ms ease-in;
+  transition: opacity 500ms linear, transform 500ms ease-in-out;
 }
 .show-exit {
   opacity: 1;
 }
 .show-exit-active {
   opacity: 0;
-  transform: translateY(-5%);
-  transition: opacity 100ms ease-in, transform 100ms ease-in;
+  transform: translateY(-100%);
+  transition: opacity 500ms linear, transform 500ms ease-in-out;
+}
+
+/* Style for divider */
+
+.divider {
+  border-bottom: 2px black solid;
 }
 
 /* Style for divider */

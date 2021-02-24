@@ -34,10 +34,12 @@ const BioSection = () => {
     <>
       <CatchContainer>
         <CatchText>
-          Not sure what to do in order to get your weight down? Tired of feeling
-          guilty about eating certain foods? And at the same time, do you want
-          to find a sustainable training routine that you can take with you for
-          the rest of your life? Well, you’ve come to the right place.
+          Not sure what to do in order to get your weight down?... Tired of
+          feeling guilty about eating certain foods?... And at the same time, do
+          you want to find a sustainable training routine that you can take with
+          you for the rest of your life?...
+          <br></br>
+          Well, you’ve come to the right place.
         </CatchText>
       </CatchContainer>
       <AboutContainer id="bio">

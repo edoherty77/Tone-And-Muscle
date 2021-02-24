@@ -1,12 +1,6 @@
 import styled from 'styled-components'
 import LgPic from './pat-photo.JPG'
-import {
-  useSpring,
-  animated,
-  useTransition,
-  config,
-  useChain,
-} from 'react-spring'
+import { animated } from 'react-spring'
 
 import colors from '../../config/colors'
 
@@ -92,7 +86,7 @@ export const MobileImgWrp = styled.div`
           rgba(0, 0, 0, 0.2) 0%,
           rgba(0, 0, 0, 0.6) 100%
         ),
-        linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, transparent 100%);
+        linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
       z-index: 1;
     }
     display: inline;
@@ -135,10 +129,12 @@ export const TextContainer = styled(animated.div)`
 `
 
 export const LandingH1 = styled(animated.h1)`
-  color: #7aaeea;
+  color: white;
+  /* color: #7aaeea; */
   font-size: 48px;
   text-align: center;
   margin-top: 110px;
+  text-transform: uppercase;
 
   @media screen and (max-width: 768px) {
     font-size: 40px;
@@ -146,13 +142,12 @@ export const LandingH1 = styled(animated.h1)`
 
   @media screen and (max-width: 480px) {
     font-size: 30px;
-    font-weight: bold;
+    font-weight: 900;
     max-width: 98%;
-    color: white;
   }
 
-  @media screen and (max-width: 350px) {
-    font-size: 25px;
+  @media screen and (max-width: 375px) {
+    font-size: 28px;
     max-width: 98%;
   }
 `
@@ -174,6 +169,7 @@ export const LandingP = styled(animated.p)`
     max-width: 80%;
     line-height: 1rm;
     letter-spacing: 1.3px;
+    font-weight: 600;
     text-transform: uppercase;
   }
 
