@@ -76,7 +76,7 @@ export const MobileIcon = styled.div`
   z-index: 3;
   display: none;
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1350px) {
     display: flex;
     align-items: center;
     position: absolute;
@@ -105,7 +105,7 @@ export const NavMenuLeft = styled.ul`
   padding-left: 0;
   margin: 0;
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1350px) {
     display: none;
   }
 `
@@ -120,7 +120,7 @@ export const NavMenuRight = styled.ul`
   right: 50px;
   margin: 0;
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1350px) {
     display: none;
   }
 `

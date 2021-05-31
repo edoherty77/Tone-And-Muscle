@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 
-import LandingSection from '../Components/LandingSection'
 import Navbar from '../Components/Navbar'
 
+import LandingSection from '../Components/LandingSection'
+import PainSection from '../Components/PainSection'
 import Sidebar from '../Components/Sidebar'
 import TestSection from '../Components/TestSection'
 import AboutSection from '../Components/AboutSection'
 import BioSection from '../Components/BioSection'
+import ContactSection from '../Components/ContactSection'
 
 function Landing() {
   const [isOpen, setIsOpen] = useState(false)
@@ -19,9 +21,11 @@ function Landing() {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <LandingSection />
-      <BioSection />
+      <PainSection />
       <AboutSection />
+      <BioSection />
       <TestSection />
+      <ContactSection />
     </>
   )
 }

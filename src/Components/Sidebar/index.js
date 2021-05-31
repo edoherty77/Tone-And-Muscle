@@ -19,17 +19,6 @@ const Sidebar = ({ isOpen, toggle }) => {
       <SidebarWrapper>
         <SidebarMenu>
           <SidebarLink
-            to="bio"
-            onClick={toggle}
-            smooth={true}
-            duration={500}
-            spy={true}
-            exact="true"
-            offset={-80}
-          >
-            Bio
-          </SidebarLink>
-          <SidebarLink
             to="about"
             onClick={toggle}
             smooth={true}
@@ -38,10 +27,10 @@ const Sidebar = ({ isOpen, toggle }) => {
             exact="true"
             offset={-80}
           >
-            About
+            The Program
           </SidebarLink>
-          {/* <SidebarLink
-            to="personal"
+          <SidebarLink
+            to="bio"
             onClick={toggle}
             smooth={true}
             duration={500}
@@ -49,8 +38,8 @@ const Sidebar = ({ isOpen, toggle }) => {
             exact="true"
             offset={-80}
           >
-            Personal
-          </SidebarLink> */}
+            Pat Doherty
+          </SidebarLink>
           <SidebarLink
             to="testies"
             onClick={toggle}
@@ -62,9 +51,25 @@ const Sidebar = ({ isOpen, toggle }) => {
           >
             Success Stories
           </SidebarLink>
+          <SidebarLink
+            to="contact"
+            onClick={toggle}
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+            offset={-80}
+          >
+            Contact Me
+          </SidebarLink>
         </SidebarMenu>
         <SideBtnWrap>
-          <SidebarRoute to="/signup">Apply Here</SidebarRoute>
+          <SidebarRoute
+            target="_blank"
+            href="https://form.jotform.com/211236844480151"
+          >
+            Apply Here
+          </SidebarRoute>
         </SideBtnWrap>
       </SidebarWrapper>
     </SidebarContainer>

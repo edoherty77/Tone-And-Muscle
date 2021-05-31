@@ -1,14 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import MobilePic from './pat-photo2.jpg'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlayCircle } from '@fortawesome/free-solid-svg-icons'
-import {
-  useSpring,
-  animated,
-  useTransition,
-  config,
-  useChain,
-} from 'react-spring'
+import { useSpring, useChain } from 'react-spring'
 
 import {
   LandingContainer,
@@ -21,21 +13,14 @@ import {
   MobileImgWrp,
   MobileImg,
   TextContainer,
+  ApplyWrapper,
+  ApplyBtn,
+  ApplyBtnLink,
 } from './LandingElements'
 
 import Player from '../Player'
 
 function LandingSection() {
-  //State for modal
-  const [isOpen, setOpen] = useState(false)
-
-  //Open and close functions for modals
-  const onOpen = () => {
-    setOpen(true)
-  }
-  const onCloseModal = () => {
-    setOpen(false)
-  }
   const [offsetY, setOffsetY] = useState(0)
   const handleScroll = () => {
     setOffsetY(window.pageYOffset)
@@ -88,13 +73,23 @@ function LandingSection() {
         />
       </MobileImgWrp>
       <TextContainer
-        style={(style, { transform: `translateY(${offsetY * 0.2}px)` })}
+        style={(style, { transform: `translateY(${offsetY * 0.15}px)` })}
       >
         <LandingH1 style={style2}>Find Your New Prime</LandingH1>
         <LandingP style={style3}>
           A tailored, online coaching experience for former athletes looking to
           regain strength, energy levels, and confidence in their bodies
         </LandingP>
+        <ApplyWrapper style={style3}>
+          <ApplyBtn>
+            <ApplyBtnLink
+              target="_blank"
+              href="https://form.jotform.com/211236844480151"
+            >
+              Apply Here
+            </ApplyBtnLink>
+          </ApplyBtn>
+        </ApplyWrapper>
         <LandingBtnWrapper style={style3}>
           <SocialLink href="https://www.facebook.com/profile.php?id=100007385869431">
             <SocialImg src="images/fb.png" />

@@ -13,6 +13,7 @@ const styles = {
     height: 30,
     width: 135,
     // padding: '0 30px',
+    fontSize: 12,
   },
   label: {
     textTransform: 'capitalize',

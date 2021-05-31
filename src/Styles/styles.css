@@ -166,7 +166,7 @@ Testimonial Text on Phone
 .show-enter-active {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 500ms linear, transform 500ms ease-in-out;
+  transition: opacity 500ms ease-in, transform 500ms ease-in-out;
 }
 .show-exit {
   opacity: 1;
@@ -174,7 +174,7 @@ Testimonial Text on Phone
 .show-exit-active {
   opacity: 0;
   transform: translateY(-100%);
-  transition: opacity 500ms linear, transform 500ms ease-in-out;
+  transition: opacity 300ms linear, transform 500ms ease-in-out;
 }
 
 /* Style for divider */

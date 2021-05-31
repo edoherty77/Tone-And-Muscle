@@ -2,25 +2,6 @@ import styled from 'styled-components'
 import colors from '../../config/colors'
 import '../../Styles/styles.css'
 
-export const CatchContainer = styled.div`
-  padding: 3% 10% 0 10%;
-
-  @media screen and (max-width: 480px) {
-    padding: 5% 7%;
-  }
-`
-export const CatchText = styled.p`
-  font-size: 25px;
-  line-height: 1.3em;
-  color: #7aaeea;
-  font-weight: 900;
-
-  @media screen and (max-width: 480px) {
-    font-size: 20px;
-    line-height: 1.1em;
-  }
-`
-
 export const AboutContainer = styled.div`
   box-shadow: 0px 0px 20px 2px gray;
   background: #f1f6fc;
@@ -43,7 +24,7 @@ export const AboutContainer = styled.div`
   }
 
   @media screen and (max-width: 600px) {
-    margin: 50px 10px;
+    margin: 20px 10px 20px 10px;
   }
 `
 
@@ -69,6 +50,7 @@ export const AboutRow = styled.div`
   display: grid;
   grid-template-columns: 4fr 1fr;
   grid-template-areas: 'col1 col2';
+  /* height: '100%'; */
 
   @media screen and (max-width: 850px) {
     grid-template-columns: 1fr;
@@ -128,7 +110,6 @@ export const Header = styled.h1`
 
 export const InfoContainer = styled.div`
   border: 1px solid #a8acb0;
-
   padding: 50px;
   width: 100%;
 
@@ -139,18 +120,16 @@ export const InfoContainer = styled.div`
     /* background: #f1f6fc; */
   }
 `
+export const AboutInfoContainer = styled.div`
+  position: relative;
+`
 
 export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   background-color: white;
   position: relative;
-  overflow: hidden;
-  transition: max-height 0.5s ease-in;
-  margin-bottom: 40px;
-
-  /* border: 1px solid black; */
   padding: 30px 50px;
 
   @media screen and (max-width: 850px) {
@@ -162,21 +141,20 @@ export const TextContainer = styled.div`
   }
 
   @media screen and (max-width: 500px) {
-    padding: 15px;
+    padding: 30px 15px;
   }
 `
 export const WhatContainer = styled.div`
-  max-height: ${({ isWhatHeight }) => (isWhatHeight ? isWhatHeight : '500px')};
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   background-color: white;
   position: relative;
-  overflow: hidden;
-  transition: max-height 0.5s ease-in;
-  margin-bottom: 40px;
+  overflow: visible;
+  max-height: 'fit-content';
 
-  /* border: 1px solid black; */
+  /* margin-bottom: 40px; */
+
   padding: 30px 50px;
 
   @media screen and (max-width: 850px) {
@@ -187,24 +165,23 @@ export const WhatContainer = styled.div`
     padding: 30px;
   }
 
-  @media screen and (max-width: 500px) {
-    padding: 15px;
+  @media screen and (max-width: 480px) {
+    transition: max-height 0.5s ease-in;
+    max-height: ${({ isWhatHeight }) =>
+      isWhatHeight ? isWhatHeight : '500px'};
+    overflow: hidden;
+    padding: 30px 15px;
   }
 `
 
 export const WhyContainer = styled.div`
-  max-height: ${({ isWhyHeight }) => (isWhyHeight ? isWhyHeight : '500px')};
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   background-color: white;
   position: relative;
-  overflow: hidden;
-  transition: max-height 0.5s ease-in;
-  margin-bottom: 40px;
-
-  /* border: 1px solid black; */
   padding: 30px 50px;
+  overflow: visible;
 
   @media screen and (max-width: 850px) {
     background: white;
@@ -214,8 +191,11 @@ export const WhyContainer = styled.div`
     padding: 30px;
   }
 
-  @media screen and (max-width: 500px) {
-    padding: 15px;
+  @media screen and (max-width: 480px) {
+    max-height: ${({ isWhyHeight }) => (isWhyHeight ? isWhyHeight : '1000px')};
+    transition: max-height 0.5s ease-in;
+    overflow: hidden;
+    padding: 30px 15px;
   }
 `
 
@@ -242,62 +222,115 @@ export const InfoHeader = styled.h1`
   }
 `
 
-export const ReadMore = styled.p`
+export const ReadMoreWhat = styled.p`
   display: none;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  bottom: 0px;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  margin: 0;
-  /* padding: 30px 0; */
-  height: 100px;
-  /* background-color: green; */
-  background: -moz-linear-gradient(
-    top,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 1) 90%
-  );
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(0%, rgba(255, 255, 255, 0)),
-    color-stop(95%, rgba(255, 255, 255, 1))
-  );
-  background: -webkit-linear-gradient(
-    top,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 1) 90%
-  );
-  background: -o-linear-gradient(
-    top,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 1) 90%
-  );
-  background: -ms-linear-gradient(
-    top,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 1) 90%
-  );
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 1) 90%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+  /* position: relative; */
 
   @media screen and (max-width: 480px) {
-    display: visible;
+    background-color: 'green';
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0px;
+    left: 0px;
+
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    height: 100px;
+
+    background: -moz-linear-gradient(
+      top,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 90%
+    );
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(0%, rgba(255, 255, 255, 0)),
+      color-stop(95%, rgba(255, 255, 255, 1))
+    );
+    background: -webkit-linear-gradient(
+      top,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 90%
+    );
+    background: -o-linear-gradient(
+      top,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 90%
+    );
+    background: -ms-linear-gradient(
+      top,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 90%
+    );
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 90%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+  }
+`
+
+export const ReadMoreWhy = styled.p`
+  display: none;
+  /* position: relative; */
+
+  @media screen and (max-width: 480px) {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    height: 100px;
+
+    background: -moz-linear-gradient(
+      top,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 90%
+    );
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(0%, rgba(255, 255, 255, 0)),
+      color-stop(95%, rgba(255, 255, 255, 1))
+    );
+    background: -webkit-linear-gradient(
+      top,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 90%
+    );
+    background: -o-linear-gradient(
+      top,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 90%
+    );
+    background: -ms-linear-gradient(
+      top,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 90%
+    );
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 90%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
   }
 `
 
 export const InfoText = styled.p`
-  /* overflow: hidden;
-  transition: max-height 0.5s ease-in; */
+  /* max-height: fit-content; */
+  /* max-width: 'fit-content'; */
+  /* display: flex; */
   text-align: start;
   font-size: 17px;
   line-height: 1.2em;

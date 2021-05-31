@@ -27,7 +27,6 @@ import {
 } from './TestElements'
 
 const Testimonial = ({
-  id,
   story,
   name,
   video,
@@ -38,8 +37,6 @@ const Testimonial = ({
   darkText,
   lightBg,
   imgStart,
-  dark,
-  primary,
 }) => {
   //State for modal
   const [isOpen, setOpen] = useState(false)
@@ -58,12 +55,12 @@ const Testimonial = ({
 
   return (
     <>
-      <TestContainer lightBg={lightBg} id={id}>
+      <TestContainer lightBg={lightBg}>
         <InfoWrapper>
           <InfoRow imgStart={imgStart}>
             <Column1>
               <TextWrapper imgStart={imgStart}>
-                {/* <Name blackHeader={blackHeader}>{name}</Name> */}
+                <Name>{name}</Name>
 
                 <BtnWrap>
                   {showButton && (

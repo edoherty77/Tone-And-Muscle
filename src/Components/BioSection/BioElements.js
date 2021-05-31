@@ -1,33 +1,12 @@
 import styled from 'styled-components'
 import colors from '../../config/colors'
 
-export const CatchContainer = styled.div`
-  padding: 3% 10% 0 10%;
-
-  @media screen and (max-width: 480px) {
-    padding: 5% 7%;
-  }
-`
-export const CatchText = styled.p`
-  text-align: center;
-  font-size: 25px;
-  line-height: 1.3em;
-  color: ${colors.primary};
-  font-weight: 800;
-
-  @media screen and (max-width: 480px) {
-    text-align: justify;
-    font-size: 20px;
-    line-height: 1.1em;
-    font-weight: 600;
-  }
-`
-
 export const AboutContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 4fr;
   box-shadow: 0px 0px 20px 2px gray;
   background: ${colors.background};
+
   padding: 120px;
 
   margin: 80px;
@@ -50,7 +29,7 @@ export const AboutContainer = styled.div`
     margin: 50px 10px;
   }
   @media screen and (max-width: 480px) {
-    margin: 10px;
+    margin: 20px 10px;
   }
 `
 
@@ -202,4 +181,9 @@ export const IconContainer = styled.div`
   /* top: 10px; */
   right: 0px;
   background-color: red;
+`
+
+export const ApplyContainer = styled.div`
+  display: flex;
+  justify-content: center;
 `

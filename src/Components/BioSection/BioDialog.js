@@ -5,9 +5,9 @@ import {
   DialogContent,
   DialogContentText,
   DialogTitle,
-  Slide,
 } from '@material-ui/core'
-
+import { ApplyContainer } from './BioElements'
+import Apply from '../Apply'
 import Button from '../Button'
 import '../../Styles/styles.css'
 
@@ -92,6 +92,9 @@ const BioDialog = ({ Transition, open, onClose }) => {
             enjoy not just the way you look but also the activities you used
             when you were on the field or court.
           </DialogContentText>
+          <ApplyContainer>
+            <Apply />
+          </ApplyContainer>
         </DialogContent>
         <DialogActions>
           <Button onClick={onClose}>Close</Button>

@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import LgPic from './pat-photo.JPG'
 import { animated } from 'react-spring'
+import { Link as LinkR } from 'react-router-dom'
 
 import colors from '../../config/colors'
 
@@ -154,6 +155,7 @@ export const LandingH1 = styled(animated.h1)`
 
 export const LandingP = styled(animated.p)`
   margin-top: 24px;
+  /* color: #7aaeea; */
   color: white;
   font-size: 24px;
   text-align: center;
@@ -179,7 +181,7 @@ export const LandingP = styled(animated.p)`
   }
 `
 export const LandingBtnWrapper = styled(animated.div)`
-  margin-top: 32px;
+  margin: 0px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -262,4 +264,34 @@ export const RightText = styled.p`
   font-size: 22px;
   color: black;
   margin-top: 15px;
+`
+
+export const ApplyWrapper = styled(animated.div)`
+  margin: 30px 0 10px;
+`
+
+export const ApplyBtn = styled.nav`
+  display: flex;
+  align-items: center;
+  padding: 0 10px 0 20px;
+`
+
+export const ApplyBtnLink = styled.a`
+  border-radius: 50px;
+  background: #bcf97f;
+  white-space: nowrap;
+  padding: 10px 22px;
+  color: black;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+    color: #010606;
+  }
 `

@@ -60,18 +60,6 @@ const Navbar = ({ toggle }) => {
             <NavMenuLeft>
               <NavItem>
                 <NavLinks
-                  to="bio"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
-                  About Me
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
                   to="about"
                   smooth={true}
                   duration={500}
@@ -79,21 +67,21 @@ const Navbar = ({ toggle }) => {
                   exact="true"
                   offset={-80}
                 >
-                  Program
+                  The Program
                 </NavLinks>
               </NavItem>
-              {/* <NavItem>
+              <NavItem>
                 <NavLinks
-                  to="personal"
+                  to="bio"
                   smooth={true}
                   duration={500}
                   spy={true}
                   exact="true"
                   offset={-80}
                 >
-                  Personal
+                  Pat Doherty
                 </NavLinks>
-              </NavItem> */}
+              </NavItem>
             </NavMenuLeft>
             <NavMenuRight>
               <NavItem>
@@ -108,9 +96,18 @@ const Navbar = ({ toggle }) => {
                   Success Stories
                 </NavLinks>
               </NavItem>
-              <NavBtn>
-                <NavBtnLink>Apply Here</NavBtnLink>
-              </NavBtn>
+              <NavItem>
+                <NavLinks
+                  to="contact"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                >
+                  Contact Me
+                </NavLinks>
+              </NavItem>
             </NavMenuRight>
           </NavbarContainer>
         </Nav>

@@ -1,5 +1,4 @@
 export const schena = {
-  id: 'testies',
   name: 'Mike',
   story:
     'Mike, an ex football player and long time gym go-er started with the Tone & Muscle Academy when he decided that he wanted to finally see things change for good. While he was super strong at some of the major lifts like squats, deadlifts, and bench press, he still wanted more. He wanted to lose the belly fat he had accumulated but still maintain all the muscle mass. Mike followed the TMA meal plans for 6 months, and a year and half later is currently still utilizing the training program. Down 60 lbs, and eating intuitively Mike is stronger all around than hes ever been.',
@@ -72,4 +71,22 @@ export const bujacich = {
   dark: true,
   primary: true,
   num: 4,
+}
+
+export const ward = {
+  name: 'Austin',
+  story:
+    "Austin came into the TMA with no routine and a busy schedule. He was balancing overnight job hours as well as going to school during the day. Due to his schedule, he usually found himself during his time off sleeping, binging Netflix, and eating fast food. However, once in the academy he managed to first get into a rhythm of training at home during times that worked for him. Then he got a handle on his nutrition and began eating more at home and packing food for work. Over time Austin lost more than 10 lbs of fat and packed on muscle mass. He feels lighter, more awake at work, and now has a routine that'll last him for years.",
+  video: 'videos/Austin.mp4',
+  bef: '/images/Austin-LgBef.png',
+  alt: 'Before Pic',
+  aft: '/images/Austin-LgAft.png',
+  alt2: 'After Pic',
+  imgStart: true,
+  darkText: true,
+  lightBg: false,
+  blackHeader: true,
+  dark: true,
+  primary: true,
+  num: 5,
 }
