@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { FaBars } from 'react-icons/fa'
 import { IconContext } from 'react-icons/lib'
-import { animateScroll as scroll } from 'react-scroll'
 
 import {
   MobileIcon,
@@ -14,8 +13,6 @@ import {
   BannerLink,
   NavMenuLeft,
   NavMenuRight,
-  NavBtn,
-  NavBtnLink,
 } from './NavbarElements'
 
 const Navbar = ({ toggle }) => {
@@ -32,10 +29,6 @@ const Navbar = ({ toggle }) => {
   useEffect(() => {
     window.addEventListener('scroll', changeNav)
   }, [])
-
-  const toggleHome = () => {
-    scroll.scrollToTop()
-  }
 
   return (
     <>

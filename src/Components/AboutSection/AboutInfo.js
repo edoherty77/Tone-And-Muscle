@@ -92,8 +92,8 @@ const AboutInfo = () => {
           for. It is the beginning of a multi-program journey where members are
           taught (and held accountable) to experience what life is like with{' '}
           <span className="bold">sustainable eating and training habits</span>{' '}
-          placed into their daily schedule....It’s like going back to school for
-          your but this time for your body.
+          placed into their daily schedule....It’s like going back to school but
+          this time for your body.
         </InfoText>
 
         <ReadMoreWhat style={{ display: isWhatPressed ? 'none' : 'flex' }}>

@@ -27,7 +27,7 @@ const ContactSection = () => {
       <InfoContainer>
         <InfoHeader>Tone & Muscle</InfoHeader>
         <InfoText style={{ fontSize: 18, fontWeight: 600 }}>
-          Pat Doherty | Personal Trainer
+          Pat Doherty | Owner
         </InfoText>
         <InfoText>917-704-7729</InfoText>
         <InfoText>pat@toneandmuscle.com</InfoText>

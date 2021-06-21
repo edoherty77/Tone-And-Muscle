@@ -186,4 +186,5 @@ export const IconContainer = styled.div`
 export const ApplyContainer = styled.div`
   display: flex;
   justify-content: center;
+  margin-top: 20px;
 `

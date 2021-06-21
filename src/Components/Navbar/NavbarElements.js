@@ -4,8 +4,8 @@ import styled from 'styled-components'
 
 export const Nav = styled.nav`
   background: ${({ scrollNav }) => (scrollNav ? '#000' : 'black')};
-  height: 12vh;
-  margin-top: -12vh;
+  height: 14vh;
+  margin-top: -14vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,7 +32,7 @@ export const NavbarContainer = styled.div`
 `
 
 export const BannerContainer = styled.div`
-  width: 450px;
+  width: 550px;
   height: 100%;
   top: 0;
   right: 0;
@@ -40,6 +40,7 @@ export const BannerContainer = styled.div`
   margin-left: auto;
   margin-right: auto;
   position: absolute;
+  z-index: 0;
 
   @media screen and (max-width: 450px) {
     transition: 0.8s all ease;
@@ -119,6 +120,7 @@ export const NavMenuRight = styled.ul`
   position: absolute;
   right: 50px;
   margin: 0;
+  z-index: 2;
 
   @media screen and (max-width: 1350px) {
     display: none;
@@ -144,7 +146,11 @@ export const NavLinks = styled(LinkS)`
 
   &.active {
     color: #7aaeea;
-    ${'' /* border-bottom: 3px solid #7aaeea; */}
+  }
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    color: #7aaeea;
   }
 `
 
@@ -168,13 +174,11 @@ export const NavBtnLink = styled(LinkR)`
   outline: none;
   border: none;
   cursor: pointer;
-  ${'' /* text-transform: uppercase; */}
   transition: all 0.2s ease-in-out;
   text-decoration: none;
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: #fff;
     color: #010606;
   }
 `
