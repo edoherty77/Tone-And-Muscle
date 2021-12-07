@@ -136,6 +136,7 @@ export const LandingH1 = styled(animated.h1)`
   text-align: center;
   margin-top: 110px;
   text-transform: uppercase;
+  letter-spacing: 2px;
 
   @media screen and (max-width: 768px) {
     font-size: 40px;
@@ -155,12 +156,13 @@ export const LandingH1 = styled(animated.h1)`
 
 export const LandingP = styled(animated.p)`
   margin-top: 24px;
-  /* color: #7aaeea; */
   color: white;
   font-size: 24px;
   text-align: center;
   max-width: 600px;
-  font-size: 30px;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 500;
 
   @media screen and (max-width: 768px) {
     font-size: 24px;
