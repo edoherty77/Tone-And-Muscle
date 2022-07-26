@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react'
 import {
-    Container,
+    SectionContainer,
     Header,
+    Photos,
     PhotoContainer,
-    Row,
+    HeaderContainer,
     Photo
 } from './ProgressElements'
 
@@ -24,7 +25,7 @@ function ProgressSection() {
     let modified_collection = [];
 
     if (photos.length > 0) {
-        let numberOfColumns = 4;
+        let numberOfColumns = 3;
 
         // if (photos.length % 5 + 3 > 0) {
         //     numberOfColumns++;
@@ -43,28 +44,26 @@ function ProgressSection() {
             modified_collection[index].push(photos[i]);
             index++;
         }
-        console.log(modified_collection)
     }
 
     return (
-        <Container>
-            <Header>Tone and Muscle Academy</Header>
-            <PhotoContainer>
+        <SectionContainer>
+            <HeaderContainer>
+                <Header>Tone and Muscle Academy</Header>
+            </HeaderContainer>
+            <Photos>
                 {modified_collection.map((row, index) => (
-                    <div key={index} style={{border: '1px solid red'}}>
+                    <div key={index}>
                         {row.map((col, index) => (
-                            <div key={index} style={{overflowX: 'auto'}}>
-                                <div>
-                                    <Photo src={col.default}/>
-
-                                </div>
-                            </div>
+                            <PhotoContainer key={index}>
+                                <Photo src={col.default}/>
+                            </PhotoContainer>
                         ))}
                     </div>
                 ))}
                 
-            </PhotoContainer>
-        </Container>
+            </Photos>
+        </SectionContainer>
     )
 }
 
