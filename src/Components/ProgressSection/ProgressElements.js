@@ -26,9 +26,8 @@ export const HeaderContainer = styled.div`
   @media screen and (max-width: 545px) {
     width: 90%;
   }
-
-  @media screen and (max-width: 470px) {
-    height: 97px;
+  @media screen and (max-width: 485px) {
+    margin: 72px auto 60px;
   }
 `
 
@@ -53,6 +52,11 @@ export const Header = styled.h1`
     letter-spacing: 0.1em;
     font-size: 40px;
     width: 100%;
+  }
+
+  @media screen and (max-width: 485px) {
+    line-height: 45px;
+    transform: translateY(-47px);
   }
 `
 
