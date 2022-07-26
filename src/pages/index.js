@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import Navbar from '../Components/Navbar'
 
 import LandingSection from '../Components/LandingSection'
+import ProgressSection from '../Components/ProgressSection'
 import PainSection from '../Components/PainSection'
 import Sidebar from '../Components/Sidebar'
 import TestSection from '../Components/TestSection'
@@ -21,6 +22,7 @@ function Landing() {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <LandingSection />
+      <ProgressSection />
       <PainSection />
       <AboutSection />
       <BioSection />

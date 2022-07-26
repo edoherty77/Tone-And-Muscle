@@ -91,11 +91,11 @@ function LandingSection() {
           </ApplyBtn>
         </ApplyWrapper>
         <LandingBtnWrapper style={style3}>
-          <SocialLink href="https://www.facebook.com/profile.php?id=100007385869431">
+          {/* <SocialLink href="https://www.facebook.com/profile.php?id=100007385869431"> */}
             <SocialImg src="images/fb.png" />
           </SocialLink>
           <SocialLink href="https://www.instagram.com/pat__doherty/">
-            <SocialImg src="images/insta.png" />
+            {/* <SocialImg src="images/insta.png" /> */}
           </SocialLink>
         </LandingBtnWrapper>
       </TextContainer>
