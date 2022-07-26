@@ -72,7 +72,7 @@ const Navbar = ({ toggle }) => {
                   exact="true"
                   offset={-80}
                 >
-                  Pat Doherty
+                  About Me
                 </NavLinks>
               </NavItem>
             </NavMenuLeft>

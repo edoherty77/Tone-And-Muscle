@@ -32,14 +32,14 @@ const BioSection = () => {
     <>
       <AboutContainer id="bio">
         <MobileHeaderContainer>
-          <Header>About Pat</Header>
+          <Header>Pat Doherty</Header>
         </MobileHeaderContainer>
         <Column1>
           <AboutImg src={AboutPic} />
         </Column1>
         <Column2>
           <HeaderContainer>
-            <Header>About Pat</Header>
+            <Header>Pat Doherty</Header>
           </HeaderContainer>
           <InfoContainer>
             <TextContainer>
