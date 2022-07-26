@@ -19,7 +19,7 @@ const Navbar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false)
 
   const changeNav = () => {
-    if (window.scrollY >= 80) {
+    if (window.scrollY >= 100) {
       setScrollNav(true)
     } else {
       setScrollNav(false)
@@ -28,12 +28,15 @@ const Navbar = ({ toggle }) => {
 
   useEffect(() => {
     window.addEventListener('scroll', changeNav)
+    // return () => {
+    //   window.removeEventListener('scroll', changeNav)
+    // }
   }, [])
 
   return (
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
-        <Nav>
+        <Nav scrollNav={scrollNav}>
           <NavbarContainer>
             <BannerLink
               to="home"

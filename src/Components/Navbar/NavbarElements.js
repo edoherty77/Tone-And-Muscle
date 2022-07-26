@@ -3,18 +3,25 @@ import { Link as LinkR } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const Nav = styled.nav`
-  background: ${({ scrollNav }) => (scrollNav ? '#000' : 'black')};
-  height: 14vh;
-  margin-top: -14vh;
   display: flex;
+  height: 14vh;
+  margin-top: 0;
   justify-content: center;
   align-items: center;
-  font-size: 13px;
-  position: sticky;
+  font-size: 16px;
+  /* position: relative; */
+  position: fixed;
   top: 0;
   z-index: 10;
   margin-bottom: 0;
+  width: 100%;
+  background: black;
 
+  @media screen and (max-width: 1500px) {
+    font-size: 13px;
+    transition: margin-top .09s ease-in-out;
+    margin-top: ${({ scrollNav }) => (scrollNav ? '-14vh' : '0')};
+  }
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;
   }
@@ -27,7 +34,7 @@ export const NavbarContainer = styled.div`
   display: flex;
   height: 100%;
   z-index: 1;
-  width: 100%;
+  /* width: 100%; */
   max-width: 1100px;
 `
 
@@ -39,7 +46,7 @@ export const BannerContainer = styled.div`
   left: 0%;
   margin-left: auto;
   margin-right: auto;
-  position: absolute;
+  position: relative;
   z-index: 0;
 
   @media screen and (max-width: 450px) {

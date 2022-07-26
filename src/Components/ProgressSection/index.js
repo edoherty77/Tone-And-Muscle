@@ -72,9 +72,9 @@ function ProgressSection() {
 
     return (
         <SectionContainer>
-            <HeaderContainer>
-                <Header>Tone and Muscle Academy</Header>
-            </HeaderContainer>
+            {/* <HeaderContainer>
+                <Header>Tone & Muscle Academy</Header>
+            </HeaderContainer> */}
             <Photos>
                 {modified_collection.map((row, index) => (
                     <div key={index}>

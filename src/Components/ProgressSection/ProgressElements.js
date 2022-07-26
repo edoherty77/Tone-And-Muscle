@@ -5,7 +5,9 @@ export const SectionContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* margin-top: 30px; */
 `
+
 export const HeaderContainer = styled.div`
   background-color: #f1f6fc;
   margin: 90px auto 60px;
@@ -56,7 +58,8 @@ export const Header = styled.h1`
 
   @media screen and (max-width: 485px) {
     line-height: 45px;
-    transform: translateY(-47px);
+    font-size: 35px;
+    transform: translateY(-27px);
   }
 `
 

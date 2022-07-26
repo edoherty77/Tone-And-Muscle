@@ -80,7 +80,7 @@ function LandingSection() {
           A tailored, online coaching experience for former athletes looking to
           regain strength, energy levels, and confidence in their bodies
         </LandingP>
-        <ApplyWrapper style={style3}>
+        {/* <ApplyWrapper style={style3}>
           <ApplyBtn>
             <ApplyBtnLink
               target="_blank"
@@ -92,12 +92,12 @@ function LandingSection() {
         </ApplyWrapper>
         <LandingBtnWrapper style={style3}>
           <SocialLink href="https://www.facebook.com/profile.php?id=100007385869431">
-            {/* <SocialImg src="images/fb.png" /> */}
+            <SocialImg src="images/fb.png" />
           </SocialLink>
           <SocialLink href="https://www.instagram.com/pat__doherty/">
-            {/* <SocialImg src="images/insta.png" /> */}
+            <SocialImg src="images/insta.png" />
           </SocialLink>
-        </LandingBtnWrapper>
+        </LandingBtnWrapper> */}
       </TextContainer>
     </LandingContainer>
   )

@@ -152,9 +152,6 @@ export const WhatContainer = styled.div`
   position: relative;
   overflow: visible;
   max-height: 'fit-content';
-
-  /* margin-bottom: 40px; */
-
   padding: 30px 50px;
 
   @media screen and (max-width: 850px) {

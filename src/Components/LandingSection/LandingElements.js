@@ -10,7 +10,7 @@ export const LandingContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 70vh;
   position: relative;
   z-index: 0;
   width: 100%;
@@ -52,7 +52,7 @@ export const LandingContainer = styled.div`
     bottom: 0;
     position: absolute;
     z-index: -1;
-    height: 100vh;
+    height: 70vh;
     width: 100%;
   }
   @media screen and (min-width: 931px) {
@@ -118,7 +118,7 @@ export const TextContainer = styled(animated.div)`
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  height: 75vh;
   justify-content: center;
 
   @media screen and (max-width: 930px) {
@@ -134,7 +134,7 @@ export const LandingH1 = styled(animated.h1)`
   /* color: #7aaeea; */
   font-size: 48px;
   text-align: center;
-  margin-top: 110px;
+  /* margin-top: 110px; */
   text-transform: uppercase;
   letter-spacing: 2px;
 
@@ -146,6 +146,7 @@ export const LandingH1 = styled(animated.h1)`
     font-size: 30px;
     font-weight: 900;
     max-width: 98%;
+    margin-top: 75px;
   }
 
   @media screen and (max-width: 375px) {
