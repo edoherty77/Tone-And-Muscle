@@ -71,6 +71,10 @@ export const Photos = styled.div`
     @media screen and (max-width: 850px) {
         max-width: 95%;
     }
+    @media screen and (max-width: 600px) {
+        max-width: 100%;
+        margin: 0 3px;
+    }
 `
 
 export const PhotoContainer = styled.div`
@@ -80,8 +84,8 @@ export const PhotoContainer = styled.div`
     @media screen and (max-width: 900px) {
         margin: 10px 5px;
     }
-    @media screen and (max-width: 500px) {
-        margin: 7px 0px;
+    @media screen and (max-width: 600px) {
+        margin: 7px 2px;
     }
 `
 
