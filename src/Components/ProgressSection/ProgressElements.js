@@ -5,24 +5,30 @@ export const SectionContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* border: 1px blue solid; */
 `
 export const HeaderContainer = styled.div`
   background-color: #f1f6fc;
-  margin: auto;
-  margin-top: 90px;
-  margin-bottom: 60px;
+  margin: 90px auto 60px;
   width: 60%;
   height: 40px;
+  display: flex;
+  justify-content: center;
 
-  @media screen and (max-width: 850px) {
-    margin: 40px auto;
-    width: 65%;
-    height: 40px;
+  @media screen and (max-width: 1020px) {
+    margin: 70px auto 50px;
+    width: 70%;
   }
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 825px) {
+    width: 85%;
+  }
+
+  @media screen and (max-width: 545px) {
     width: 90%;
+  }
+
+  @media screen and (max-width: 470px) {
+    height: 97px;
   }
 `
 
@@ -33,13 +39,20 @@ export const Header = styled.h1`
   text-transform: uppercase;
   letter-spacing: 0.2em;
   transform: translateY(-30px);
+  width: 80%;
 
-  @media screen and (max-width: 600px) {
-    letter-spacing: 0.01em;
+  @media screen and (max-width: 1588px) {
+    transform: translateY(-40px);
   }
 
-  @media screen and (max-width: 450px) {
-    font-size: 35px;
+  @media screen and (max-width: 1020px) {
+    width: 85%;
+  }
+
+  @media screen and (max-width: 700px) {
+    letter-spacing: 0.1em;
+    font-size: 40px;
+    width: 100%;
   }
 `
 
@@ -64,7 +77,7 @@ export const PhotoContainer = styled.div`
         margin: 10px 5px;
     }
     @media screen and (max-width: 500px) {
-        margin: 7px 2px;
+        margin: 7px 0px;
     }
 `
 
