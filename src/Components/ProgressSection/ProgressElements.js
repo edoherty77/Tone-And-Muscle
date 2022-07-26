@@ -5,7 +5,7 @@ export const SectionContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px blue solid;
+    /* border: 1px blue solid; */
 `
 export const HeaderContainer = styled.div`
   background-color: #f1f6fc;
@@ -16,8 +16,6 @@ export const HeaderContainer = styled.div`
   height: 40px;
 
   @media screen and (max-width: 850px) {
-    /* display: inline; */
-    /* background-color: white; */
     margin: 40px auto;
     width: 65%;
     height: 40px;
@@ -49,11 +47,25 @@ export const Photos = styled.div`
     display: flex;
     flex-direction: 'row';
     max-width: 70%;
+
+    @media screen and (max-width: 1200px) {
+        max-width: 85%;
+    }
+    @media screen and (max-width: 850px) {
+        max-width: 95%;
+    }
 `
 
 export const PhotoContainer = styled.div`
     display: flex;
     margin: 15px 10px;
+
+    @media screen and (max-width: 900px) {
+        margin: 10px 5px;
+    }
+    @media screen and (max-width: 500px) {
+        margin: 7px 2px;
+    }
 `
 
 export const Photo = styled.img`

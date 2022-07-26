@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import {
     SectionContainer,
     Header,
@@ -12,6 +12,24 @@ let listOfImages = []
 
 function ProgressSection() {
     const [photos, setPhotos] = useState([])
+    const [windowSize, setWindowSize] = useState({
+        width: undefined,
+        height: undefined,
+      })
+    
+      useEffect(() => {
+        // Handler to call on window resize
+        function handleResize() {
+          // Set window width/height to state
+          setWindowSize({
+            width: window.innerWidth,
+            height: window.innerHeight,
+          })
+        }
+        window.addEventListener('resize', handleResize)
+        handleResize()
+        return () => window.removeEventListener('resize', handleResize)
+      }, [])
 
     const importAll = (r) => {
         return r.keys().map(r)
@@ -26,13 +44,19 @@ function ProgressSection() {
 
     if (photos.length > 0) {
         let numberOfColumns = 3;
+        let remainder = 0;
 
-        // if (photos.length % 5 + 3 > 0) {
-        //     numberOfColumns++;
-        // }
+        if(windowSize.width <= 600){
+            numberOfColumns = 2
+        }
+
+        if (photos.length % numberOfColumns > 0) {
+            remainder = photos.length % numberOfColumns
+            console.log(remainder)
+        }
 
         let index = 0;
-        for (let i = 0; i < photos.length; i++) {
+        for (let i = 0; i < photos.length - remainder; i++) {
             if (index % numberOfColumns == 0) {
                 index = 0;
             }
@@ -61,7 +85,6 @@ function ProgressSection() {
                         ))}
                     </div>
                 ))}
-                
             </Photos>
         </SectionContainer>
     )

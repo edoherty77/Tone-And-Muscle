@@ -69,7 +69,6 @@ const AboutInfo = () => {
 
   return (
     <>
-      {/* <AboutInfoContainer> */}
       <WhatContainer
         ref={whatRef}
         style={
@@ -77,7 +76,6 @@ const AboutInfo = () => {
             ? { maxHeight: isWhatHeight }
             : { maxHeight: 'fit-content' }
         }
-        // style={{ maxHeight: isWhatHeight }}
         isWhatHeight={isWhatHeight}
       >
         <InfoHeader>What is the 101 Course?</InfoHeader>
@@ -169,7 +167,6 @@ const AboutInfo = () => {
           </Button>
         </ReadMoreWhy>
       </WhyContainer>
-      {/* </AboutInfoContainer> */}
     </>
   )
 }
