@@ -277,10 +277,12 @@ export const Img2 = styled.img`
 `
 
 export const ApplyContainer = styled.div`
-  background-color: ${colors.background};
+  /* background-color: ${colors.background}; */
+  margin: 40px 0 60px;
+  background-color: white;
 
-  @media screen and (max-width: 890px) {
-    background-color: white;
+  @media screen and (max-width: 480px) {
+    margin: 40px 0 0;
   }
 `
 
@@ -308,7 +310,7 @@ export const ApplyBtnLink = styled.a`
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
-  width: 500px;
+  width: 200px;
 
   &:hover {
     transition: all 0.2s ease-in-out;

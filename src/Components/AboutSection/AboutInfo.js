@@ -96,12 +96,14 @@ const AboutInfo = () => {
 
         <ReadMoreWhat style={{ display: isWhatPressed ? 'none' : 'flex' }}>
           <Button
-            dark
-            primary
+            // dark
+            // primary
             onClick={handleWhatPress}
             style={{
               display: windowSize.width > '480' ? 'none' : 'flex',
               padding: '10px',
+              background: 'black',
+              color: 'white'
             }}
           >
             Read More
@@ -154,13 +156,14 @@ const AboutInfo = () => {
           style={isWhyPressed ? { display: 'none' } : { display: 'flex' }}
         >
           <Button
-            dark
-            primary
+            // dark
+            // primary
             onClick={handleWhyPress}
             style={{
               display: windowSize.width > '480' ? 'none' : 'flex',
-              // height: '40px'
               padding: '10px',
+              background: 'black',
+              color: 'white'
             }}
           >
             Read More

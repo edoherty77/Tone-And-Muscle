@@ -34,8 +34,7 @@ const PainSection = () => {
         </SliderContainer>
         <SliderContainer>
           <Left>
-            {' '}
-            And at the same time, do you want to find a sustainable training
+            Do you want to find a sustainable training
             routine that you can take with you for the rest of your life?
           </Left>
           <Right>
