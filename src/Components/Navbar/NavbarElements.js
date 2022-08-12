@@ -5,12 +5,15 @@ import styled from 'styled-components'
 export const Nav = styled.nav`
   display: flex;
   height: 14vh;
-  margin-top: 0;
+  margin-top: -14vh;
+  /* margin-top: 0;
+  transition: margin-top .09s ease-in-out;
+  margin-top: ${({ scrollNav }) => (scrollNav ? '-14vh' : '0')}; */
+  /* position: fixed; */
   justify-content: center;
   align-items: center;
   font-size: 16px;
-  /* position: relative; */
-  position: fixed;
+  position: sticky;
   top: 0;
   z-index: 10;
   margin-bottom: 0;
@@ -19,8 +22,6 @@ export const Nav = styled.nav`
 
   @media screen and (max-width: 1500px) {
     font-size: 13px;
-    transition: margin-top .09s ease-in-out;
-    margin-top: ${({ scrollNav }) => (scrollNav ? '-14vh' : '0')};
   }
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;

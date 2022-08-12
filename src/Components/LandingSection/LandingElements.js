@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import LgPic from './pat-photo.JPG'
+import LgPic from './pat.jpeg'
 import { animated } from 'react-spring'
 import { Link as LinkR } from 'react-router-dom'
 

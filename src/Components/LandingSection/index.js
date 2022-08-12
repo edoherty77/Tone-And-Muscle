@@ -76,10 +76,10 @@ function LandingSection() {
         style={(style, { transform: `translateY(${offsetY * 0.15}px)` })}
       >
         <LandingH1 style={style2}>Find Your New Prime</LandingH1>
-        <LandingP style={style3}>
+        {/* <LandingP style={style3}>
           A tailored, online coaching experience for former athletes looking to
           regain strength, energy levels, and confidence in their bodies
-        </LandingP>
+        </LandingP> */}
         {/* <ApplyWrapper style={style3}>
           <ApplyBtn>
             <ApplyBtnLink
