@@ -19,12 +19,12 @@ const AboutSection = () => {
     <>
       <AboutContainer id="about">
         <MobileHeaderContainer>
-          <Header>The 101 Course</Header>
+          <Header>What's Included?</Header>
         </MobileHeaderContainer>
         <AboutRow>
           <Column1>
             <HeaderContainer>
-              <Header>The 101 Course</Header>
+              <Header>What's Included?</Header>
             </HeaderContainer>
             <InfoContainer>
               <AboutInfo />

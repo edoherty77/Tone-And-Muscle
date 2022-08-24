@@ -16,7 +16,7 @@ const TestSection = ({ id, lightBg }) => {
     <>
       <Div id="testies">
         <HeaderContainer>
-          <Header>Testimonials</Header>
+          <Header>Student Stories/interviews</Header>
         </HeaderContainer>
         <Testimonial {...schena} />
         <Testimonial {...poplaski} />

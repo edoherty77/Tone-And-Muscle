@@ -10,6 +10,8 @@ import TestSection from '../Components/TestSection'
 import AboutSection from '../Components/AboutSection'
 import BioSection from '../Components/BioSection'
 import ContactSection from '../Components/ContactSection'
+import MidSection from '../Components/MidSection'
+import FormSection from '../Components/FormSection'
 
 function Landing() {
   const [isOpen, setIsOpen] = useState(false)
@@ -23,10 +25,12 @@ function Landing() {
       <Navbar toggle={toggle} />
       <LandingSection />
       <ProgressSection />
-      <PainSection />
+      <MidSection />
+      <FormSection />
       <AboutSection />
-      <BioSection />
       <TestSection />
+      <PainSection />
+      <BioSection />
       <ContactSection />
     </>
   )

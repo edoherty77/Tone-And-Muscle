@@ -1,11 +1,12 @@
 import styled from 'styled-components'
+import colors from '../../config/colors'
 
 export const SectionContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* margin-top: 30px; */
+    margin-top: 70px;
 `
 
 export const HeaderContainer = styled.div`
@@ -95,4 +96,73 @@ export const PhotoContainer = styled.div`
 export const Photo = styled.img`
     height: auto;
     width: 100%;
+`
+
+export const TextContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin: 35px 10px;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: 900px) {
+        margin: 10px 5px;
+    }
+    @media screen and (max-width: 600px) {
+        margin: 7px 2px;
+    }
+`
+
+export const Text = styled.div`
+    font-size: 50px;
+
+    @media screen and (max-width: 620px) {
+      font-size: 40px;
+    }
+    @media screen and (max-width: 480px) {
+      font-size: 30px;
+    }
+`
+
+export const ApplyContainer = styled.div`
+  /* background-color: ${colors.background}; */
+  margin: 20px 0 20px;
+  background-color: white;
+
+  @media screen and (max-width: 480px) {
+    margin: 40px 0 0;
+  }
+`
+
+export const ApplyBtn = styled.nav`
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  justify-content: center;
+
+  @media screen and (max-width: 890px) {
+    padding-top: 5px;
+  }
+`
+
+export const ApplyBtnLink = styled.a`
+  display: flex;
+  justify-content: center;
+  border-radius: 50px;
+  background: #bcf97f;
+  padding: 10px 22px;
+  color: black;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  width: 200px;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+    color: #010606;
+  }
 `

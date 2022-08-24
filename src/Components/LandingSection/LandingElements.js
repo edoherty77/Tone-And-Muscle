@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import LgPic from './pat.jpeg'
+import LgPic from './pat-photo.JPG'
 import { animated } from 'react-spring'
 import { Link as LinkR } from 'react-router-dom'
 
@@ -10,7 +10,7 @@ export const LandingContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70vh;
+  height: 100vh;
   position: relative;
   z-index: 0;
   width: 100%;
@@ -43,7 +43,7 @@ export const LandingContainer = styled.div`
 
   :after {
     content: '';
-    background: rgb(0 0 0/ 57%) url(${LgPic}) no-repeat fixed top;
+    background: rgb(0 0 0/ 5%) url(${LgPic}) no-repeat fixed top;
     background-blend-mode: color;
     background-size: cover;
     top: 0;
@@ -52,7 +52,7 @@ export const LandingContainer = styled.div`
     bottom: 0;
     position: absolute;
     z-index: -1;
-    height: 70vh;
+    height: 100vh;
     width: 100%;
   }
   @media screen and (min-width: 931px) {
@@ -134,7 +134,7 @@ export const LandingH1 = styled(animated.h1)`
   /* color: #7aaeea; */
   font-size: 48px;
   text-align: center;
-  /* margin-top: 110px; */
+  margin-top: 110px;
   text-transform: uppercase;
   letter-spacing: 2px;
 

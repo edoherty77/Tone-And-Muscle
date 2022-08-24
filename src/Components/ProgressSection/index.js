@@ -5,7 +5,12 @@ import {
     Photos,
     PhotoContainer,
     HeaderContainer,
-    Photo
+    Photo,
+    TextContainer,
+    Text,
+    ApplyContainer,
+    ApplyBtn,
+    ApplyBtnLink
 } from './ProgressElements'
 
 let listOfImages = []
@@ -86,6 +91,19 @@ function ProgressSection() {
                     </div>
                 ))}
             </Photos>
+            <TextContainer>
+                <Text>Want results like this?</Text>
+                <ApplyContainer>
+                    <ApplyBtn>
+                        <ApplyBtnLink
+                        target="_blank"
+                        href="https://form.jotform.com/211236844480151"
+                        >
+                        Apply Here
+                        </ApplyBtnLink>
+                    </ApplyBtn>
+                </ApplyContainer>
+            </TextContainer>
         </SectionContainer>
     )
 }

@@ -6,7 +6,6 @@ export const AboutContainer = styled.div`
   box-shadow: 0px 0px 20px 2px gray;
   background: #f1f6fc;
   padding: 120px;
-
   margin: 80px;
   height: fit-content;
 
