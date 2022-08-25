@@ -1,16 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import {
     SectionContainer,
-    Header,
     Photos,
     PhotoContainer,
-    HeaderContainer,
     Photo,
     TextContainer,
     Text,
-    ApplyContainer,
-    ApplyBtn,
-    ApplyBtnLink
+    CTA
 } from './ProgressElements'
 
 let listOfImages = []
@@ -77,9 +73,6 @@ function ProgressSection() {
 
     return (
         <SectionContainer>
-            {/* <HeaderContainer>
-                <Header>Tone & Muscle Academy</Header>
-            </HeaderContainer> */}
             <Photos>
                 {modified_collection.map((row, index) => (
                     <div key={index}>
@@ -93,16 +86,7 @@ function ProgressSection() {
             </Photos>
             <TextContainer>
                 <Text>Want results like this?</Text>
-                <ApplyContainer>
-                    <ApplyBtn>
-                        <ApplyBtnLink
-                        target="_blank"
-                        href="https://form.jotform.com/211236844480151"
-                        >
-                        Apply Here
-                        </ApplyBtnLink>
-                    </ApplyBtn>
-                </ApplyContainer>
+                <CTA>Apply Below</CTA>
             </TextContainer>
         </SectionContainer>
     )

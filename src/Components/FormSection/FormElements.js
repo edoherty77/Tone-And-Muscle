@@ -26,7 +26,15 @@ export const FormTitle = styled.div`
 export const Form = styled.form`
     display: flex;
     flex-direction: column;
-    margin: 0 400px;
+    width: 60%;
+    align-self: center;
+
+    @media screen and (max-width: 800px) {
+        width: 75%;
+    }
+    @media screen and (max-width: 600px) {
+        width: 85%;
+    }
 `
 
 export const FormGroup = styled.div`
@@ -56,7 +64,18 @@ export const Input = styled.input`
 `
 
 export const TextArea = styled.textarea`
-    height: 100px;
+    -webkit-text-size-adjust: 100%;
+    width: 100%;
+    padding: 12px;
+    margin: 6px 0 4px;
+    border: 1px solid #ccc;
+    background: #fafafa;
+    color: #000;
+    font-family: sans-serif;
+    font-size: 12px;
+    line-height: normal;
+    box-sizing: border-box;
+    border-radius: 2px;
 `
 export const ApplyContainer = styled.div`
   /* background-color: ${colors.background}; */

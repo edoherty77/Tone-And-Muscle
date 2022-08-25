@@ -54,7 +54,7 @@ export const BannerContainer = styled.div`
     transition: 0.8s all ease;
   }
 
-  @media screen and (max-width: 460px) {
+  @media screen and (max-width: 555px) {
     width: 330px;
   }
   @media screen and (max-width: 350px) {

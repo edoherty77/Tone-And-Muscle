@@ -1,8 +1,13 @@
 import styled from 'styled-components'
-import Button from '@material-ui/core/Button'
 import colors from '../../config/colors'
 
 export const Div = styled.div`
+  margin-top: 160px;
+
+  @media screen and (max-width: 850px) {
+    margin-top: 100px;
+  }
+
   @media screen and (max-width: 480px) {
     margin: 10px 10px;
     padding: 20px;
@@ -11,21 +16,30 @@ export const Div = styled.div`
 
 export const HeaderContainer = styled.div`
   background-color: #f1f6fc;
-  margin: auto;
-  margin-bottom: 75px;
+  margin: 75px auto;
   width: 40%;
   height: 40px;
 
+  @media screen and (max-width: 1500px) {
+    width: 50%;
+  } 
+
+  
+  @media screen and (max-width: 945px) {
+    width: 60%;
+  }
+  
   @media screen and (max-width: 850px) {
-    /* display: inline; */
-    /* background-color: white; */
-    margin: 40px auto;
-    width: 65%;
+    width: 70%;
     height: 40px;
   }
 
-  @media screen and (max-width: 700px) {
-    width: 90%;
+  @media screen and (max-width: 535px) {
+    width: 80%;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 100%;
   }
 `
 
@@ -35,14 +49,32 @@ export const Header = styled.h1`
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  transform: translateY(-30px);
+  transform: translateY(-54px);
 
-  @media screen and (max-width: 600px) {
-    letter-spacing: 0.01em;
+  @media screen and (max-width: 1205px) {
+    font-size: 30px;
+    transform: translateY(-33px);
   }
 
+  @media screen and (max-width: 630px) {
+    font-size: 25px;
+    transform: translateY(-18px);
+  }
   @media screen and (max-width: 450px) {
-    font-size: 35px;
+    display: none;
+  }
+`
+export const MobileHeader = styled.h1`
+  display: none;
+
+  @media screen and (max-width: 450px) {
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 24px;
+    transform: translateY(-20px);
   }
 `
 
@@ -53,11 +85,6 @@ export const TestContainer = styled.div`
   @media screen and (max-width: 600px) {
     background-color: white;
   }
-
-  /* @media screen and (max-width: 480px) {
-    padding: 20px;
-    margin: 40px 10px;
-  } */
 `
 export const InfoWrapper = styled.div`
   display: grid;

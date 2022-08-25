@@ -91,7 +91,7 @@ export const Header = styled.h1`
   letter-spacing: 0.2em;
   transform: translateY(-30px);
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1205px) {
     transform: translateY(-20px);
     font-size: 30px;
   }

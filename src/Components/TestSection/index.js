@@ -5,6 +5,7 @@ import { schena, conway, poplaski, bujacich, ward } from './Data'
 import {
   Div,
   Header,
+  MobileHeader,
   HeaderContainer,
   ApplyBtn,
   ApplyBtnLink,
@@ -17,6 +18,7 @@ const TestSection = ({ id, lightBg }) => {
       <Div id="testies">
         <HeaderContainer>
           <Header>Student Stories/interviews</Header>
+          <MobileHeader>Student Stories & interviews</MobileHeader>
         </HeaderContainer>
         <Testimonial {...schena} />
         <Testimonial {...poplaski} />

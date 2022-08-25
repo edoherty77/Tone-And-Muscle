@@ -38,7 +38,7 @@ const FormSection = () => {
             phoneNumber: Yup.string().required('* Phone number field is required')
           }),
         onSubmit: values => {
-            emailjs.send('service_h2iorer', 'template_9xhl9xf', values, 'DT43FVbGpAf3j6KAH')
+            emailjs.send('service_cdemyxh', 'template_9xhl9xf', values, 'DT43FVbGpAf3j6KAH')
                 .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
                 }, function(error) {
