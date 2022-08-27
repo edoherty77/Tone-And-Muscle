@@ -13,7 +13,7 @@ export const FormContainer = styled.div`
     }
 
     @media screen and (max-width: 600px) {
-        margin: 20px 10px 20px 10px;
+        margin: 20px 10px 70px 10px;
     }
 `
 
@@ -37,6 +37,11 @@ export const Form = styled.form`
     }
 `
 
+export const ErrorMessage = styled.div`
+    color: red;
+    font-size: 11px;
+`
+
 export const FormGroup = styled.div`
     display: flex;
     flex-direction: column;
@@ -48,6 +53,18 @@ export const Label = styled.label`
     margin-bottom: 3px;
     font-weight: 100;
 `
+
+export const SubLabel = styled.label`
+    color: #363636;
+    font-weight: 100;
+    margin-bottom: 5px;
+    font-size: 12px;
+    opacity: .7;
+    /* display: block; */
+    white-space: pre-wrap;
+`
+
+
 export const Input = styled.input`
     -webkit-text-size-adjust: 100%;
     width: 100%;
@@ -77,9 +94,25 @@ export const TextArea = styled.textarea`
     box-sizing: border-box;
     border-radius: 2px;
 `
+
+
+export const Select = styled.select`
+    width: 40px;
+    padding: 5px;
+`
+
+export const Option = styled.option``
+
+export const Checkbox = styled.input`
+    width: 15px;
+    margin-top: 0px;
+`
+
 export const ApplyContainer = styled.div`
   /* background-color: ${colors.background}; */
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   margin: 20px 0 20px;
   background-color: white;
@@ -103,10 +136,16 @@ export const ApplyBtn = styled.button`
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   width: 200px;
+  font-weight: 600;
 
-  /* &:hover {
+  &:hover {
     transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #010606;
-  } */
+    background: #000;
+    color: #fff;
+  }
+`
+
+export const SubmitMessage = styled.div`
+    font-size: 14px;
+    margin-top: 20px;
 `

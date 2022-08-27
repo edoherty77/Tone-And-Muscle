@@ -28,8 +28,12 @@ const TestSection = ({ id, lightBg }) => {
         <ApplyContainer>
           <ApplyBtn>
             <ApplyBtnLink
-              target="_blank"
-              href="https://form.jotform.com/211236844480151"
+              to="form"
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact="true"
+              offset={-80}
             >
               Apply Here
             </ApplyBtnLink>

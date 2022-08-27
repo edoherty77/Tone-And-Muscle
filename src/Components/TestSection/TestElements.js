@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 import colors from '../../config/colors'
+import { Link as LinkS } from 'react-scroll'
+import { Link as LinkR } from 'react-router-dom'
 
 export const Div = styled.div`
   margin-top: 160px;
@@ -324,7 +326,7 @@ export const ApplyBtn = styled.nav`
   }
 `
 
-export const ApplyBtnLink = styled.a`
+export const ApplyBtnLink = styled(LinkS)`
   display: flex;
   justify-content: center;
   border-radius: 50px;
@@ -341,7 +343,7 @@ export const ApplyBtnLink = styled.a`
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #010606;
+    background: #000;
+    color: #fff;
   }
 `
