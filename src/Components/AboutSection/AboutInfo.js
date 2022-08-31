@@ -1,6 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react'
-import { Button } from '../ButtonElements'
-import '../../Styles/styles.css'
+import React, { useState, useRef, useEffect } from "react";
+import { Button } from "../ButtonElements";
+import "../../Styles/styles.css";
 import {
   AboutInfoContainer,
   WhatContainer,
@@ -10,22 +10,22 @@ import {
   InfoText,
   ReadMoreWhat,
   ReadMoreWhy,
-} from './AboutElements'
+} from "./AboutElements";
 
-let whatHeight = null
-let whyHeight = null
+let whatHeight = null;
+let whyHeight = null;
 
 const AboutInfo = () => {
-  const [isWhatHeight, setWhatHeight] = useState('auto')
-  const [isWhyHeight, setWhyHeight] = useState('auto')
-  const [isWhatPressed, setWhatPressed] = useState(false)
-  const [isWhyPressed, setWhyPressed] = useState(false)
-  const whatRef = useRef(null)
-  const whyRef = useRef(null)
+  const [isWhatHeight, setWhatHeight] = useState("auto");
+  const [isWhyHeight, setWhyHeight] = useState("auto");
+  const [isWhatPressed, setWhatPressed] = useState(false);
+  const [isWhyPressed, setWhyPressed] = useState(false);
+  const whatRef = useRef(null);
+  const whyRef = useRef(null);
   const [windowSize, setWindowSize] = useState({
     width: undefined,
     height: undefined,
-  })
+  });
 
   useEffect(() => {
     // Handler to call on window resize
@@ -34,75 +34,85 @@ const AboutInfo = () => {
       setWindowSize({
         width: window.innerWidth,
         height: window.innerHeight,
-      })
+      });
     }
-    window.addEventListener('resize', handleResize)
-    handleResize()
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     if (whatRef.current && whatHeight === null) {
-      whatHeight = whatRef.current.getBoundingClientRect().isWhatHeight
-      setWhatHeight(315)
+      whatHeight = whatRef.current.getBoundingClientRect().isWhatHeight;
+      setWhatHeight(315);
     }
     if (whyRef.current && whyHeight === null) {
-      whyHeight = whyRef.current.getBoundingClientRect().isWhyHeight
-      setWhyHeight(325)
+      whyHeight = whyRef.current.getBoundingClientRect().isWhyHeight;
+      setWhyHeight(325);
     }
-  })
+  });
 
   const handleWhatPress = () => {
-    if (whatHeight === null) return
-    setWhatHeight(isWhatHeight === 315 ? whatHeight : 315)
+    if (whatHeight === null) return;
+    setWhatHeight(isWhatHeight === 315 ? whatHeight : 315);
     setTimeout(function () {
-      setWhatPressed(true)
-    }, 800)
-  }
+      setWhatPressed(true);
+    }, 800);
+  };
   const handleWhyPress = () => {
-    if (whyHeight === null) return
-    setWhyHeight(isWhyHeight === 325 ? whyHeight : 325)
+    if (whyHeight === null) return;
+    setWhyHeight(isWhyHeight === 325 ? whyHeight : 325);
     setTimeout(function () {
-      setWhyPressed(true)
-    }, 700)
-  }
+      setWhyPressed(true);
+    }, 700);
+  };
 
   return (
     <>
       <TextContainer>
         <InfoHeader>Customized Training Routines</InfoHeader>
         <InfoText>
-          For at home or in gym routines built around your goals and capabilities
+          We work with what you have, period. Whether you want to start in the
+          comfort of your own living room, use the apartment gym, or start your
+          routine with all the equipment that your local gym offers, we got you.
+          We'll take into account your goals, limitations and alter your
+          training routine on a monthly basis.
         </InfoText>
       </TextContainer>
 
       <TextContainer>
-        <InfoHeader>Flexible Food Plans/Nutrition Course</InfoHeader>
+        <InfoHeader>Flexible Nutrition + Course</InfoHeader>
         <InfoText>
-          To help you learn all about what to put in your body for higher energy levels/fat loss but allow you to make the decisions so you never feel like you're on a diet.
+          Whether it's meal plans, tracking, or intuitive eating we'll discuss
+          together what is the best route for you. We will also teach you along
+          the way about food choices so there's never any more questions about
+          what you need to put in your body to look and feel your best.
         </InfoText>
       </TextContainer>
 
       <TextContainer>
-        <InfoHeader>Zoom Community Calls</InfoHeader>
+        <InfoHeader>Community Calls + FB Group</InfoHeader>
         <InfoText>
-          So you can not only learn from others what is working for them, but share with other students who can benefit from your guidance 
+          Being part of a crew that is on the same journey as you is invaluable.
+          You will not only be able to see what is working for others, but have
+          the opportunity to be guides for those that come after you. It's
+          another level of accountability and motivation that you won't find in
+          your local gym or diet plan.
         </InfoText>
       </TextContainer>
       <TextContainer>
-        <InfoHeader>24/7 text Access to Coach plus Monthly 1 on 1's</InfoHeader>
+        <InfoHeader>1 on 1 Accountability Coaching</InfoHeader>
         <InfoText>
-          Get short term support but a refreshed game plan heading into each month
-        </InfoText>
-      </TextContainer>
-      <TextContainer>
-        <InfoHeader>Weekly Exercise Form/Food Reviews</InfoHeader>
-        <InfoText>
-          We don't just hold you accountable to complete your workouts, we make sure you are moving in a way that's going to maximize muscle. For those that choose to track their food you get weekly overviews with suggestions on what to alter/keep in order to hit your weight loss goals. 
+          The most valuable aspect of the program is what will ultimately help
+          you stay focused on your goals despite what life throws at you. We
+          offer 24/7 text and video message support throughout the week plus 1
+          on 1 monthly reviews, where we compile data such as your weight,
+          training completion percentage, photos, and measurements and go over
+          next month's game plan to help you stay focused on your goals.
         </InfoText>
       </TextContainer>
     </>
-  )
-}
+  );
+};
 
-export default AboutInfo
+export default AboutInfo;

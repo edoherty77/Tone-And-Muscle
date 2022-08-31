@@ -1,6 +1,6 @@
-import styled from 'styled-components'
-import colors from '../../config/colors'
-import '../../Styles/styles.css'
+import styled from "styled-components";
+import colors from "../../config/colors";
+import "../../Styles/styles.css";
 
 export const AboutContainer = styled.div`
   box-shadow: 0px 0px 20px 2px gray;
@@ -25,7 +25,7 @@ export const AboutContainer = styled.div`
   @media screen and (max-width: 600px) {
     margin: 20px 10px 20px 10px;
   }
-`
+`;
 
 export const MobileHeaderContainer = styled.div`
   display: none;
@@ -43,27 +43,27 @@ export const MobileHeaderContainer = styled.div`
     margin: 40px auto 0px;
     width: 85%;
   }
-`
+`;
 
 export const AboutRow = styled.div`
   display: grid;
   grid-template-columns: 4fr 1fr;
-  grid-template-areas: 'col1 col2';
+  grid-template-areas: "col1 col2";
   /* height: '100%'; */
 
   @media screen and (max-width: 850px) {
     grid-template-columns: 1fr;
     padding: 0;
-    grid-template-areas: 'col2 col2' 'col1 col1';
+    grid-template-areas: "col2 col2" "col1 col1";
   }
-`
+`;
 
 export const Column1 = styled.div`
   @media screen and (max-width: 480px) {
     padding: 0;
     grid-area: col1;
   }
-`
+`;
 
 export const HeaderContainer = styled.div`
   background-color: white;
@@ -80,7 +80,7 @@ export const HeaderContainer = styled.div`
   @media screen and (max-width: 850px) {
     display: none;
   }
-`
+`;
 
 export const Header = styled.h1`
   text-align: center;
@@ -105,7 +105,7 @@ export const Header = styled.h1`
     transform: translateY(-20px);
     font-size: 27px;
   }
-`
+`;
 
 export const InfoContainer = styled.div`
   border: 1px solid #a8acb0;
@@ -118,10 +118,10 @@ export const InfoContainer = styled.div`
     border: none;
     /* background: #f1f6fc; */
   }
-`
+`;
 export const AboutInfoContainer = styled.div`
   position: relative;
-`
+`;
 
 export const TextContainer = styled.div`
   display: flex;
@@ -142,7 +142,7 @@ export const TextContainer = styled.div`
   @media screen and (max-width: 500px) {
     padding: 30px 15px;
   }
-`
+`;
 export const WhatContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -150,7 +150,7 @@ export const WhatContainer = styled.div`
   background-color: white;
   position: relative;
   overflow: visible;
-  max-height: 'fit-content';
+  max-height: "fit-content";
   padding: 30px 50px;
 
   @media screen and (max-width: 850px) {
@@ -164,11 +164,11 @@ export const WhatContainer = styled.div`
   @media screen and (max-width: 480px) {
     transition: max-height 0.5s ease-in;
     max-height: ${({ isWhatHeight }) =>
-      isWhatHeight ? isWhatHeight : '500px'};
+      isWhatHeight ? isWhatHeight : "500px"};
     overflow: hidden;
     padding: 30px 15px;
   }
-`
+`;
 
 export const WhyContainer = styled.div`
   display: flex;
@@ -188,12 +188,12 @@ export const WhyContainer = styled.div`
   }
 
   @media screen and (max-width: 480px) {
-    max-height: ${({ isWhyHeight }) => (isWhyHeight ? isWhyHeight : '1000px')};
+    max-height: ${({ isWhyHeight }) => (isWhyHeight ? isWhyHeight : "1000px")};
     transition: max-height 0.5s ease-in;
     overflow: hidden;
     padding: 30px 15px;
   }
-`
+`;
 
 export const InfoHeader = styled.h1`
   margin-bottom: 15px;
@@ -216,14 +216,14 @@ export const InfoHeader = styled.h1`
     margin-bottom: 8px;
     font-weight: 700;
   }
-`
+`;
 
 export const ReadMoreWhat = styled.p`
   display: none;
   /* position: relative; */
 
   @media screen and (max-width: 480px) {
-    background-color: 'green';
+    background-color: "green";
     position: absolute;
     display: flex;
     align-items: center;
@@ -270,7 +270,7 @@ export const ReadMoreWhat = styled.p`
     );
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
   }
-`
+`;
 
 export const ReadMoreWhy = styled.p`
   display: none;
@@ -321,7 +321,7 @@ export const ReadMoreWhy = styled.p`
     );
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
   }
-`
+`;
 
 export const InfoText = styled.p`
   /* max-height: fit-content; */
@@ -341,9 +341,8 @@ export const InfoText = styled.p`
     letter-spacing: 0;
     border-left: none;
     padding-left: 0;
-    text-align: justify;
   }
-`
+`;
 
 export const Column2 = styled.div`
   grid-area: col2;
@@ -358,7 +357,7 @@ export const Column2 = styled.div`
     justify-content: center;
     transform: none;
   }
-`
+`;
 
 export const AboutImg = styled.img`
   position: absolute;
@@ -375,4 +374,4 @@ export const AboutImg = styled.img`
     width: 200px;
     height: 200px;
   }
-`
+`;

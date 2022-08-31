@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
-import { FaBars } from 'react-icons/fa'
-import { IconContext } from 'react-icons/lib'
+import React, { useState, useEffect } from "react";
+import { FaBars } from "react-icons/fa";
+import { IconContext } from "react-icons/lib";
 
 import {
   MobileIcon,
@@ -13,10 +13,10 @@ import {
   BannerLink,
   NavMenuLeft,
   NavMenuRight,
-} from './NavbarElements'
+} from "./NavbarElements";
 
 const Navbar = ({ toggle }) => {
-  const [scrollNav, setScrollNav] = useState(false)
+  const [scrollNav, setScrollNav] = useState(false);
 
   const changeNav = () => {
     // if (window.scrollY >= 100) {
@@ -24,18 +24,18 @@ const Navbar = ({ toggle }) => {
     // } else {
     //   setScrollNav(false)
     // }
-  }
+  };
 
   useEffect(() => {
-    window.addEventListener('scroll', changeNav)
+    window.addEventListener("scroll", changeNav);
     // return () => {
     //   window.removeEventListener('scroll', changeNav)
     // }
-  }, [])
+  }, []);
 
   return (
     <>
-      <IconContext.Provider value={{ color: '#fff' }}>
+      <IconContext.Provider value={{ color: "#fff" }}>
         <Nav scrollNav={scrollNav}>
           <NavbarContainer>
             <BannerLink
@@ -75,7 +75,7 @@ const Navbar = ({ toggle }) => {
                   exact="true"
                   offset={-80}
                 >
-                  About Me
+                  About Pat
                 </NavLinks>
               </NavItem>
             </NavMenuLeft>
@@ -94,14 +94,14 @@ const Navbar = ({ toggle }) => {
               </NavItem>
               <NavItem>
                 <NavLinks
-                  to="contact"
+                  to="form"
                   smooth={true}
                   duration={500}
                   spy={true}
                   exact="true"
                   offset={-80}
                 >
-                  Contact Me
+                  Apply
                 </NavLinks>
               </NavItem>
             </NavMenuRight>
@@ -109,7 +109,7 @@ const Navbar = ({ toggle }) => {
         </Nav>
       </IconContext.Provider>
     </>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

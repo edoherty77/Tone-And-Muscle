@@ -116,7 +116,7 @@ export const Text = styled.div`
     margin-bottom: 10px;
 
     @media screen and (max-width: 500px) {
-      font-size: 30px;
+      font-size: 25px;
     }
 
 `
@@ -124,8 +124,4 @@ export const Text = styled.div`
 export const CTA = styled.div`
     font-size: 25px;
     font-weight: 200;
-    
-    /* @media screen and (max-width: 500px) {
-      font-size: 30px;
-    } */
 `

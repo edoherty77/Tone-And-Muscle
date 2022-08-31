@@ -1,13 +1,13 @@
 export const schena = {
-  name: 'Mike',
+  name: "Mike",
   story:
-    'Mike, an ex football player and long time gym go-er started with the Tone & Muscle Academy when he decided that he wanted to finally see things change for good. While he was super strong at some of the major lifts like squats, deadlifts, and bench press, he still wanted more. He wanted to lose the belly fat he had accumulated but still maintain all the muscle mass. Mike followed the TMA meal plans for 6 months, and a year and half later is currently still utilizing the training program. Down 60 lbs, and eating intuitively Mike is stronger all around than hes ever been.',
-  buttonLabel: 'Get Started',
-  video: 'videos/Mike.mp4',
-  bef: '/images/Mike-LgBef.png',
-  alt: 'Before Pic',
-  aft: '/images/Mike-LgAft.png',
-  alt2: 'After Pic',
+    "Mike dropped over 50 lbs by learning how to eat in a manner that helped him lose weight and have energy to lift weight at home 4x per week.",
+  buttonLabel: "Get Started",
+  video: "videos/Mike.mp4",
+  img: "/images/mike.JPG",
+  alt: "Before Pic",
+  aft: "/images/Mike-LgAft.png",
+  alt2: "After Pic",
   imgStart: true,
   darkText: true,
   lightBg: true,
@@ -15,37 +15,18 @@ export const schena = {
   dark: true,
   primary: true,
   num: 1,
-}
-
-export const conway = {
-  name: 'Jack',
-  story:
-    'With quarantine set in and the gyms closed Jack came into the TMA without any experience lifting weights. While he had been an athlete a lot of his life, strength training never had made its way into his routine. Jack adopted TMAs home routine and began balancing his work, newborn child, and lifting regimen while adhering to the meal plans. After 12 weeks Jack learned all about how to prioritize whole foods into his diet, lost 15 lbs, and now is stronger than hes ever been...all without ever leaving the house.',
-  buttonLabel: 'Get Started',
-  video: 'videos/Jack.mp4',
-  bef: '/images/Jack-LgBef.png',
-  alt: 'Before Pic',
-  aft: '/images/Jack-LgAft.jpg',
-  alt2: 'After Pic',
-  imgStart: true,
-  darkText: true,
-  lightBg: true,
-  blackHeader: true,
-  dark: true,
-  primary: true,
-  num: 2,
-}
+};
 
 export const poplaski = {
-  name: 'Kevin',
+  name: "Kevin",
   story:
-    'Kevin a former college wrestler and current entrepreneur found the TMA at a time where he was extremely busy getting his mead business off the ground. However, eating what he could when he could wasnt serving him well as he was weighing 282 and was eating foods that werent giving him the energy to train on his downtime. After adopting ideas from the TMA meal plans into his diet he learned how to prepare for the week and prioritize his work outs no matter how busy his business got. Currently at 222 lbs, Kevin is 60 lbs down from his original weight and stronger all around than hes ever been.',
-  buttonLabel: 'Get Started',
-  video: 'videos/Kevin.mp4',
-  bef: '/images/Kevin-LgBef.png',
-  alt: 'Before Pic',
-  aft: '/images/Kevin-LgAft.png',
-  alt2: 'After Pic',
+    "Kevin dropped over 30 lbs, gained strength, and developed confidence in his body all while running his own business.",
+  buttonLabel: "Get Started",
+  video: "videos/Kevin.mp4",
+  img: "/images/kevin.JPG",
+  alt: "Before Pic",
+  aft: "/images/Kevin-LgAft.png",
+  alt2: "After Pic",
   imgStart: false,
   darkText: true,
   lightBg: false,
@@ -53,35 +34,71 @@ export const poplaski = {
   dark: true,
   primary: true,
   num: 3,
-}
+};
 
 export const bujacich = {
-  name: 'Alex',
+  name: "Alex",
   story:
-    ' Alex came into the program wanting to kick the habit of buying most of his meals from Grubhub and then establish an effective training routine at home since the gyms had closed for quarantine. His life was busy as he was attaining new responsibilities from his promotion at work and was in the midst of buying his first property. Once he was given clear cut strategies on how to eat and exercise Alex never looked back. His discipline and action helped him lose 20 lbs in 12 weeks and pack on muscle from the comfort of his own home. On top of the physical changes he created, Alexs biggest wins came from preparing his meals at home. He not saved thousands of dollars by eliminating take out from his diet, but attained new levels of energy throughout the day since he was now consuming whole foods that he prepped for himself.',
-  video: 'videos/Alex.mp4',
-  bef: '/images/Alex-LgBef.png',
-  alt: 'Before Pic',
-  aft: '/images/Alex-LgAft.png',
-  alt2: 'After Pic',
+    "Alex lost over 20 lbs, started squatting and deadlifting his weight while saving hundreds of dollars a month by making his own food instead of ordering Grub Hub.",
+  video: "videos/Alex.mp4",
+  img: "/images/alex.JPG",
+  alt: "Before Pic",
+  aft: "/images/Alex-LgAft.png",
+  alt2: "After Pic",
+  imgStart: true,
+  darkText: true,
+  lightBg: true,
+  blackHeader: true,
+  dark: true,
+  primary: true,
+  num: 4,
+};
+
+export const ward = {
+  name: "Austin",
+  story:
+    "Austin managed to lose over 10 lbs, boost his energy levels, and consistently weight train 3x per week, all while working an overnight shift.",
+  video: "videos/Austin.mp4",
+  img: "/images/austin.JPG",
+  alt: "Before Pic",
+  aft: "/images/Austin-LgAft.png",
+  alt2: "After Pic",
   imgStart: false,
   darkText: true,
   lightBg: false,
   blackHeader: true,
   dark: true,
   primary: true,
-  num: 4,
-}
+  num: 5,
+};
 
-export const ward = {
-  name: 'Austin',
+export const rob = {
+  name: "Rob",
   story:
-    "Austin came into the TMA with no routine and a busy schedule. He was balancing overnight job hours as well as going to school during the day. Due to his schedule, he usually found himself during his time off sleeping, binging Netflix, and eating fast food. However, once in the academy he managed to first get into a rhythm of training at home during times that worked for him. Then he got a handle on his nutrition and began eating more at home and packing food for work. Over time Austin lost more than 10 lbs of fat and packed on muscle mass. He feels lighter, more awake at work, and now has a routine that'll last him for years.",
-  video: 'videos/Austin.mp4',
-  bef: '/images/Austin-LgBef.png',
-  alt: 'Before Pic',
-  aft: '/images/Austin-LgAft.png',
-  alt2: 'After Pic',
+    "Rob D'Aug dropped over 25 lbs and strengthened his way out of back pain while balancing his demanding law job and family life.",
+  video: "videos/rob.mp4",
+  img: "/images/rob.JPG",
+  alt: "Before Pic",
+  aft: "/images/Austin-LgAft.png",
+  alt2: "After Pic",
+  imgStart: false,
+  darkText: true,
+  lightBg: false,
+  blackHeader: true,
+  dark: true,
+  primary: true,
+  num: 5,
+};
+
+export const ricky = {
+  name: "Ricky",
+  story:
+    "Ricky developed a 3x a week early morning strength routine while losing 27 lbs. He built the confidence that he can take time off and pick back up no matter what.",
+  video: "videos/rick.crdownload",
+  img: "/images/ricky.JPG",
+  alt: "Before Pic",
+  aft: "/images/Austin-LgAft.png",
+  alt2: "After Pic",
   imgStart: true,
   darkText: true,
   lightBg: true,
@@ -89,4 +106,40 @@ export const ward = {
   dark: true,
   primary: true,
   num: 5,
-}
+};
+
+export const tim = {
+  name: "Tim",
+  story:
+    "Tim got rid of his love handles, added inches to his chest, but more importantly felt as though he finally found a sustainable, progressive exercise routine.",
+  video: "videos/tim.mp4",
+  img: "/images/tim.JPG",
+  alt: "Before Pic",
+  aft: "/images/Austin-LgAft.png",
+  alt2: "After Pic",
+  imgStart: false,
+  darkText: true,
+  lightBg: false,
+  blackHeader: true,
+  dark: true,
+  primary: true,
+  num: 5,
+};
+
+export const eric = {
+  name: "Eric",
+  story:
+    "Eric developed strength in his legs which helped him decrease his back pain and run pain free for the first time in a decade.",
+  video: "videos/eric.mp4",
+  img: "/images/eric.JPG",
+  alt: "Before Pic",
+  aft: "/images/Austin-LgAft.png",
+  alt2: "After Pic",
+  imgStart: true,
+  darkText: true,
+  lightBg: true,
+  blackHeader: true,
+  dark: true,
+  primary: true,
+  num: 5,
+};

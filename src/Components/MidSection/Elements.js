@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 
-
 export const PhotoContainer = styled.div`
     position: relative;
     background-color: black;
@@ -10,13 +9,10 @@ export const PhotoContainer = styled.div`
         background: none;
     }
 
-    @media screen and (max-width: 450px) {
-        height: 90vh;
+    @media screen and (max-width: 480px) {
+        display: none;
     }
 `
-
-
-
 export const Img = styled.div`
     height: 87vh;
     width: auto;
@@ -46,29 +42,4 @@ export const Img = styled.div`
         background-position: top 90px right 50%;
         background-size: cover;
     }
-
-    @media screen and (max-width: 480px) {
-        display: none;
-    }
-`
-
-export const MobileImgWrp = styled.div`
-    display: none;
-
-    @media screen and (max-width: 480px) {
-        display: flex;
-        position: relative;
-  
-        width: 100%;
-        height: 100%;
-        /* overflow: hidden; */
-        z-index: 1;
-    }    
-`
-export const MobileImg = styled.img`
-    position: relative;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    background: #232a34;
 `

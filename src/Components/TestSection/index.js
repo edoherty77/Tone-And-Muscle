@@ -1,7 +1,7 @@
-import React from 'react'
-import '../../Styles/styles.css'
-import Testimonial from './testimonial'
-import { schena, conway, poplaski, bujacich, ward } from './Data'
+import React from "react";
+import "../../Styles/styles.css";
+import Testimonial from "./testimonial";
+import { schena, poplaski, bujacich, ward, tim, eric, rob } from "./Data";
 import {
   Div,
   Header,
@@ -10,7 +10,7 @@ import {
   ApplyBtn,
   ApplyBtnLink,
   ApplyContainer,
-} from './TestElements'
+} from "./TestElements";
 
 const TestSection = ({ id, lightBg }) => {
   return (
@@ -22,9 +22,11 @@ const TestSection = ({ id, lightBg }) => {
         </HeaderContainer>
         <Testimonial {...schena} />
         <Testimonial {...poplaski} />
-        <Testimonial {...conway} />
         <Testimonial {...bujacich} />
         <Testimonial {...ward} />
+        <Testimonial {...tim} />
+        <Testimonial {...eric} />
+        <Testimonial {...rob} />
         <ApplyContainer>
           <ApplyBtn>
             <ApplyBtnLink
@@ -41,7 +43,7 @@ const TestSection = ({ id, lightBg }) => {
         </ApplyContainer>
       </Div>
     </>
-  )
-}
+  );
+};
 
-export default TestSection
+export default TestSection;

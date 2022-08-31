@@ -1,14 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 // import { Button } from '../ButtonElements'
-import { CSSTransition } from 'react-transition-group'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlayCircle } from '@fortawesome/free-solid-svg-icons'
-import Player from '../Player'
-import colors from '../../config/colors'
+import { CSSTransition } from "react-transition-group";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlayCircle } from "@fortawesome/free-solid-svg-icons";
+import Player from "../Player";
+import colors from "../../config/colors";
 
-import ToggleBtn from './ToggleBtn'
+import ToggleBtn from "./ToggleBtn";
 
-import '../../Styles/styles.css'
+import "../../Styles/styles.css";
 import {
   TestContainer,
   InfoWrapper,
@@ -24,13 +24,13 @@ import {
   Play,
   Img,
   Img2,
-} from './TestElements'
+} from "./TestElements";
 
 const Testimonial = ({
   story,
   name,
   video,
-  bef,
+  img,
   aft,
   alt,
   alt2,
@@ -39,30 +39,30 @@ const Testimonial = ({
   imgStart,
 }) => {
   //State for modal
-  const [isOpen, setOpen] = useState(false)
+  const [isOpen, setOpen] = useState(false);
 
   //State for story in mobile view
-  const [isShown, setShown] = useState(false)
-  const [showButton, setShowButton] = useState(true)
+  const [isShown, setShown] = useState(false);
+  const [showButton, setShowButton] = useState(true);
 
   //Open and close functions for modals
   const onOpen = () => {
-    setOpen(true)
-  }
+    setOpen(true);
+  };
   const onCloseModal = () => {
-    setOpen(false)
-  }
+    setOpen(false);
+  };
 
   return (
     <>
       <TestContainer lightBg={lightBg}>
         <InfoWrapper>
           <InfoRow imgStart={imgStart}>
-            <Column1>
+            <Column1 imgStart={imgStart}>
               <TextWrapper imgStart={imgStart}>
-                <Name>{name}</Name>
+                {/* <Name>{name}</Name> */}
 
-                <BtnWrap>
+                {/* <BtnWrap>
                   {showButton && (
                     <ToggleBtn
                       onClick={() => setShown(true)}
@@ -80,7 +80,7 @@ const Testimonial = ({
                       background="linear-gradient(49deg, rgba(240,118,102,1) 0%, rgba(232,128,115,1) 49%, rgba(224,147,137,1) 81%, rgba(226,188,184,1) 100%)"
                     />
                   )}
-                </BtnWrap>
+                </BtnWrap> */}
                 <CSSTransition
                   in={isShown}
                   timeout={500}
@@ -107,7 +107,7 @@ const Testimonial = ({
                 </Story>
               </TextWrapper>
             </Column1>
-            <Column2>
+            <Column2 imgStart={imgStart}>
               <ImgWrap>
                 <Play>
                   <FontAwesomeIcon
@@ -117,8 +117,7 @@ const Testimonial = ({
                     size="5x"
                   />
                 </Play>
-                <Img src={bef} alt={alt} />
-                <Img2 src={aft} alt={alt2} />
+                <Img src={img} alt={alt} />
               </ImgWrap>
               <Player
                 name={name}
@@ -131,6 +130,6 @@ const Testimonial = ({
         </InfoWrapper>
       </TestContainer>
     </>
-  )
-}
-export default Testimonial
+  );
+};
+export default Testimonial;

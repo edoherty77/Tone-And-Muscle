@@ -91,7 +91,7 @@ const FormSection = () => {
                 </FormGroup>
                 <FormGroup>
                     <Label>Phone Number *</Label>
-                    <Input type="tel" id="phoneNumber" name="phoneNumber" onBlur={formik.handleBlur} onChange={formik.handleChange} value={formik.values.phoneNumber} />
+                    <Input type="number" id="phoneNumber" name="phoneNumber" onBlur={formik.handleBlur} onChange={formik.handleChange} value={formik.values.phoneNumber} />
                     {formik.touched.phoneNumber && formik.errors.phoneNumber ?  <ErrorMessage>{formik.errors.phoneNumber}</ErrorMessage> : null}
                 </FormGroup>
                 <FormGroup>

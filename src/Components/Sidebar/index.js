@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import {
   SidebarContainer,
   Icon,
@@ -6,9 +6,7 @@ import {
   SidebarWrapper,
   SidebarMenu,
   SidebarLink,
-  SidebarRoute,
-  SideBtnWrap,
-} from './SidebarElements'
+} from "./SidebarElements";
 
 const Sidebar = ({ isOpen, toggle }) => {
   return (
@@ -38,7 +36,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             exact="true"
             offset={-80}
           >
-            Pat Doherty
+            About Pat
           </SidebarLink>
           <SidebarLink
             to="testies"
@@ -52,7 +50,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             Success Stories
           </SidebarLink>
           <SidebarLink
-            to="contact"
+            to="form"
             onClick={toggle}
             smooth={true}
             duration={500}
@@ -60,20 +58,12 @@ const Sidebar = ({ isOpen, toggle }) => {
             exact="true"
             offset={-80}
           >
-            Contact Me
+            Apply
           </SidebarLink>
         </SidebarMenu>
-        <SideBtnWrap>
-          <SidebarRoute
-            target="_blank"
-            href="https://form.jotform.com/211236844480151"
-          >
-            Apply Here
-          </SidebarRoute>
-        </SideBtnWrap>
       </SidebarWrapper>
     </SidebarContainer>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;

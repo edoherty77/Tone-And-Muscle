@@ -1,7 +1,7 @@
-import styled from 'styled-components'
-import colors from '../../config/colors'
-import { Link as LinkS } from 'react-scroll'
-import { Link as LinkR } from 'react-router-dom'
+import styled from "styled-components";
+import colors from "../../config/colors";
+import { Link as LinkS } from "react-scroll";
+import { Link as LinkR } from "react-router-dom";
 
 export const Div = styled.div`
   margin-top: 160px;
@@ -14,7 +14,7 @@ export const Div = styled.div`
     margin: 10px 10px;
     padding: 20px;
   }
-`
+`;
 
 export const HeaderContainer = styled.div`
   background-color: #f1f6fc;
@@ -24,13 +24,12 @@ export const HeaderContainer = styled.div`
 
   @media screen and (max-width: 1500px) {
     width: 50%;
-  } 
+  }
 
-  
   @media screen and (max-width: 945px) {
     width: 60%;
   }
-  
+
   @media screen and (max-width: 850px) {
     width: 70%;
     height: 40px;
@@ -43,7 +42,7 @@ export const HeaderContainer = styled.div`
   @media screen and (max-width: 480px) {
     width: 100%;
   }
-`
+`;
 
 export const Header = styled.h1`
   text-align: center;
@@ -65,7 +64,7 @@ export const Header = styled.h1`
   @media screen and (max-width: 450px) {
     display: none;
   }
-`
+`;
 export const MobileHeader = styled.h1`
   display: none;
 
@@ -78,16 +77,20 @@ export const MobileHeader = styled.h1`
     font-size: 24px;
     transform: translateY(-20px);
   }
-`
+`;
 
 export const TestContainer = styled.div`
   color: #fff;
-  background: ${({ lightBg }) => (lightBg ? 'white' : '#f1f6fc')};
+  background: ${({ lightBg }) => (lightBg ? "white" : "#f1f6fc")};
 
   @media screen and (max-width: 600px) {
     background-color: white;
   }
-`
+
+  @media screen and (max-width: 480px) {
+    margin-bottom: 20px;
+  }
+`;
 export const InfoWrapper = styled.div`
   display: grid;
   z-index: 1;
@@ -104,7 +107,7 @@ export const InfoWrapper = styled.div`
   @media screen and (max-width: 550px) {
     padding: 0;
   }
-`
+`;
 export const InfoRow = styled.div`
   display: grid;
   justify-content: space-evenly;
@@ -112,29 +115,35 @@ export const InfoRow = styled.div`
     imgStart ? "'col2 col1'" : "'col1 col2'"};
 
   grid-template-columns: ${({ imgStart }) =>
-    imgStart ? '1fr 4fr' : '4fr 1fr'};
+    imgStart ? "1fr 1fr" : "1fr 1fr"};
 
   @media screen and (max-width: 890px) {
     grid-template-areas: ${({ imgStart }) =>
       imgStart ? `'col2' 'col1'` : `'col2' 'col1'`};
 
-    grid-template-columns: ${({ imgStart }) => (imgStart ? '1fr' : '1fr')};
+    grid-template-columns: ${({ imgStart }) => (imgStart ? "1fr" : "1fr")};
   }
   @media screen and (max-width: 480px) {
     margin: 0px;
   }
-`
+`;
 
 export const Column1 = styled.div`
-  background-color: 'red';
+  background-color: "red";
   grid-area: col1;
   display: flex;
+  justify-self: ${({ imgStart }) => (imgStart ? "start" : "end")};
 
-  @media screen and (max-width: 890px) {
+  @media screen and (max-width: 900px) {
     margin-top: 15px;
     margin-bottom: 30px;
     align-items: center;
+    justify-self: center;
     justify-content: center;
+  }
+
+  @media screen and (max-width: 800px) {
+    max-width: 375px;
   }
 
   @media screen and (max-width: 550px) {
@@ -144,13 +153,19 @@ export const Column1 = styled.div`
 
   @media screen and (max-width: 480px) {
     padding: 0px;
+    max-width: 280px;
   }
-`
+`;
 export const Column2 = styled.div`
   /* margin-bottom: 15px; */
   display: flex;
   grid-area: col2;
   align-items: center;
+  justify-self: ${({ imgStart }) => (imgStart ? "end" : "start")};
+
+  @media screen and (max-width: 900px) {
+    justify-self: center;
+  }
 
   @media screen and (max-width: 550px) {
     margin-top: 25px;
@@ -161,7 +176,7 @@ export const Column2 = styled.div`
     padding: 0px;
     margin: 0;
   }
-`
+`;
 export const TextWrapper = styled.div`
   max-width: 100%;
   /* height: fit-content; */
@@ -170,12 +185,16 @@ export const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: ${({ imgStart }) => (imgStart ? "flex-start" : "flex-end")};
+
+  @media screen and (max-width: 1100px) {
+    align-items: center;
+  }
 
   @media screen and (max-width: 480px) {
     padding: 0px;
   }
-`
+`;
 export const Name = styled.h1`
   display: flex;
   line-height: 1.1;
@@ -193,7 +212,7 @@ export const Name = styled.h1`
     font-size: 32px;
     margin-bottom: 0;
   } */
-`
+`;
 export const BtnWrap = styled.div`
   display: none;
   @media screen and (max-width: 480px) {
@@ -202,36 +221,35 @@ export const BtnWrap = styled.div`
     width: 100%;
     margin-top: 5px;
   }
-`
+`;
 
 export const Story = styled.p`
   display: flex;
-  max-width: 100%;
+  max-width: 60%;
   font-size: 20px;
-  padding: 60px;
   line-height: 24px;
   font-weight: 400;
-  color: ${({ darkText }) => (darkText ? '#010606' : '#fff')};
+  color: ${({ darkText }) => (darkText ? "#010606" : "#fff")};
   padding: ${({ imgStart }) =>
-    imgStart ? '60px 0 60px 60px' : '60px 60px 60px 0'};
+    imgStart ? "60px 0 60px 60px" : "60px 60px 60px 0"};
 
-  @media screen and (max-width: 1100px) {
-    padding: ${({ imgStart }) =>
-      imgStart ? '30px 0 30px 30px' : '30px 30px 30px 0'};
-    /* padding: 30px; */
+  @media screen and (max-width: 1250px) {
+    max-width: 70%;
+    /* padding: ${({ imgStart }) =>
+      imgStart ? "30px 0 30px 30px" : "30px 30px 30px 0"}; */
     font-size: 18px;
   }
 
   @media screen and (max-width: 890px) {
     margin: auto;
     max-width: 450px;
-    text-align: justify;
+    /* text-align: justify; */
     padding: 0;
   }
-  @media screen and (max-width: 480px) {
+  /* @media screen and (max-width: 480px) {
     display: none;
-  }
-`
+  } */
+`;
 
 export const MobileStory = styled.p`
   display: flex;
@@ -245,10 +263,10 @@ export const MobileStory = styled.p`
     font-weight: 400;
     line-height: 24px;
     text-align: justify;
-    color: ${({ darkText }) => (darkText ? '#010606' : '#fff')};
+    color: ${({ darkText }) => (darkText ? "#010606" : "#fff")};
     margin: 20px 0 20px 0;
   }
-`
+`;
 export const ImgWrap = styled.div`
   max-width: 555px;
   height: 375px;
@@ -269,27 +287,20 @@ export const ImgWrap = styled.div`
   @media screen and (max-width: 350px) {
     max-width: 100%;
   }
-`
+`;
 export const Play = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-`
+`;
 export const Img = styled.img`
-  /* width: 50%; */
-  width: 225px;
-  height: 375px;
+  width: 100%;
   margin-top: 0;
   margin-right: 0;
   margin-left: 0;
   padding-right: 0;
-
-  @media screen and (max-width: 480px) {
-    width: 50%;
-    height: 280px;
-  }
-`
+`;
 export const Img2 = styled.img`
   width: 225px;
   height: 375px;
@@ -303,7 +314,7 @@ export const Img2 = styled.img`
     width: 50%;
     height: 280px;
   }
-`
+`;
 
 export const ApplyContainer = styled.div`
   /* background-color: ${colors.background}; */
@@ -313,7 +324,7 @@ export const ApplyContainer = styled.div`
   @media screen and (max-width: 480px) {
     margin: 40px 0 0;
   }
-`
+`;
 
 export const ApplyBtn = styled.nav`
   display: flex;
@@ -324,7 +335,7 @@ export const ApplyBtn = styled.nav`
   @media screen and (max-width: 890px) {
     padding-top: 5px;
   }
-`
+`;
 
 export const ApplyBtnLink = styled(LinkS)`
   display: flex;
@@ -346,4 +357,4 @@ export const ApplyBtnLink = styled(LinkS)`
     background: #000;
     color: #fff;
   }
-`
+`;
