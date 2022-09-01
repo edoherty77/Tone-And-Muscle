@@ -9,7 +9,7 @@ import Sidebar from "../Components/Sidebar";
 import TestSection from "../Components/TestSection";
 import AboutSection from "../Components/AboutSection";
 import BioSection from "../Components/BioSection";
-// import ContactSection from "../Components/ContactSection";
+import ContactSection from "../Components/ContactSection";
 import MidSection from "../Components/MidSection";
 import FormSection from "../Components/FormSection";
 

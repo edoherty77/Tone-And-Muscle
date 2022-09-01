@@ -23,10 +23,10 @@ const TestSection = ({ id, lightBg }) => {
         <Testimonial {...schena} />
         <Testimonial {...poplaski} />
         <Testimonial {...bujacich} />
-        <Testimonial {...ward} />
         <Testimonial {...tim} />
         <Testimonial {...eric} />
         <Testimonial {...rob} />
+        <Testimonial {...ward} />
         <ApplyContainer>
           <ApplyBtn>
             <ApplyBtnLink

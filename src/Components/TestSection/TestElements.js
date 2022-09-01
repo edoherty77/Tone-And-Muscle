@@ -157,7 +157,6 @@ export const Column1 = styled.div`
   }
 `;
 export const Column2 = styled.div`
-  /* margin-bottom: 15px; */
   display: flex;
   grid-area: col2;
   align-items: center;
@@ -179,7 +178,6 @@ export const Column2 = styled.div`
 `;
 export const TextWrapper = styled.div`
   max-width: 100%;
-  /* height: fit-content; */
   padding-top: 0;
   position: relative;
   display: flex;
@@ -195,33 +193,6 @@ export const TextWrapper = styled.div`
     padding: 0px;
   }
 `;
-export const Name = styled.h1`
-  display: flex;
-  line-height: 1.1;
-  font-weight: 600;
-  color: black;
-  /* padding-left: 60px; */
-
-  @media screen and (max-width: 890px) {
-    display: none;
-    /* text-align: center;
-    margin-bottom: 20px; */
-  }
-
-  /* @media screen and (max-width: 480px) {
-    font-size: 32px;
-    margin-bottom: 0;
-  } */
-`;
-export const BtnWrap = styled.div`
-  display: none;
-  @media screen and (max-width: 480px) {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 5px;
-  }
-`;
 
 export const Story = styled.p`
   display: flex;
@@ -235,38 +206,19 @@ export const Story = styled.p`
 
   @media screen and (max-width: 1250px) {
     max-width: 70%;
-    /* padding: ${({ imgStart }) =>
-      imgStart ? "30px 0 30px 30px" : "30px 30px 30px 0"}; */
     font-size: 18px;
   }
 
   @media screen and (max-width: 890px) {
     margin: auto;
-    max-width: 450px;
-    /* text-align: justify; */
+    max-width: 375px;
     padding: 0;
   }
-  /* @media screen and (max-width: 480px) {
-    display: none;
-  } */
-`;
-
-export const MobileStory = styled.p`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
   @media screen and (max-width: 480px) {
-    max-width: 450px;
-    height: fit-content;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 24px;
-    text-align: justify;
-    color: ${({ darkText }) => (darkText ? "#010606" : "#fff")};
-    margin: 20px 0 20px 0;
+    max-width: 280px;
   }
 `;
+
 export const ImgWrap = styled.div`
   max-width: 555px;
   height: 375px;
