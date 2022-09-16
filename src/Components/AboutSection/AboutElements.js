@@ -337,10 +337,10 @@ export const InfoText = styled.p`
   /* margin-bottom: 30px; */
 
   @media screen and (max-width: 500px) {
-    /* font-size: 13px; */
     letter-spacing: 0;
     border-left: none;
     padding-left: 0;
+    text-align: center;
   }
 `;
 

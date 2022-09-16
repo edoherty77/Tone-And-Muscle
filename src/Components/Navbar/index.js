@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { FaBars } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 
@@ -16,27 +16,10 @@ import {
 } from "./NavbarElements";
 
 const Navbar = ({ toggle }) => {
-  const [scrollNav, setScrollNav] = useState(false);
-
-  const changeNav = () => {
-    // if (window.scrollY >= 100) {
-    //   setScrollNav(true)
-    // } else {
-    //   setScrollNav(false)
-    // }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", changeNav);
-    // return () => {
-    //   window.removeEventListener('scroll', changeNav)
-    // }
-  }, []);
-
   return (
     <>
       <IconContext.Provider value={{ color: "#fff" }}>
-        <Nav scrollNav={scrollNav}>
+        <Nav>
           <NavbarContainer>
             <BannerLink
               to="home"
@@ -68,14 +51,14 @@ const Navbar = ({ toggle }) => {
               </NavItem>
               <NavItem>
                 <NavLinks
-                  to="bio"
+                  to="form"
                   smooth={true}
                   duration={500}
                   spy={true}
                   exact="true"
                   offset={-80}
                 >
-                  About Pat
+                  Apply
                 </NavLinks>
               </NavItem>
             </NavMenuLeft>
@@ -94,14 +77,14 @@ const Navbar = ({ toggle }) => {
               </NavItem>
               <NavItem>
                 <NavLinks
-                  to="form"
+                  to="bio"
                   smooth={true}
                   duration={500}
                   spy={true}
                   exact="true"
                   offset={-80}
                 >
-                  Apply
+                  About Pat
                 </NavLinks>
               </NavItem>
             </NavMenuRight>

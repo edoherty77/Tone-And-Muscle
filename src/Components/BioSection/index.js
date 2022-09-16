@@ -46,7 +46,6 @@ const BioSection = () => {
         <InfoTextName>Pat Doherty | Owner</InfoTextName>
         <InfoText>Certified Strength and Conditioning Specialist</InfoText>
         <InfoText>Certified Pilates Instructor</InfoText>
-        <InfoText>Certified 8 and a Half Inch Hammer Cock</InfoText>
         <IconsContainer>
           <IconLink
             href="https://www.instagram.com/pat__doherty/"
