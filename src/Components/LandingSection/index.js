@@ -10,8 +10,6 @@ import {
   TextContainer,
 } from "./LandingElements";
 
-import Player from "../Player";
-
 function LandingSection() {
   const [offsetY, setOffsetY] = useState(0);
   const handleScroll = () => {
@@ -26,7 +24,6 @@ function LandingSection() {
   // you can configure animations with physics based movement w/ react-spring
   const config = { mass: 1, tension: 50, friction: 4, clamp: true };
   const configTwo = { mass: 100, tension: 600, friction: 300, clamp: true };
-  const configThree = { mass: 70, tension: 200, friction: 120, clamp: false };
 
   const animationRefOne = useRef();
   const style = useSpring({
@@ -44,17 +41,8 @@ function LandingSection() {
     from: { opacity: 0 },
   });
 
-  //third useSpring
-  const animationRefThree = useRef();
-  const style3 = useSpring({
-    ref: animationRefThree,
-    config: configThree,
-    from: { opacity: 0, color: "#FFF", transform: "scale(0.6)" },
-    to: { opacity: 1, color: "#fff5f5", transform: "scale(1)" },
-  });
-
   //by using the ref's we can chain the animations, to happen sequentially, not all at once
-  useChain([animationRefOne, animationRefTwo, animationRefThree]);
+  useChain([animationRefOne, animationRefTwo]);
 
   return (
     <LandingContainer id="home">

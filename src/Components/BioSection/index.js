@@ -21,8 +21,6 @@ import {
   IconLink,
 } from "./BioElements";
 
-const video = "videos/about-me.mp4";
-
 const BioSection = () => {
   const [isOpen, setOpen] = useState(false);
   const [renderIcon, setRenderIcon] = useState(true);

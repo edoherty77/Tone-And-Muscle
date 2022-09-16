@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import AboutPic from './pat-photo4.png'
-import '../../Styles/styles.css'
-import AboutInfo from './AboutInfo'
+import React from "react";
+import AboutPic from "./pat-photo4.png";
+import "../../Styles/styles.css";
+import AboutInfo from "./AboutInfo";
 import {
   AboutContainer,
   MobileHeaderContainer,
@@ -12,7 +12,7 @@ import {
   HeaderContainer,
   Header,
   Column1,
-} from './AboutElements'
+} from "./AboutElements";
 
 const AboutSection = () => {
   return (
@@ -36,7 +36,7 @@ const AboutSection = () => {
         </AboutRow>
       </AboutContainer>
     </>
-  )
-}
+  );
+};
 
-export default AboutSection
+export default AboutSection;

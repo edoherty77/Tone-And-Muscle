@@ -49,7 +49,6 @@ export const AboutRow = styled.div`
   display: grid;
   grid-template-columns: 4fr 1fr;
   grid-template-areas: "col1 col2";
-  /* height: '100%'; */
 
   @media screen and (max-width: 850px) {
     grid-template-columns: 1fr;
@@ -68,10 +67,8 @@ export const Column1 = styled.div`
 export const HeaderContainer = styled.div`
   background-color: white;
   margin: 0 auto 65px auto;
-  /* margin-bottom: 35px; */
   width: 55%;
   height: 40px;
-  /* background-color: blue; */
 
   @media screen and (max-width: 1450px) {
     margin: 0 auto 45px auto;
@@ -113,12 +110,11 @@ export const InfoContainer = styled.div`
   width: 100%;
 
   @media screen and (max-width: 850px) {
-    /* display: flex; */
     padding: 0;
     border: none;
-    /* background: #f1f6fc; */
   }
 `;
+
 export const AboutInfoContainer = styled.div`
   position: relative;
 `;
@@ -126,7 +122,6 @@ export const AboutInfoContainer = styled.div`
 export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  /* align-items: flex-start; */
   background-color: white;
   position: relative;
   padding: 30px 50px;
@@ -140,57 +135,6 @@ export const TextContainer = styled.div`
   }
 
   @media screen and (max-width: 500px) {
-    padding: 30px 15px;
-  }
-`;
-export const WhatContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  background-color: white;
-  position: relative;
-  overflow: visible;
-  max-height: "fit-content";
-  padding: 30px 50px;
-
-  @media screen and (max-width: 850px) {
-    background: white;
-  }
-
-  @media screen and (max-width: 675px) {
-    padding: 30px;
-  }
-
-  @media screen and (max-width: 480px) {
-    transition: max-height 0.5s ease-in;
-    max-height: ${({ isWhatHeight }) =>
-      isWhatHeight ? isWhatHeight : "500px"};
-    overflow: hidden;
-    padding: 30px 15px;
-  }
-`;
-
-export const WhyContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  background-color: white;
-  position: relative;
-  padding: 30px 50px;
-  overflow: visible;
-
-  @media screen and (max-width: 850px) {
-    background: white;
-  }
-
-  @media screen and (max-width: 675px) {
-    padding: 30px;
-  }
-
-  @media screen and (max-width: 480px) {
-    max-height: ${({ isWhyHeight }) => (isWhyHeight ? isWhyHeight : "1000px")};
-    transition: max-height 0.5s ease-in;
-    overflow: hidden;
     padding: 30px 15px;
   }
 `;
@@ -218,115 +162,7 @@ export const InfoHeader = styled.h1`
   }
 `;
 
-export const ReadMoreWhat = styled.p`
-  display: none;
-  /* position: relative; */
-
-  @media screen and (max-width: 480px) {
-    background-color: "green";
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    bottom: 0px;
-    left: 0px;
-
-    width: 100%;
-    text-align: center;
-    margin: auto;
-    height: 100px;
-
-    background: -moz-linear-gradient(
-      top,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 1) 90%
-    );
-    background: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      color-stop(0%, rgba(255, 255, 255, 0)),
-      color-stop(95%, rgba(255, 255, 255, 1))
-    );
-    background: -webkit-linear-gradient(
-      top,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 1) 90%
-    );
-    background: -o-linear-gradient(
-      top,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 1) 90%
-    );
-    background: -ms-linear-gradient(
-      top,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 1) 90%
-    );
-    background: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 1) 90%
-    );
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
-  }
-`;
-
-export const ReadMoreWhy = styled.p`
-  display: none;
-  /* position: relative; */
-
-  @media screen and (max-width: 480px) {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    bottom: 0px;
-    left: 0;
-    width: 100%;
-    margin: 0;
-    height: 100px;
-
-    background: -moz-linear-gradient(
-      top,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 1) 90%
-    );
-    background: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      color-stop(0%, rgba(255, 255, 255, 0)),
-      color-stop(95%, rgba(255, 255, 255, 1))
-    );
-    background: -webkit-linear-gradient(
-      top,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 1) 90%
-    );
-    background: -o-linear-gradient(
-      top,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 1) 90%
-    );
-    background: -ms-linear-gradient(
-      top,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 1) 90%
-    );
-    background: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 1) 90%
-    );
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
-  }
-`;
-
 export const InfoText = styled.p`
-  /* max-height: fit-content; */
-  /* max-width: 'fit-content'; */
-  /* display: flex; */
   text-align: start;
   font-size: 17px;
   line-height: 1.2em;
@@ -334,7 +170,6 @@ export const InfoText = styled.p`
   font-weight: 500;
   border-left: ${colors.primary} 2px solid;
   padding-left: 15px;
-  /* margin-bottom: 30px; */
 
   @media screen and (max-width: 500px) {
     letter-spacing: 0;
@@ -348,7 +183,6 @@ export const Column2 = styled.div`
   grid-area: col2;
   position: relative;
   display: flex;
-  /* border: blue 1px solid; */
   width: 100%;
   transform: translate(-80px, 0px);
 

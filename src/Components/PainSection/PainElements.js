@@ -1,7 +1,5 @@
-import styled from 'styled-components'
-import colors from '../../config/colors'
-import { motion } from 'framer-motion'
-import CheckCircleIcon from '@material-ui/icons/CheckCircle'
+import styled from "styled-components";
+import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 
 export const MainContainer = styled.div`
   margin: 70px auto 80px;
@@ -15,7 +13,7 @@ export const MainContainer = styled.div`
   @media screen and (max-width: 450px) {
     margin: 40px auto 50px;
   }
-`
+`;
 
 export const ContentContainer = styled.div`
   padding: 55px;
@@ -39,7 +37,7 @@ export const ContentContainer = styled.div`
   @media screen and (max-width: 450px) {
     padding: 35px 10px;
   }
-`
+`;
 
 export const SliderContainer = styled.div`
   display: flex;
@@ -47,9 +45,6 @@ export const SliderContainer = styled.div`
   line-height: 1.3em;
   font-weight: 500;
   margin-bottom: 25px;
-  /* justify-content: center; */
-  /* width: 100%; */
-  /* align-items: center; */
 
   @media screen and (max-width: 900px) {
     flex-direction: column;
@@ -58,7 +53,7 @@ export const SliderContainer = styled.div`
     font-weight: 600;
     margin-bottom: 20px;
   }
-`
+`;
 
 export const Left = styled.div`
   display: flex;
@@ -74,15 +69,12 @@ export const Left = styled.div`
     margin: 0 0 10px 0;
     max-width: 100%;
   }
-`
+`;
 
 export const Right = styled.div`
   display: flex;
   flex-basis: 10%;
   justify-content: flex-end;
-  /* align-items: center; */
-  /* margin: 10px 30px; */
-  /* padding-right: 110px; */
 
   @media screen and (max-width: 1200px) {
     justify-content: center;
@@ -93,7 +85,7 @@ export const Right = styled.div`
     padding: 0;
     margin: 0 30px;
   }
-`
+`;
 
 export const Icon = styled(CheckCircleIcon)`
   && {
@@ -105,7 +97,7 @@ export const Icon = styled(CheckCircleIcon)`
       font-size: 30px;
     }
   }
-`
+`;
 
 export const Bottom = styled.div`
   display: flex;
@@ -121,4 +113,4 @@ export const Bottom = styled.div`
     line-height: 1.1em;
     font-weight: 600;
   }
-`
+`;

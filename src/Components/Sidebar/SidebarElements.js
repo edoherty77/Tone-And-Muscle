@@ -1,7 +1,7 @@
-import styled from 'styled-components'
-import { Link as LinkS } from 'react-scroll'
-import { Link as LinkR } from 'react-router-dom'
-import { FaTimes } from 'react-icons/fa'
+import styled from "styled-components";
+import { Link as LinkS } from "react-scroll";
+import { Link as LinkR } from "react-router-dom";
+import { FaTimes } from "react-icons/fa";
 
 export const SidebarContainer = styled.aside`
   position: fixed;
@@ -14,14 +14,14 @@ export const SidebarContainer = styled.aside`
   top: 0;
   left: 0;
   transition: 0.3s ease-in-out;
-  opacity: ${({ isOpen }) => (isOpen ? '95%' : '0')};
-  top: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
+  opacity: ${({ isOpen }) => (isOpen ? "95%" : "0")};
+  top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
   z-index: 999;
-`
+`;
 
 export const CloseIcon = styled(FaTimes)`
   color: #fff;
-`
+`;
 
 export const Icon = styled.div`
   background: transparent;
@@ -39,13 +39,12 @@ export const Icon = styled.div`
 
   @media screen and (max-width: 280px) {
     width: 100%;
-    ${'' /* display: none; */}
   }
-`
+`;
 
 export const SidebarWrapper = styled.div`
   color: #fff;
-`
+`;
 
 export const SidebarMenu = styled.ul`
   padding: 0;
@@ -57,7 +56,7 @@ export const SidebarMenu = styled.ul`
   @media screen and (max-width: 480px) {
     grid-template-rows: repeat(6, 60px);
   }
-`
+`;
 
 export const SidebarLink = styled(LinkS)`
   display: flex;
@@ -75,18 +74,33 @@ export const SidebarLink = styled(LinkS)`
     color: #bcf97f;
     transition: 0.2s ease-in-out;
   }
-`
+`;
 
-export const SideBtnWrap = styled.div`
+export const ApplyContainer = styled.div`
+  margin: 40px 0 60px;
+
+  @media screen and (max-width: 480px) {
+    margin: 40px 0 0;
+  }
+`;
+
+export const ApplyBtn = styled.nav`
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  justify-content: center;
+
+  @media screen and (max-width: 890px) {
+    padding-top: 5px;
+  }
+`;
+
+export const ApplyBtnLink = styled(LinkS)`
   display: flex;
   justify-content: center;
-`
-
-export const SidebarRoute = styled.a`
   border-radius: 50px;
   background: #bcf97f;
-  white-space: nowrap;
-  padding: 16px 64px;
+  padding: 10px 22px;
   color: black;
   font-size: 16px;
   outline: none;
@@ -94,10 +108,11 @@ export const SidebarRoute = styled.a`
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
+  width: 200px;
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #010606;
+    background: #000;
+    color: #fff;
   }
-`
+`;

@@ -1,72 +1,8 @@
-import React, { useState, useRef, useEffect } from "react";
-import { Button } from "../ButtonElements";
+import React from "react";
 import "../../Styles/styles.css";
-import {
-  AboutInfoContainer,
-  WhatContainer,
-  WhyContainer,
-  TextContainer,
-  InfoHeader,
-  InfoText,
-  ReadMoreWhat,
-  ReadMoreWhy,
-} from "./AboutElements";
-
-let whatHeight = null;
-let whyHeight = null;
+import { TextContainer, InfoHeader, InfoText } from "./AboutElements";
 
 const AboutInfo = () => {
-  const [isWhatHeight, setWhatHeight] = useState("auto");
-  const [isWhyHeight, setWhyHeight] = useState("auto");
-  const [isWhatPressed, setWhatPressed] = useState(false);
-  const [isWhyPressed, setWhyPressed] = useState(false);
-  const whatRef = useRef(null);
-  const whyRef = useRef(null);
-  const [windowSize, setWindowSize] = useState({
-    width: undefined,
-    height: undefined,
-  });
-
-  useEffect(() => {
-    // Handler to call on window resize
-    function handleResize() {
-      // Set window width/height to state
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    }
-    window.addEventListener("resize", handleResize);
-    handleResize();
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  useEffect(() => {
-    if (whatRef.current && whatHeight === null) {
-      whatHeight = whatRef.current.getBoundingClientRect().isWhatHeight;
-      setWhatHeight(315);
-    }
-    if (whyRef.current && whyHeight === null) {
-      whyHeight = whyRef.current.getBoundingClientRect().isWhyHeight;
-      setWhyHeight(325);
-    }
-  });
-
-  const handleWhatPress = () => {
-    if (whatHeight === null) return;
-    setWhatHeight(isWhatHeight === 315 ? whatHeight : 315);
-    setTimeout(function () {
-      setWhatPressed(true);
-    }, 800);
-  };
-  const handleWhyPress = () => {
-    if (whyHeight === null) return;
-    setWhyHeight(isWhyHeight === 325 ? whyHeight : 325);
-    setTimeout(function () {
-      setWhyPressed(true);
-    }, 700);
-  };
-
   return (
     <>
       <TextContainer>
@@ -79,7 +15,6 @@ const AboutInfo = () => {
           training routine on a monthly basis.
         </InfoText>
       </TextContainer>
-
       <TextContainer>
         <InfoHeader>Flexible Nutrition + Course</InfoHeader>
         <InfoText>
@@ -89,7 +24,6 @@ const AboutInfo = () => {
           what you need to put in your body to look and feel your best.
         </InfoText>
       </TextContainer>
-
       <TextContainer>
         <InfoHeader>Community Calls + FB Group</InfoHeader>
         <InfoText>

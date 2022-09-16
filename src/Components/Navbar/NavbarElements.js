@@ -6,10 +6,6 @@ export const Nav = styled.nav`
   display: flex;
   height: 14vh;
   margin-top: -14vh;
-  /* margin-top: 0;
-  transition: margin-top .09s ease-in-out;
-  margin-top: ${({ scrollNav }) => (scrollNav ? '-14vh' : '0')}; */
-  /* position: fixed; */
   justify-content: center;
   align-items: center;
   font-size: 16px;
@@ -35,7 +31,6 @@ export const NavbarContainer = styled.div`
   display: flex;
   height: 100%;
   z-index: 1;
-  /* width: 100%; */
   max-width: 1100px;
 `
 
@@ -99,7 +94,6 @@ export const MobileIcon = styled.div`
 
   @media screen and (max-width: 280px) {
     width: 100%;
-    ${'' /* display: none; */}
   }
 `
 export const NavMenuLeft = styled.ul`

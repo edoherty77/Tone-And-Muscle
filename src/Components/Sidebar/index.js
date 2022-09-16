@@ -6,6 +6,9 @@ import {
   SidebarWrapper,
   SidebarMenu,
   SidebarLink,
+  ApplyContainer,
+  ApplyBtn,
+  ApplyBtnLink,
 } from "./SidebarElements";
 
 const Sidebar = ({ isOpen, toggle }) => {
@@ -49,17 +52,21 @@ const Sidebar = ({ isOpen, toggle }) => {
           >
             Success Stories
           </SidebarLink>
-          <SidebarLink
-            to="form"
-            onClick={toggle}
-            smooth={true}
-            duration={500}
-            spy={true}
-            exact="true"
-            offset={-80}
-          >
-            Apply
-          </SidebarLink>
+          <ApplyContainer>
+            <ApplyBtn>
+              <ApplyBtnLink
+                to="form"
+                smooth={true}
+                onClick={toggle}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-80}
+              >
+                Apply Here
+              </ApplyBtnLink>
+            </ApplyBtn>
+          </ApplyContainer>
         </SidebarMenu>
       </SidebarWrapper>
     </SidebarContainer>

@@ -222,7 +222,6 @@ const FormSection = () => {
             <Option>4</Option>
             <Option>5</Option>
           </Select>
-          {/* {formik.touched.important && formik.errors.important ?  <ErrorMessage>{formik.errors.important}</ErrorMessage> : null} */}
         </FormGroup>
         <FormGroup>
           <Label>
@@ -246,7 +245,6 @@ const FormSection = () => {
             <Option>4</Option>
             <Option>5</Option>
           </Select>
-          {/* {formik.touched.investment && formik.errors.investment ?  <ErrorMessage>{formik.errors.investment}</ErrorMessage> : null} */}
         </FormGroup>
         <FormGroup>
           <Label>Checkbox *</Label>

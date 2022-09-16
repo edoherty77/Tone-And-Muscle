@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import colors from "../../config/colors";
 import { Link as LinkS } from "react-scroll";
-import { Link as LinkR } from "react-router-dom";
 
 export const Div = styled.div`
   margin-top: 160px;
@@ -91,6 +90,7 @@ export const TestContainer = styled.div`
     margin-bottom: 20px;
   }
 `;
+
 export const InfoWrapper = styled.div`
   display: grid;
   z-index: 1;
@@ -108,6 +108,7 @@ export const InfoWrapper = styled.div`
     padding: 0;
   }
 `;
+
 export const InfoRow = styled.div`
   display: grid;
   justify-content: space-evenly;
@@ -156,6 +157,7 @@ export const Column1 = styled.div`
     max-width: 280px;
   }
 `;
+
 export const Column2 = styled.div`
   display: flex;
   grid-area: col2;
@@ -176,6 +178,7 @@ export const Column2 = styled.div`
     margin: 0;
   }
 `;
+
 export const TextWrapper = styled.div`
   max-width: 100%;
   padding-top: 0;
@@ -240,6 +243,7 @@ export const ImgWrap = styled.div`
     max-width: 100%;
   }
 `;
+
 export const Play = styled.div`
   position: absolute;
   top: 50%;
@@ -256,7 +260,6 @@ export const Img = styled.img`
 export const Img2 = styled.img`
   width: 225px;
   height: 375px;
-  /* width: 50%; */
   margin-top: 0;
   margin-right: 0;
   margin-left: 0;
@@ -269,7 +272,6 @@ export const Img2 = styled.img`
 `;
 
 export const ApplyContainer = styled.div`
-  /* background-color: ${colors.background}; */
   margin: 40px 0 60px;
   background-color: white;
 

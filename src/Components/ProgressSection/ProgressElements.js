@@ -1,13 +1,12 @@
-import styled from 'styled-components'
-import colors from '../../config/colors'
+import styled from "styled-components";
 
 export const SectionContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 70px;
-`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+`;
 
 export const HeaderContainer = styled.div`
   background-color: #f1f6fc;
@@ -32,7 +31,7 @@ export const HeaderContainer = styled.div`
   @media screen and (max-width: 485px) {
     margin: 72px auto 60px;
   }
-`
+`;
 
 export const Header = styled.h1`
   text-align: center;
@@ -62,66 +61,65 @@ export const Header = styled.h1`
     font-size: 35px;
     transform: translateY(-27px);
   }
-`
+`;
 
 export const Photos = styled.div`
-    display: flex;
-    flex-direction: 'row';
-    max-width: 70%;
+  display: flex;
+  flex-direction: "row";
+  max-width: 70%;
 
-    @media screen and (max-width: 1200px) {
-        max-width: 85%;
-    }
-    @media screen and (max-width: 850px) {
-        max-width: 95%;
-    }
-    @media screen and (max-width: 600px) {
-        max-width: 100%;
-        margin: 0 3px;
-    }
-`
+  @media screen and (max-width: 1200px) {
+    max-width: 85%;
+  }
+  @media screen and (max-width: 850px) {
+    max-width: 95%;
+  }
+  @media screen and (max-width: 600px) {
+    max-width: 100%;
+    margin: 0 3px;
+  }
+`;
 
 export const PhotoContainer = styled.div`
-    display: flex;
-    margin: 15px 10px;
+  display: flex;
+  margin: 15px 10px;
 
-    @media screen and (max-width: 900px) {
-        margin: 10px 5px;
-    }
-    @media screen and (max-width: 600px) {
-        margin: 7px 2px;
-    }
-`
+  @media screen and (max-width: 900px) {
+    margin: 10px 5px;
+  }
+  @media screen and (max-width: 600px) {
+    margin: 7px 2px;
+  }
+`;
 
 export const Photo = styled.img`
-    height: auto;
-    width: 100%;
-`
+  height: auto;
+  width: 100%;
+`;
 
 export const TextContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    margin: 35px 10px;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin: 35px 10px;
+  align-items: center;
+  justify-content: center;
 
-    @media screen and (max-width: 900px) {
-        margin: 20px 5px;
-    }
-`
+  @media screen and (max-width: 900px) {
+    margin: 20px 5px;
+  }
+`;
 
 export const Text = styled.div`
-    font-size: 35px;
-    font-weight: 200;
-    margin-bottom: 10px;
+  font-size: 35px;
+  font-weight: 200;
+  margin-bottom: 10px;
 
-    @media screen and (max-width: 500px) {
-      font-size: 25px;
-    }
-
-`
+  @media screen and (max-width: 500px) {
+    font-size: 25px;
+  }
+`;
 
 export const CTA = styled.div`
-    font-size: 25px;
-    font-weight: 200;
-`
+  font-size: 25px;
+  font-weight: 200;
+`;

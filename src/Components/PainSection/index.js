@@ -1,7 +1,4 @@
-import React from 'react'
-import colors from '../../config/colors'
-import { InView, useInView } from 'react-intersection-observer'
-import CheckCircleIcon from '@material-ui/icons/CheckCircle'
+import React from "react";
 import {
   MainContainer,
   SliderContainer,
@@ -10,16 +7,12 @@ import {
   Icon,
   Bottom,
   ContentContainer,
-} from './PainElements'
+} from "./PainElements";
 
 const PainSection = () => {
-  const { ref, inView, entry } = useInView({
-    /* Optional options */
-    threshold: 1,
-  })
   return (
     <MainContainer>
-      <ContentContainer> 
+      <ContentContainer>
         <SliderContainer>
           <Left>Not sure what to do in order to get your weight down?</Left>
           <Right>
@@ -34,8 +27,8 @@ const PainSection = () => {
         </SliderContainer>
         <SliderContainer>
           <Left>
-            Do you want to find a sustainable training
-            routine that you can take with you for the rest of your life?
+            Do you want to find a sustainable training routine that you can take
+            with you for the rest of your life?
           </Left>
           <Right>
             <Icon />
@@ -44,7 +37,7 @@ const PainSection = () => {
         <Bottom>Well, you’ve come to the right place.</Bottom>
       </ContentContainer>
     </MainContainer>
-  )
-}
+  );
+};
 
-export default PainSection
+export default PainSection;
