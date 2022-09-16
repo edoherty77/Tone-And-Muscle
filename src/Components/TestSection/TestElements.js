@@ -154,7 +154,7 @@ export const Column1 = styled.div`
 
   @media screen and (max-width: 480px) {
     padding: 0px;
-    max-width: 280px;
+    min-width: 280px;
   }
 `;
 
@@ -176,11 +176,12 @@ export const Column2 = styled.div`
   @media screen and (max-width: 480px) {
     padding: 0px;
     margin: 0;
+    max-width: 280px;
   }
 `;
 
 export const TextWrapper = styled.div`
-  max-width: 100%;
+  min-width: 100%;
   padding-top: 0;
   position: relative;
   display: flex;
@@ -218,7 +219,9 @@ export const Story = styled.p`
     padding: 0;
   }
   @media screen and (max-width: 480px) {
+    width: 280px;
     max-width: 280px;
+    margin: 0px;
   }
 `;
 
