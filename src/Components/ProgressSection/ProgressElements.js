@@ -64,7 +64,8 @@ export const Header = styled.h1`
 `;
 
 export const Photos = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   flex-direction: "row";
   max-width: 70%;
 
@@ -74,7 +75,11 @@ export const Photos = styled.div`
   @media screen and (max-width: 850px) {
     max-width: 95%;
   }
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
   @media screen and (max-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
     max-width: 100%;
     margin: 0 3px;
   }

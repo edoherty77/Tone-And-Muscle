@@ -201,3 +201,16 @@ Testimonial Text on Phone
 .divider {
   border-bottom: 2px black solid;
 }
+
+
+@media screen and (min-width: 768px) {
+  .photo16 {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .photo16 {
+    display: flex !important;
+  }
+}
