@@ -67,6 +67,19 @@ export const InfoText = styled.div`
   }
 `;
 
+export const InfoCTA = styled.a`
+  font-size: 18px;
+  color: rgb(122, 174, 234);
+  cursor: pointer;
+  margin-top: 15px;
+  text-decoration: none;
+  text-align: center;
+
+  @media screen and (max-width: 420px) {
+    font-size: 12px;
+  }
+`;
+
 export const IconsContainer = styled.div`
   display: flex;
 `;

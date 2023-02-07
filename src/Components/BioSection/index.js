@@ -12,6 +12,7 @@ import {
   InfoHeader,
   MobileHeader,
   InfoText,
+  InfoCTA,
   InfoTextName,
   ImgWrap,
   Img,
@@ -44,15 +45,15 @@ const BioSection = () => {
         <InfoTextName>Pat Doherty | Owner</InfoTextName>
         <InfoText>Certified Strength and Conditioning Specialist</InfoText>
         <InfoText>Certified Pilates Instructor</InfoText>
+        <InfoCTA
+          href="https://www.facebook.com/groups/ToneandMuscleCommunity"
+          target="_blank"
+        >
+          Join the Free Tone & Muscle Facebook Community Today
+        </InfoCTA>
         <IconsContainer>
           <IconLink
-            href="https://www.instagram.com/pat__doherty/"
-            target="_blank"
-          >
-            <InstagramIcon style={{ color: colors.primary, fontSize: 40 }} />
-          </IconLink>
-          <IconLink
-            href="https://www.facebook.com/profile.php?id=100007385869431"
+            href="https://www.facebook.com/groups/ToneandMuscleCommunity"
             target="_blank"
           >
             <FacebookIcon style={{ color: colors.primary, fontSize: 40 }} />

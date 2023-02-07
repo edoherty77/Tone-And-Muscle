@@ -224,31 +224,7 @@ const FormSection = () => {
           </Select>
         </FormGroup>
         <FormGroup>
-          <Label>
-            On scale of 1-5 how ready are you to make a significant financial
-            investment in your health & fitness? *
-          </Label>
-          <SubLabel>
-            1 being not ready at all and a 5 being very ready to significantly
-            invest for a significant goal.
-          </SubLabel>
-          <Select
-            id="investment"
-            name="investment"
-            onBlur={formik.handleBlur}
-            onChange={formik.handleChange}
-            value={formik.values.investment}
-          >
-            <Option>1</Option>
-            <Option>2</Option>
-            <Option>3</Option>
-            <Option>4</Option>
-            <Option>5</Option>
-          </Select>
-        </FormGroup>
-        <FormGroup>
-          <Label>Checkbox *</Label>
-          <SubLabel>Are you ready to COMMIT?</SubLabel>
+          <Label>Are you ready to COMMIT?</Label>
           <Checkbox
             type="checkbox"
             id="commit"

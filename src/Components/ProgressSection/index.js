@@ -38,9 +38,6 @@ function ProgressSection() {
           <Photo src="/images/photo8.jpg" />
         </PhotoContainer>
         <PhotoContainer>
-          <Photo src="/images/photo9.jpg" />
-        </PhotoContainer>
-        <PhotoContainer>
           <Photo src="/images/photo10.jpg" />
         </PhotoContainer>
         <PhotoContainer>
@@ -61,9 +58,9 @@ function ProgressSection() {
         <PhotoContainer className="photo16">
           <Photo src="/images/photo16.jpg" />
         </PhotoContainer>
-        {/* <PhotoContainer>
+        <PhotoContainer>
           <Photo src="/images/photo17.jpg" />
-        </PhotoContainer> */}
+        </PhotoContainer>
       </Photos>
       <TextContainer>
         <Text>Want results like this?</Text>
