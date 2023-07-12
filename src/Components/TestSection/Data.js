@@ -90,24 +90,6 @@ export const rob = {
   num: 5,
 };
 
-export const ricky = {
-  name: "Ricky",
-  story:
-    "Ricky developed a 3x a week early morning strength routine while losing 27 lbs. He built the confidence that he can take time off and pick back up no matter what.",
-  video: "videos/rick.crdownload",
-  img: "/images/ricky.JPG",
-  alt: "Before Pic",
-  aft: "/images/Austin-LgAft.png",
-  alt2: "After Pic",
-  imgStart: true,
-  darkText: true,
-  lightBg: true,
-  blackHeader: true,
-  dark: true,
-  primary: true,
-  num: 5,
-};
-
 export const tim = {
   name: "Tim",
   story:
