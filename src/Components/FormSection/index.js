@@ -55,7 +55,7 @@ const FormSection = () => {
     onSubmit: (values, { resetForm }) => {
       emailjs
         .send(
-          "service_ufnp7um",
+          "service_c3vkg0i",
           "template_9xhl9xf",
           values,
           "DT43FVbGpAf3j6KAH"
