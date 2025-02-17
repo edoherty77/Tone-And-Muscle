@@ -40,7 +40,7 @@ const BioSection = () => {
   return (
     <MainContainer id="bio">
       <InfoContainer>
-        <InfoHeader>Tone & Muscle</InfoHeader>
+        <InfoHeader><a href="https://www.toneandmuscle.com" style={{textDecoration: 'none', color: "white"}}>Tone & Muscle</a></InfoHeader>
         <MobileHeader>Pat Doherty</MobileHeader>
         <InfoTextName>Pat Doherty | Owner</InfoTextName>
         <InfoText>Certified Strength and Conditioning Specialist</InfoText>
