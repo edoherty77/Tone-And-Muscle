@@ -23,9 +23,9 @@ function Landing() {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <LandingSection />
+      <FormSection />
       <ProgressSection />
       <MidSection />
-      <FormSection />
       <AboutSection />
       <TestSection />
       <PainSection />

@@ -64,7 +64,7 @@ function ProgressSection() {
       </Photos>
       <TextContainer>
         <Text>Want results like this?</Text>
-        <CTA>Apply Below</CTA>
+        <CTA>Apply Above</CTA>
       </TextContainer>
     </SectionContainer>
   );

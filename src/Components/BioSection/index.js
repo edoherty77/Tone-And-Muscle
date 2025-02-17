@@ -45,12 +45,6 @@ const BioSection = () => {
         <InfoTextName>Pat Doherty | Owner</InfoTextName>
         <InfoText>Certified Strength and Conditioning Specialist</InfoText>
         <InfoText>Certified Pilates Instructor</InfoText>
-        <InfoCTA
-          href="https://www.facebook.com/groups/ToneandMuscleCommunity"
-          target="_blank"
-        >
-          Join the Free Tone & Muscle Facebook Community Today
-        </InfoCTA>
         <IconsContainer>
           <IconLink
             href="https://www.facebook.com/groups/ToneandMuscleCommunity"
@@ -60,7 +54,7 @@ const BioSection = () => {
           </IconLink>
         </IconsContainer>
       </InfoContainer>
-      <VideoContainer>
+      {/* <VideoContainer>
         <ImgWrap>
           {isOpen ? (
             <Player
@@ -85,7 +79,7 @@ const BioSection = () => {
             </>
           )}
         </ImgWrap>
-      </VideoContainer>
+      </VideoContainer> */}
     </MainContainer>
   );
 };
